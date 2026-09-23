@@ -24,9 +24,9 @@ export default function ParallaxHero({
         <motion.div style={{ y }} className="absolute -top-[12%] inset-x-0 h-[130%]">
           {video}
         </motion.div>
-        <div className="absolute inset-0 bg-navy/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/50 to-navy/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/20 to-transparent" />
+        <div className="absolute inset-0 bg-navy/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/35 to-navy/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/55 via-navy/10 to-transparent" />
         <div className="relative flex h-full items-end">{children}</div>
       </div>
     </section>
