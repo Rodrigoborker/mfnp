@@ -282,8 +282,8 @@ export default function HomePage() {
               src="/photos/flat-decorado-quarto.jpg"
               placeholder="Flat decorado e mobiliado após a montagem"
             />
-            <div className="absolute inset-0 bg-navy/55" />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/35 to-transparent" />
+            <div className="absolute inset-0 bg-navy/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
                 <p className="mb-4 text-[17px] leading-relaxed text-white/85">

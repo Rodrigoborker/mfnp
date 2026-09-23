@@ -144,8 +144,8 @@ export default function ParaProprietariosPage() {
               src="/photos/montagem-projeto.jpg"
               placeholder="Projeto de arquitetura, plantas e amostras de acabamento"
             />
-            <div className="absolute inset-0 bg-navy/60" />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/50 to-transparent" />
+            <div className="absolute inset-0 bg-navy/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
                 <p className="mb-5 text-base leading-relaxed text-white/85">
