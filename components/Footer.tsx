@@ -105,8 +105,7 @@ export default function Footer() {
 
       <div className="mx-auto flex max-w-brand flex-wrap justify-between gap-3 border-t border-white/10 px-6 py-5 text-[13px] text-footer-text-dim">
         <span>
-          © {new Date().getFullYear()} Meu Flat na Praia. Rodrigo Montenegro,
-          CRECI-PE 16191.
+          © {new Date().getFullYear()} Meu Flat na Praia Locações por Temporada.
         </span>
         <div className="flex gap-5">
           <Link href="#" className="hover:text-white">
