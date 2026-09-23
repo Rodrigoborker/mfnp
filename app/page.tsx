@@ -266,7 +266,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Montagem de Flats — banner fixo: a imagem prende na tela enquanto o site rola por cima */}
+        <section className="px-6 pb-14 pt-24 text-center">
+          <Reveal className="mx-auto max-w-[760px]">
+            <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+              Montagem e decoração completa
+            </p>
+            <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+              Do projeto de arquitetura ao flat pronto para hospedar.
+            </h2>
+          </Reveal>
+        </section>
         <section className="relative h-[100vh] min-h-[750px]">
           <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
@@ -277,12 +286,6 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/35 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
-                <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
-                  Montagem e decoração completa
-                </p>
-                <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
-                  Do projeto de arquitetura ao flat pronto para hospedar.
-                </h2>
                 <p className="mb-4 text-[17px] leading-relaxed text-white/85">
                   Cuidamos de todo o processo de montagem: projeto de
                   arquitetura e ambientação, marcenaria sob medida, instalação
@@ -303,7 +306,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Pagamento direto */}
+        <section className="px-6 pb-14 pt-24 text-center">
+          <Reveal className="mx-auto max-w-[760px]">
+            <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+              Transparência financeira
+            </p>
+            <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+              Os pagamentos das reservas são feitos diretamente ao proprietário.
+            </h2>
+          </Reveal>
+        </section>
         <section className="relative h-[100vh] min-h-[750px]">
           <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
@@ -315,13 +327,6 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/55 to-navy/20" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
-                <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
-                  Transparência financeira
-                </p>
-                <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
-                  Os pagamentos das reservas são feitos diretamente ao
-                  proprietário.
-                </h2>
                 <p className="mb-4 text-[17px] leading-relaxed text-white/85">
                   O valor de cada reserva cai diretamente na conta cadastrada
                   pelo proprietário. A Meu Flat na Praia não recebe nem retém

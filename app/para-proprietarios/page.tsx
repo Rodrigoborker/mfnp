@@ -115,7 +115,16 @@ export default function ParaProprietariosPage() {
           </Reveal>
         </section>
 
-        {/* Montagem de flats */}
+        <section className="px-6 pb-14 pt-24 text-center">
+          <Reveal className="mx-auto max-w-[760px]">
+            <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+              Montagem e decoração completa
+            </p>
+            <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+              Do projeto de arquitetura ao flat pronto para hospedar.
+            </h2>
+          </Reveal>
+        </section>
         <section className="relative h-[100vh] min-h-[750px]">
           <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
@@ -126,12 +135,6 @@ export default function ParaProprietariosPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/50 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
-                <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-white">
-                  Montagem e decoração completa
-                </p>
-                <h2 className="mb-4 font-heading text-[26px] sm:text-[34px]">
-                  Do projeto de arquitetura ao flat pronto para hospedar.
-                </h2>
                 <p className="mb-5 text-base leading-relaxed text-white/85">
                   Cuidamos do projeto de arquitetura, marcenaria sob medida,
                   instalação elétrica e pintura, com equipe própria. Você

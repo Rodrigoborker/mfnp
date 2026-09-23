@@ -24,6 +24,7 @@
 }
 
 body {
+  overflow-x: clip;
   background: var(--color-surface);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
@@ -31,4 +32,34 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 767px) {
+  body > header,
+  body > main,
+  body > footer {
+    text-align: center;
+  }
+  body > header .flex-wrap,
+  body > main .flex-wrap,
+  body > footer .flex-wrap {
+    justify-content: center;
+  }
+  body > main .flex.items-start {
+    flex-direction: column;
+    align-items: center;
+  }
+  body > main svg,
+  body > footer img {
+    margin-inline: auto;
+  }
+  body > main [class*="max-w-"] {
+    margin-inline: auto;
+  }
+  body > main form label {
+    text-align: left;
+  }
+  body > main form {
+    text-align: left;
+  }
 }

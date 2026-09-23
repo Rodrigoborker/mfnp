@@ -226,7 +226,18 @@ export default function GestaoDeImoveisPage() {
           const isAlt = i % 2 === 1;
           if (i === 0) {
             return (
-              <section key={pillar.id} className="relative h-[120vh] min-h-[860px]">
+              <div key={pillar.id}>
+              <section className="px-6 pb-14 pt-8 text-center">
+                <Reveal className="mx-auto max-w-[760px]">
+                  <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+                    {pillar.tag}
+                  </p>
+                  <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+                    {pillar.title}
+                  </h2>
+                </Reveal>
+              </section>
+              <section className="relative h-[120vh] min-h-[860px]">
                 <div className="sticky top-0 h-[85vh] min-h-[620px] overflow-hidden">
                   <ImageSlot
                     src="/photos/preparacao-mare-alta.jpg"
@@ -237,12 +248,6 @@ export default function GestaoDeImoveisPage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/50 to-transparent" />
                   <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
                     <div className="max-w-xl text-white">
-                      <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-white">
-                        {pillar.tag}
-                      </p>
-                      <h2 className="mb-4 font-heading text-[26px] sm:text-[34px]">
-                        {pillar.title}
-                      </h2>
                       <p className="mb-5 text-base leading-relaxed text-white/85">
                         {pillar.intro}
                       </p>
@@ -273,6 +278,7 @@ export default function GestaoDeImoveisPage() {
                   </Reveal>
                 </div>
               </section>
+              </div>
             );
           }
           return (
