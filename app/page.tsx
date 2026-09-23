@@ -70,10 +70,10 @@ const STEPS = [
 ];
 
 const DESTINATIONS = [
-  { slug: "dest-muro-alto", name: "Muro Alto" },
-  { slug: "dest-porto", name: "Porto de Galinhas" },
-  { slug: "dest-tamandare", name: "Tamandaré" },
-  { slug: "dest-carneiros", name: "Praia dos Carneiros" },
+  { slug: "dest-muro-alto", name: "Muro Alto", photo: "/photos/destino-muro-alto.jpg" },
+  { slug: "dest-porto", name: "Porto de Galinhas", photo: "/photos/destino-porto-de-galinhas.jpg" },
+  { slug: "dest-tamandare", name: "Tamandaré", photo: "/photos/destino-tamandare.jpg" },
+  { slug: "dest-carneiros", name: "Praia dos Carneiros", photo: undefined },
 ];
 
 const CHANNELS = ["Airbnb", "Booking.com", "Decolar/Despegar", "Google Vacation Rentals"];
@@ -104,7 +104,11 @@ export default function HomePage() {
         {/* Hero — full-bleed */}
         <section className="relative flex h-[82vh] min-h-[560px] items-end overflow-hidden">
           <RevealImage className="absolute inset-0">
-            <ImageSlot placeholder="Foto real: flat decorado frente-mar, Porto de Galinhas" />
+            <ImageSlot
+              src="/photos/hero-jangada.jpg"
+              placeholder="Jangada em Porto de Galinhas"
+              priority
+            />
           </RevealImage>
           <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
           <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-16 text-white" delay={0.15}>
@@ -357,7 +361,7 @@ export default function HomePage() {
               {DESTINATIONS.map((dest, i) => (
                 <Reveal key={dest.slug} delay={i * 0.08}>
                   <Link href="#" className="group relative block h-[280px] overflow-hidden">
-                    <ImageSlot placeholder={dest.name} />
+                    <ImageSlot src={dest.photo} placeholder={dest.name} />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/0 to-transparent transition-opacity group-hover:from-navy/85" />
                     <div className="absolute bottom-0 left-0 p-5 font-heading text-[19px] text-white">
                       {dest.name}
@@ -399,7 +403,7 @@ export default function HomePage() {
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10">
               <Reveal className="flex items-start gap-5">
-                <div className="h-22 w-22 shrink-0 overflow-hidden rounded-full">
+                <div className="relative h-22 w-22 shrink-0 overflow-hidden rounded-full">
                   <ImageSlot placeholder="Rodrigo Montenegro" shape="circle" />
                 </div>
                 <div>
@@ -417,8 +421,12 @@ export default function HomePage() {
                 </div>
               </Reveal>
               <Reveal delay={0.1} className="flex items-start gap-5">
-                <div className="h-22 w-22 shrink-0 overflow-hidden rounded-full">
-                  <ImageSlot placeholder="Rosana Costa" shape="circle" />
+                <div className="relative h-22 w-22 shrink-0 overflow-hidden rounded-full">
+                  <ImageSlot
+                    src="/photos/rosana-costa.jpg"
+                    placeholder="Rosana Costa"
+                    shape="circle"
+                  />
                 </div>
                 <div>
                   <h3 className="mb-0.5 font-heading text-[19px] text-navy">
