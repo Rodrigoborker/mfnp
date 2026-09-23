@@ -387,7 +387,12 @@ export default function HomePage() {
             <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10">
               <Reveal className="flex items-start gap-5">
                 <div className="relative h-22 w-22 shrink-0 overflow-hidden rounded-full">
-                  <ImageSlot placeholder="Rodrigo Montenegro" shape="circle" />
+                  <ImageSlot
+                    src="/photos/rodrigo-montenegro.jpg"
+                    placeholder="Rodrigo Montenegro"
+                    shape="circle"
+                    objectPosition="center 20%"
+                  />
                 </div>
                 <div>
                   <h3 className="mb-0.5 font-heading text-[19px] text-white">
@@ -406,10 +411,10 @@ export default function HomePage() {
               <Reveal delay={0.1} className="flex items-start gap-5">
                 <div className="relative h-22 w-22 shrink-0 overflow-hidden rounded-full">
                   <ImageSlot
-                    src="/photos/rosana-costa.png"
+                    src="/photos/rosana-costa.jpg"
                     placeholder="Rosana Costa"
                     shape="circle"
-                    objectPosition="center 15%"
+                    objectPosition="center 20%"
                   />
                 </div>
                 <div>
