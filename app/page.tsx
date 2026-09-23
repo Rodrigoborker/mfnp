@@ -90,12 +90,12 @@ export default function HomePage() {
           video={<HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />}
         >
           <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-16 text-white" delay={0.15}>
-            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
               Gestão de imóveis por temporada
             </p>
             <h1 className="mb-6 max-w-3xl font-heading text-[34px] leading-[1.15] sm:text-[46px] lg:text-[56px]">
               A solução{" "}
-              <span className="font-script text-[1.3em] leading-none text-orange-light">
+              <span className="font-script text-[1.3em] leading-none text-white">
                 definitiva
               </span>{" "}
               para gestão de locações por temporada.
