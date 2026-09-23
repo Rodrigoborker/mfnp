@@ -22,10 +22,10 @@ export default function LeadForm() {
           className="mx-auto mb-4 h-10 w-10 text-orange-light"
           aria-hidden
         />
-        <h3 className="mb-2 font-heading text-xl font-bold text-white">
+        <h3 className="mb-2 font-heading text-[23px] font-bold text-white">
           Recebemos seus dados
         </h3>
-        <p className="text-[17px] text-white/70">
+        <p className="text-[20px] text-white/70">
           Nossa equipe entra em contato em breve pelo WhatsApp informado.
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="name"
-          className="mb-1.5 block text-[15px] font-semibold text-white"
+          className="mb-1.5 block text-[18px] font-semibold text-white"
         >
           Nome
         </label>
@@ -80,14 +80,14 @@ export default function LeadForm() {
           name="name"
           type="text"
           required
-          className="w-full rounded-brand border border-border px-3.5 py-3 text-[17px] focus:border-navy focus:outline-none"
+          className="w-full rounded-brand border border-border px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
         />
       </div>
 
       <div>
         <label
           htmlFor="phone"
-          className="mb-1.5 block text-[15px] font-semibold text-white"
+          className="mb-1.5 block text-[18px] font-semibold text-white"
         >
           WhatsApp
         </label>
@@ -97,14 +97,14 @@ export default function LeadForm() {
           type="tel"
           required
           placeholder="(81) 90000-0000"
-          className="w-full rounded-brand border border-border px-3.5 py-3 text-[17px] placeholder:text-ink-soft/60 focus:border-navy focus:outline-none"
+          className="w-full rounded-brand border border-border px-3.5 py-3 text-[20px] placeholder:text-ink-soft/60 focus:border-navy focus:outline-none"
         />
       </div>
 
       <div>
         <label
           htmlFor="location"
-          className="mb-1.5 block text-[15px] font-semibold text-white"
+          className="mb-1.5 block text-[18px] font-semibold text-white"
         >
           Localização do imóvel
         </label>
@@ -114,14 +114,14 @@ export default function LeadForm() {
           type="text"
           required
           placeholder="Ex: Porto de Galinhas"
-          className="w-full rounded-brand border border-border px-3.5 py-3 text-[17px] placeholder:text-ink-soft/60 focus:border-navy focus:outline-none"
+          className="w-full rounded-brand border border-border px-3.5 py-3 text-[20px] placeholder:text-ink-soft/60 focus:border-navy focus:outline-none"
         />
       </div>
 
       <div>
         <label
           htmlFor="propertyType"
-          className="mb-1.5 block text-[15px] font-semibold text-white"
+          className="mb-1.5 block text-[18px] font-semibold text-white"
         >
           Tipo do imóvel
         </label>
@@ -129,7 +129,7 @@ export default function LeadForm() {
           id="propertyType"
           name="propertyType"
           defaultValue=""
-          className="w-full rounded-brand border border-border bg-white px-3.5 py-3 text-[17px] focus:border-navy focus:outline-none"
+          className="w-full rounded-brand border border-border bg-white px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
         >
           <option value="">Selecione...</option>
           <option value="flat">Flat</option>
@@ -142,7 +142,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="rentalStatus"
-          className="mb-1.5 block text-[15px] font-semibold text-white"
+          className="mb-1.5 block text-[18px] font-semibold text-white"
         >
           Já trabalha com temporada?
         </label>
@@ -150,7 +150,7 @@ export default function LeadForm() {
           id="rentalStatus"
           name="rentalStatus"
           defaultValue=""
-          className="w-full rounded-brand border border-border bg-white px-3.5 py-3 text-[17px] focus:border-navy focus:outline-none"
+          className="w-full rounded-brand border border-border bg-white px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
         >
           <option value="">Selecione...</option>
           <option value="sim">Sim</option>
@@ -161,7 +161,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="message"
-          className="mb-1.5 block text-[15px] font-semibold text-white"
+          className="mb-1.5 block text-[18px] font-semibold text-white"
         >
           Mensagem (opcional)
         </label>
@@ -169,12 +169,12 @@ export default function LeadForm() {
           id="message"
           name="message"
           rows={3}
-          className="w-full resize-y rounded-brand border border-border px-3.5 py-3 text-[17px] focus:border-navy focus:outline-none"
+          className="w-full resize-y rounded-brand border border-border px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
         />
       </div>
 
       {state.status === "error" && (
-        <p role="alert" className="text-base font-medium text-red-600">
+        <p role="alert" className="text-[19px] font-medium text-red-600">
           {state.message}
         </p>
       )}
@@ -182,11 +182,11 @@ export default function LeadForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="mt-1 rounded-brand bg-orange px-6 py-3.5 text-[17px] font-semibold text-white hover:bg-orange/90 disabled:opacity-60"
+        className="mt-1 rounded-brand bg-orange px-6 py-3.5 text-[20px] font-semibold text-white hover:bg-orange/90 disabled:opacity-60"
       >
         {isPending ? "Enviando..." : "Enviar e receber avaliação"}
       </button>
-      <p className="text-center text-sm text-white/60">
+      <p className="text-center text-[17px] text-white/60">
         Seus dados são usados apenas para contato.
       </p>
     </form>

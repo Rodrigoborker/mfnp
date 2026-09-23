@@ -30,13 +30,13 @@ export default async function ConteudosPage({
       <Header />
       <main>
         <Reveal className="mx-auto max-w-brand px-6 pt-14 pb-6">
-          <p className="mb-3 text-[15px] font-medium uppercase tracking-[0.14em] text-orange">
+          <p className="mb-3 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
             Conteúdos
           </p>
-          <h1 className="mb-2 font-heading text-[32px] text-navy sm:text-[42px]">
+          <h1 className="mb-2 font-heading text-[36px] text-navy sm:text-[47px]">
             Guias sobre gestão de imóveis por temporada
           </h1>
-          <p className="max-w-[600px] text-lg text-ink-soft">
+          <p className="max-w-[600px] text-[21px] text-ink-soft">
             Conteúdo prático sobre Airbnb, precificação e os destinos onde
             atuamos no litoral de Pernambuco.
           </p>
@@ -50,7 +50,7 @@ export default async function ConteudosPage({
                 <Link
                   key={cat}
                   href={cat === "Todos" ? "/conteudos" : `/conteudos?category=${encodeURIComponent(cat)}`}
-                  className={`border px-4.5 py-2 text-[15px] font-medium ${
+                  className={`border px-4.5 py-2 text-[18px] font-medium ${
                     isActive
                       ? "border-navy bg-navy text-white"
                       : "border-border bg-surface text-navy"
@@ -76,13 +76,13 @@ export default async function ConteudosPage({
                     <div className="mb-4 h-[190px] overflow-hidden">
                       <ImageSlot placeholder={article.title} />
                     </div>
-                    <p className="mb-2 text-sm font-medium uppercase tracking-[0.08em] text-orange">
+                    <p className="mb-2 text-[17px] font-medium uppercase tracking-[0.08em] text-orange">
                       {article.category} · {readingTime(article.content)} min
                     </p>
-                    <h3 className="mb-2 font-heading text-xl leading-snug text-navy">
+                    <h3 className="mb-2 font-heading text-[23px] leading-snug text-navy">
                       {article.title}
                     </h3>
-                    <p className="text-base leading-relaxed text-ink-soft">
+                    <p className="text-[19px] leading-relaxed text-ink-soft">
                       {article.excerpt}
                     </p>
                   </Link>

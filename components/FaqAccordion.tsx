@@ -39,7 +39,7 @@ export default function FaqAccordion({
               onClick={() => toggle(item.id)}
               aria-expanded={isOpen}
               aria-controls={`faq-panel-${item.id}`}
-              className="flex w-full items-center justify-between gap-4 px-6 py-5.5 text-left font-heading text-[17px] font-semibold text-navy"
+              className="flex w-full items-center justify-between gap-4 px-6 py-5.5 text-left font-heading text-[20px] font-semibold text-navy"
             >
               {item.question}
               {isOpen ? (
@@ -57,7 +57,7 @@ export default function FaqAccordion({
             {isOpen && (
               <div
                 id={`faq-panel-${item.id}`}
-                className="px-6 pb-5.5 text-[17px] leading-relaxed text-ink-soft"
+                className="px-6 pb-5.5 text-[20px] leading-relaxed text-ink-soft"
               >
                 {item.answer}
               </div>

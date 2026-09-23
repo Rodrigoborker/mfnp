@@ -41,7 +41,7 @@ export default function ImageSlot({
       } ${className}`}
     >
       <ImageIcon className="h-6 w-6 text-white/50" aria-hidden />
-      <span className="text-sm leading-tight text-white/70">
+      <span className="text-[17px] leading-tight text-white/70">
         {placeholder}
       </span>
     </div>

@@ -11,16 +11,13 @@ export default function Footer() {
             alt="Meu Flat na Praia"
             width={676}
             height={316}
-            className="h-10 w-auto"
+            className="h-16 w-auto"
           />
         </div>
 
         <div>
-          <div className="mb-3.5 text-base font-bold text-white">Empresa</div>
-          <div className="flex flex-col gap-2.5 text-base">
-            <Link href="#" className="text-footer-text hover:text-white">
-              Sobre
-            </Link>
+          <div className="mb-3.5 text-[19px] font-bold text-white">Empresa</div>
+          <div className="flex flex-col gap-2.5 text-[19px]">
             <Link
               href="/gestao-de-imoveis"
               className="text-footer-text hover:text-white"
@@ -40,26 +37,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-3.5 text-base font-bold text-white">Destinos</div>
-          <div className="flex flex-col gap-2.5 text-base">
-            <Link href="#" className="text-footer-text hover:text-white">
-              Muro Alto
-            </Link>
-            <Link href="#" className="text-footer-text hover:text-white">
-              Porto de Galinhas
-            </Link>
-            <Link href="#" className="text-footer-text hover:text-white">
-              Praia dos Carneiros
-            </Link>
-            <Link href="#" className="text-footer-text hover:text-white">
-              Tamandaré
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <div className="mb-3.5 text-base font-bold text-white">Explorar</div>
-          <div className="flex flex-col gap-2.5 text-base">
+          <div className="mb-3.5 text-[19px] font-bold text-white">Explorar</div>
+          <div className="flex flex-col gap-2.5 text-[19px]">
             <Link href="#" className="text-footer-text hover:text-white">
               Imóveis
             </Link>
@@ -85,8 +64,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-3.5 text-base font-bold text-white">Contato</div>
-          <div className="flex flex-col gap-2.5 text-base">
+          <div className="mb-3.5 text-[19px] font-bold text-white">Contato</div>
+          <div className="flex flex-col gap-2.5 text-[19px]">
             <a
               href="https://wa.me/5581994869792"
               className="text-footer-text hover:text-white"
@@ -103,7 +82,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-brand flex-wrap justify-between gap-3 border-t border-white/10 px-6 py-5 text-[15px] text-footer-text-dim">
+      <div className="mx-auto flex max-w-brand flex-wrap justify-between gap-3 border-t border-white/10 px-6 py-5 text-[18px] text-footer-text-dim">
         <span>
           © {new Date().getFullYear()} Meu Flat na Praia Locações por Temporada.
         </span>
