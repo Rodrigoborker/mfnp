@@ -12,7 +12,6 @@ import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
 import Reveal from "@/components/Reveal";
 import RevealImage from "@/components/RevealImage";
-import ParallaxImage from "@/components/ParallaxImage";
 import HeroVideo from "@/components/HeroVideo";
 import ParallaxHero from "@/components/ParallaxHero";
 
@@ -268,41 +267,41 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Montagem de Flats — full-bleed com parallax */}
-        <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-          <ParallaxImage className="absolute inset-0">
+        {/* Montagem de Flats — banner fixo: a imagem prende na tela enquanto o site rola por cima */}
+        <section className="relative h-[140vh] min-h-[1000px]">
+          <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
               src="/photos/flat-decorado-quarto.jpg"
               placeholder="Flat decorado e mobiliado após a montagem"
             />
-          </ParallaxImage>
-          <div className="absolute inset-0 bg-navy/55" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/35 to-transparent" />
-          <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
-            <div className="max-w-xl text-white">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
-                Montagem e decoração completa
-              </p>
-              <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
-                Do projeto de arquitetura ao flat pronto para hospedar.
-              </h2>
-              <p className="mb-4 text-[17px] leading-relaxed text-white/85">
-                Cuidamos de todo o processo de montagem: projeto de
-                arquitetura e ambientação, marcenaria sob medida, instalação
-                elétrica e pintura, executados por equipe própria.
-              </p>
-              <p className="mb-7 text-[17px] leading-relaxed text-white/85">
-                Você entrega as chaves. Nós entregamos o flat decorado,
-                fotografado e pronto para receber hóspedes.
-              </p>
-              <Link
-                href="/montagem-de-flats"
-                className="border-b border-white/70 pb-0.5 text-[16px] text-white hover:border-orange-light hover:text-orange-light"
-              >
-                Conhecer o serviço de montagem →
-              </Link>
-            </div>
-          </Reveal>
+            <div className="absolute inset-0 bg-navy/55" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/35 to-transparent" />
+            <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+              <div className="max-w-xl text-white">
+                <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+                  Montagem e decoração completa
+                </p>
+                <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
+                  Do projeto de arquitetura ao flat pronto para hospedar.
+                </h2>
+                <p className="mb-4 text-[17px] leading-relaxed text-white/85">
+                  Cuidamos de todo o processo de montagem: projeto de
+                  arquitetura e ambientação, marcenaria sob medida, instalação
+                  elétrica e pintura, executados por equipe própria.
+                </p>
+                <p className="mb-7 text-[17px] leading-relaxed text-white/85">
+                  Você entrega as chaves. Nós entregamos o flat decorado,
+                  fotografado e pronto para receber hóspedes.
+                </p>
+                <Link
+                  href="/montagem-de-flats"
+                  className="border-b border-white/70 pb-0.5 text-[16px] text-white hover:border-orange-light hover:text-orange-light"
+                >
+                  Conhecer o serviço de montagem →
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         {/* Pagamento direto */}
