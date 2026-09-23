@@ -90,7 +90,7 @@ export default async function ArtigoPage({
               </span>
             </div>
           </Reveal>
-          <RevealImage className="mb-10 h-[300px] sm:h-[360px]">
+          <RevealImage className="relative mb-10 h-[300px] sm:h-[360px]">
             <ImageSlot placeholder="Foto real: imóvel administrado, ambiente decorado" />
           </RevealImage>
 

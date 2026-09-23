@@ -94,7 +94,7 @@ export default function ParaProprietariosPage() {
               Quero uma avaliação do meu imóvel
             </Link>
           </Reveal>
-          <RevealImage className="h-[320px] overflow-hidden lg:h-[440px]">
+          <RevealImage className="relative h-[320px] overflow-hidden lg:h-[440px]">
             <ImageSlot placeholder="Foto real: proprietário entregando as chaves ou vista do flat" />
           </RevealImage>
         </section>
@@ -117,7 +117,7 @@ export default function ParaProprietariosPage() {
 
         {/* Montagem de flats */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <RevealImage className="h-[280px] overflow-hidden lg:h-[360px]">
+          <RevealImage className="relative h-[280px] overflow-hidden lg:h-[360px]">
             <ImageSlot placeholder="Foto real: flat decorado e mobiliado após a montagem" />
           </RevealImage>
           <Reveal>

@@ -143,7 +143,7 @@ export default function MontagemDeFlatsPage() {
               Quero montar e decorar meu flat
             </Link>
           </Reveal>
-          <RevealImage className="h-[320px] overflow-hidden lg:h-[440px]">
+          <RevealImage className="relative h-[320px] overflow-hidden lg:h-[440px]">
             <ImageSlot placeholder="Foto real: flat decorado e mobiliado, antes/depois da montagem" />
           </RevealImage>
         </section>
@@ -174,7 +174,7 @@ export default function MontagemDeFlatsPage() {
 
         {/* Detalhe arquitetura */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <RevealImage className="h-[280px] overflow-hidden lg:h-[360px]">
+          <RevealImage className="relative h-[280px] overflow-hidden lg:h-[360px]">
             <ImageSlot placeholder="Foto real: planta baixa ou render do projeto de ambientação" />
           </RevealImage>
           <Reveal>
@@ -216,7 +216,7 @@ export default function MontagemDeFlatsPage() {
                 </p>
               </Reveal>
               <RevealImage
-                className={`h-[280px] overflow-hidden lg:h-[320px] ${
+                className={`relative h-[280px] overflow-hidden lg:h-[320px] ${
                   trade.alt ? "lg:order-1" : ""
                 }`}
               >

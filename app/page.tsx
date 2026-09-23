@@ -84,46 +84,48 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* Hero — full-bleed */}
-        <section className="relative flex h-[82vh] min-h-[560px] items-end overflow-hidden">
-          <RevealImage className="absolute inset-0">
-            <HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />
-          </RevealImage>
-          <div className="absolute inset-0 bg-navy/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/35 to-navy/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/10 to-transparent" />
-          <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-16 text-white" delay={0.15}>
-            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
-              Gestão de imóveis por temporada
-            </p>
-            <h1 className="mb-6 max-w-3xl font-heading text-[34px] leading-[1.15] sm:text-[46px] lg:text-[56px]">
-              A solução{" "}
-              <span className="font-script text-[1.3em] leading-none text-orange-light">
-                definitiva
-              </span>{" "}
-              para gestão de locações por temporada.
-            </h1>
-            <p className="mb-8 max-w-2xl text-[17px] leading-relaxed text-white/85 sm:text-lg">
-              25 anos de experiência a serviço de sua propriedade. Maximize
-              seus ganhos com uma administração profissional, locações
-              seguras e alta ocupação, sem se preocupar com a rotina do dia
-              a dia.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/para-proprietarios#lead-form"
-                className="bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
-              >
-                Quero rentabilizar meu imóvel
-              </Link>
-              <Link
-                href="/gestao-de-imoveis"
-                className="border border-white/70 px-7 py-4 text-base text-white hover:bg-white/10"
-              >
-                Conhecer nossa gestão
-              </Link>
-            </div>
-          </Reveal>
+        {/* Hero — full-bleed, fixo ao rolar */}
+        <section className="relative h-[170vh]">
+          <div className="sticky top-0 flex h-[82vh] min-h-[560px] items-end overflow-hidden">
+            <RevealImage className="absolute inset-0">
+              <HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />
+            </RevealImage>
+            <div className="absolute inset-0 bg-navy/50" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/50 to-navy/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/20 to-transparent" />
+            <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-16 text-white" delay={0.15}>
+              <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+                Gestão de imóveis por temporada
+              </p>
+              <h1 className="mb-6 max-w-3xl font-heading text-[34px] leading-[1.15] sm:text-[46px] lg:text-[56px]">
+                A solução{" "}
+                <span className="font-script text-[1.3em] leading-none text-orange-light">
+                  definitiva
+                </span>{" "}
+                para gestão de locações por temporada.
+              </h1>
+              <p className="mb-8 max-w-2xl text-[17px] leading-relaxed text-white/85 sm:text-lg">
+                25 anos de experiência a serviço de sua propriedade. Maximize
+                seus ganhos com uma administração profissional, locações
+                seguras e alta ocupação, sem se preocupar com a rotina do dia
+                a dia.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/para-proprietarios#lead-form"
+                  className="bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
+                >
+                  Quero rentabilizar meu imóvel
+                </Link>
+                <Link
+                  href="/gestao-de-imoveis"
+                  className="border border-white/70 px-7 py-4 text-base text-white hover:bg-white/10"
+                >
+                  Conhecer nossa gestão
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         {/* Locação eficiente + Cuidamos de todo o processo */}
@@ -296,7 +298,7 @@ export default function HomePage() {
                 Conhecer o serviço de montagem →
               </Link>
             </Reveal>
-            <RevealImage className="h-[300px] overflow-hidden lg:h-[420px]">
+            <RevealImage className="relative h-[300px] overflow-hidden lg:h-[420px]">
               <ImageSlot
                 src="/photos/flat-decorado-quarto.jpg"
                 placeholder="Flat decorado e mobiliado após a montagem"
@@ -307,7 +309,7 @@ export default function HomePage() {
 
         {/* Pagamento direto */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <RevealImage className="order-2 h-[300px] overflow-hidden lg:order-1 lg:h-[420px]">
+          <RevealImage className="relative order-2 h-[300px] overflow-hidden lg:order-1 lg:h-[420px]">
             <ImageSlot placeholder="Foto real: proprietário e equipe, ou detalhe do imóvel" />
           </RevealImage>
           <Reveal className="order-1 lg:order-2">

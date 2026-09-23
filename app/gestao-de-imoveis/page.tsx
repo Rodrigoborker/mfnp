@@ -212,7 +212,7 @@ export default function GestaoDeImoveisPage() {
         </Reveal>
 
         <RevealImage className="mx-auto max-w-brand px-6 pb-20">
-          <div className="h-[420px] overflow-hidden">
+          <div className="relative h-[420px] overflow-hidden">
             <ImageSlot placeholder="Foto real: equipe preparando um flat ou vista do imóvel" />
           </div>
         </RevealImage>
@@ -264,7 +264,7 @@ export default function GestaoDeImoveisPage() {
                 </div>
               </Reveal>
               <RevealImage
-                className={`h-[340px] overflow-hidden ${
+                className={`relative h-[340px] overflow-hidden ${
                   i % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
