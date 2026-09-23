@@ -307,7 +307,11 @@ export default function HomePage() {
         {/* Pagamento direto */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
           <RevealImage className="relative order-2 h-[300px] overflow-hidden lg:order-1 lg:h-[420px]">
-            <ImageSlot placeholder="Foto real: proprietário e equipe, ou detalhe do imóvel" />
+            <ImageSlot
+              src="/photos/transparencia-financeira.jpg"
+              placeholder="Acompanhamento financeiro das reservas e repasses"
+              objectPosition="center 20%"
+            />
           </RevealImage>
           <Reveal className="order-1 lg:order-2">
             <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
