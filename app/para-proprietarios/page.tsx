@@ -116,30 +116,37 @@ export default function ParaProprietariosPage() {
         </section>
 
         {/* Montagem de flats */}
-        <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <RevealImage className="relative h-[280px] overflow-hidden lg:h-[360px]">
-            <ImageSlot placeholder="Foto real: flat decorado e mobiliado após a montagem" />
-          </RevealImage>
-          <Reveal>
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
-              Montagem e decoração completa
-            </p>
-            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
-              Do projeto de arquitetura ao flat pronto para hospedar.
-            </h2>
-            <p className="mb-4 text-base leading-relaxed text-ink-soft">
-              Cuidamos do projeto de arquitetura, marcenaria sob medida,
-              instalação elétrica e pintura, com equipe própria. Você
-              entrega as chaves, recebe o flat decorado e pronto para
-              receber hóspedes.
-            </p>
-            <Link
-              href="/montagem-de-flats"
-              className="border-b border-navy pb-0.5 text-[16px] text-navy hover:border-orange hover:text-orange"
-            >
-              Ver detalhes da montagem →
-            </Link>
-          </Reveal>
+        <section className="relative h-[100vh] min-h-[750px]">
+          <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
+            <ImageSlot
+              src="/photos/montagem-projeto.jpg"
+              placeholder="Projeto de arquitetura, plantas e amostras de acabamento"
+            />
+            <div className="absolute inset-0 bg-navy/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/50 to-transparent" />
+            <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+              <div className="max-w-xl text-white">
+                <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-white">
+                  Montagem e decoração completa
+                </p>
+                <h2 className="mb-4 font-heading text-[26px] sm:text-[34px]">
+                  Do projeto de arquitetura ao flat pronto para hospedar.
+                </h2>
+                <p className="mb-5 text-base leading-relaxed text-white/85">
+                  Cuidamos do projeto de arquitetura, marcenaria sob medida,
+                  instalação elétrica e pintura, com equipe própria. Você
+                  entrega as chaves, recebe o flat decorado e pronto para
+                  receber hóspedes.
+                </p>
+                <Link
+                  href="/montagem-de-flats"
+                  className="border-b border-white/70 pb-0.5 text-[16px] text-white hover:border-orange-light hover:text-orange-light"
+                >
+                  Ver detalhes da montagem →
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         {/* Benefícios */}
