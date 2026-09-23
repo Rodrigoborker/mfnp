@@ -79,24 +79,6 @@ const DESTINATIONS = [
 
 const CHANNELS = ["Airbnb", "Booking.com", "Decolar/Despegar", "Google Vacation Rentals"];
 
-const ARTICLES = [
-  {
-    slug: "como-funciona-a-gestao-profissional-de-um-airbnb",
-    title: "Como funciona a gestão profissional de um Airbnb",
-    category: "Gestão",
-  },
-  {
-    slug: "quanto-custa-administrar-um-imovel-por-temporada",
-    title: "Quanto custa administrar um imóvel por temporada",
-    category: "Gestão",
-  },
-  {
-    slug: "como-aumentar-a-ocupacao-do-seu-flat-em-porto-de-galinhas",
-    title: "Como aumentar a ocupação do seu flat em Porto de Galinhas",
-    category: "Destinos",
-  },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -315,7 +297,10 @@ export default function HomePage() {
               </Link>
             </Reveal>
             <RevealImage className="h-[300px] overflow-hidden lg:h-[420px]">
-              <ImageSlot placeholder="Foto real: flat decorado e mobiliado após a montagem" />
+              <ImageSlot
+                src="/photos/flat-decorado-quarto.jpg"
+                placeholder="Flat decorado e mobiliado após a montagem"
+              />
             </RevealImage>
           </div>
         </section>
@@ -443,38 +428,6 @@ export default function HomePage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </section>
-
-        {/* Conteúdos */}
-        <section className="mx-auto max-w-brand px-6 py-24">
-          <Reveal className="mb-10 flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="font-heading text-[28px] text-navy sm:text-[34px]">
-              Conteúdos sobre gestão por temporada
-            </h2>
-            <Link
-              href="/conteudos"
-              className="border-b border-navy pb-0.5 text-[16px] text-navy hover:border-orange hover:text-orange"
-            >
-              Ver todos os conteúdos →
-            </Link>
-          </Reveal>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-7">
-            {ARTICLES.map((article, i) => (
-              <Reveal key={article.slug} delay={i * 0.08}>
-                <Link href={`/conteudos/${article.slug}`} className="block">
-                  <div className="mb-4 h-[190px] overflow-hidden">
-                    <ImageSlot placeholder={article.title} />
-                  </div>
-                  <p className="mb-2 text-[12px] font-medium uppercase tracking-[0.08em] text-orange">
-                    {article.category}
-                  </p>
-                  <h3 className="font-heading text-[19px] leading-snug text-navy">
-                    {article.title}
-                  </h3>
-                </Link>
-              </Reveal>
-            ))}
           </div>
         </section>
 
