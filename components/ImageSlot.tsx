@@ -40,8 +40,8 @@ export default function ImageSlot({
         shape === "circle" ? "rounded-full" : ""
       } ${className}`}
     >
-      <ImageIcon className="h-6 w-6 text-ink-soft/60" aria-hidden />
-      <span className="text-xs leading-tight text-ink-soft/80">
+      <ImageIcon className="h-6 w-6 text-white/50" aria-hidden />
+      <span className="text-xs leading-tight text-white/70">
         {placeholder}
       </span>
     </div>

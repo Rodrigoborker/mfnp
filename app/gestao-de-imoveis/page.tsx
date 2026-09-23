@@ -218,35 +218,37 @@ export default function GestaoDeImoveisPage() {
         </RevealImage>
 
         {/* Pilares */}
-        {PILLARS.map((pillar, i) => (
+        {PILLARS.map((pillar, i) => {
+          const isAlt = i % 2 === 1;
+          return (
           <section
             key={pillar.id}
-            className={i % 2 === 1 ? "border-y border-border bg-surface-alt" : ""}
+            className={isAlt ? "border-y border-border bg-surface-alt" : ""}
           >
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
               <Reveal className={pillar.link ? "" : ""} delay={0.05}>
-                <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
+                <div className={isAlt ? "lg:order-2" : ""}>
+                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${isAlt ? "text-orange-light" : "text-orange"}`}>
                   {pillar.tag}
                 </p>
-                <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
+                <h2 className={`mb-4 font-heading text-[26px] sm:text-[30px] ${isAlt ? "text-white" : "text-navy"}`}>
                   {pillar.title}
                 </h2>
-                <p className="mb-5 text-base leading-relaxed text-ink-soft">
+                <p className={`mb-5 text-base leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
                   {pillar.intro}
                 </p>
                 <div className="flex flex-col gap-3.5">
                   {pillar.points.map((point) => (
                     <div key={point.title} className="flex items-start gap-3">
                       <Check
-                        className="mt-0.5 h-4.5 w-4.5 shrink-0 text-orange"
+                        className={`mt-0.5 h-4.5 w-4.5 shrink-0 ${isAlt ? "text-orange-light" : "text-orange"}`}
                         aria-hidden
                       />
                       <div>
-                        <div className="mb-0.5 text-[15px] font-semibold text-navy">
+                        <div className={`mb-0.5 text-[15px] font-semibold ${isAlt ? "text-white" : "text-navy"}`}>
                           {point.title}
                         </div>
-                        <div className="text-sm leading-relaxed text-ink-soft">
+                        <div className={`text-sm leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
                           {point.desc}
                         </div>
                       </div>
@@ -256,7 +258,11 @@ export default function GestaoDeImoveisPage() {
                 {pillar.link && (
                   <Link
                     href={pillar.link}
-                    className="mt-5 inline-block border-b border-navy pb-0.5 text-sm text-navy hover:border-orange hover:text-orange"
+                    className={
+                      isAlt
+                        ? "mt-5 inline-block border-b border-white/70 pb-0.5 text-sm text-white hover:border-orange-light hover:text-orange-light"
+                        : "mt-5 inline-block border-b border-navy pb-0.5 text-sm text-navy hover:border-orange hover:text-orange"
+                    }
                   >
                     {pillar.linkLabel}
                   </Link>
@@ -272,7 +278,8 @@ export default function GestaoDeImoveisPage() {
               </RevealImage>
             </div>
           </section>
-        ))}
+          );
+        })}
 
         {/* Canais */}
         <section className="bg-navy">
@@ -312,7 +319,7 @@ export default function GestaoDeImoveisPage() {
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[32px]">
+            <h2 className="mb-4 font-heading text-[26px] text-white sm:text-[32px]">
               Pronto para rentabilizar seu imóvel?
             </h2>
             <Link

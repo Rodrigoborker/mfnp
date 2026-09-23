@@ -150,8 +150,8 @@ export default function HomePage() {
         {/* Autoridade */}
         <section className="border-b border-border bg-surface-alt">
           <Reveal className="mx-auto flex max-w-brand flex-wrap items-center justify-between gap-8 px-6 py-12">
-            <p className="max-w-[640px] text-[19px] leading-relaxed text-ink-soft">
-              <strong className="font-normal text-navy">
+            <p className="max-w-[640px] text-[19px] leading-relaxed text-white/70">
+              <strong className="font-normal text-white">
                 25 anos de experiência em hotelaria
               </strong>{" "}
               no litoral de Pernambuco, à frente da gestão de propriedades por
@@ -159,20 +159,20 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-10">
               <div>
-                <div className="font-heading text-[30px] text-navy">25 anos</div>
-                <div className="text-[13px] text-ink-soft">
+                <div className="font-heading text-[30px] text-white">25 anos</div>
+                <div className="text-[13px] text-white/70">
                   de experiência em hotelaria
                 </div>
               </div>
               <div>
-                <div className="font-heading text-[30px] text-navy">4</div>
-                <div className="text-[13px] text-ink-soft">
+                <div className="font-heading text-[30px] text-white">4</div>
+                <div className="text-[13px] text-white/70">
                   destinos atendidos no litoral
                 </div>
               </div>
               <div>
-                <div className="font-heading text-[30px] text-navy">4</div>
-                <div className="text-[13px] text-ink-soft">
+                <div className="font-heading text-[30px] text-white">4</div>
+                <div className="text-[13px] text-white/70">
                   canais de distribuição integrados
                 </div>
               </div>
@@ -242,23 +242,23 @@ export default function HomePage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
                 Como funciona
               </p>
-              <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+              <h2 className="font-heading text-[28px] text-white sm:text-[38px]">
                 Você entrega as chaves. A gente entrega resultado.
               </h2>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
               {STEPS.map((step, i) => (
                 <Reveal key={step.n} delay={i * 0.08}>
-                  <div className="mb-3 font-heading text-[18px] text-orange">
+                  <div className="mb-3 font-heading text-[18px] text-orange-light">
                     {step.n}
                   </div>
-                  <h3 className="mb-2 font-heading text-[19px] text-navy">
+                  <h3 className="mb-2 font-heading text-[19px] text-white">
                     {step.title}
                   </h3>
-                  <p className="text-[16px] leading-relaxed text-ink-soft">
+                  <p className="text-[16px] leading-relaxed text-white/70">
                     {step.desc}
                   </p>
                 </Reveal>
@@ -333,10 +333,10 @@ export default function HomePage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
                 Onde atuamos
               </p>
-              <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+              <h2 className="font-heading text-[28px] text-white sm:text-[38px]">
                 Destinos atendidos no litoral de Pernambuco
               </h2>
             </Reveal>
@@ -377,10 +377,10 @@ export default function HomePage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
                 Quem administra
               </p>
-              <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+              <h2 className="font-heading text-[28px] text-white sm:text-[38px]">
                 Uma operação conduzida por quem entende o mercado
               </h2>
             </Reveal>
@@ -390,13 +390,13 @@ export default function HomePage() {
                   <ImageSlot placeholder="Rodrigo Montenegro" shape="circle" />
                 </div>
                 <div>
-                  <h3 className="mb-0.5 font-heading text-[19px] text-navy">
+                  <h3 className="mb-0.5 font-heading text-[19px] text-white">
                     Rodrigo Montenegro
                   </h3>
-                  <p className="mb-2 text-[13px] font-medium text-orange">
+                  <p className="mb-2 text-[13px] font-medium text-orange-light">
                     Corretor de imóveis · CRECI-PE 16191
                   </p>
-                  <p className="text-[15px] leading-relaxed text-ink-soft">
+                  <p className="text-[15px] leading-relaxed text-white/70">
                     25 anos de experiência em hotelaria, ex-gerente de
                     resorts em Porto de Galinhas (Enotel, Solar, Village).
                     Especialista em investimento imobiliário no litoral.
@@ -413,13 +413,13 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-0.5 font-heading text-[19px] text-navy">
+                  <h3 className="mb-0.5 font-heading text-[19px] text-white">
                     Rosana Costa
                   </h3>
-                  <p className="mb-2 text-[13px] font-medium text-orange">
+                  <p className="mb-2 text-[13px] font-medium text-orange-light">
                     Administradora
                   </p>
-                  <p className="text-[15px] leading-relaxed text-ink-soft">
+                  <p className="text-[15px] leading-relaxed text-white/70">
                     Mais de 20 anos em gestão de equipes na indústria
                     farmacêutica no Nordeste. Responsável pelos projetos de
                     decoração dos imóveis administrados.

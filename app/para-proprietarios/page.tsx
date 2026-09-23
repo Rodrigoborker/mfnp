@@ -102,11 +102,11 @@ export default function ParaProprietariosPage() {
         {/* Pagamento direto */}
         <section className="border-y border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-[960px] px-6 py-16 text-center">
-            <ShieldCheck className="mx-auto mb-4 h-9 w-9 text-orange" aria-hidden />
-            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
+            <ShieldCheck className="mx-auto mb-4 h-9 w-9 text-orange-light" aria-hidden />
+            <h2 className="mb-4 font-heading text-[26px] text-white sm:text-[30px]">
               Os pagamentos das reservas caem direto na sua conta.
             </h2>
-            <p className="mx-auto max-w-[640px] text-base leading-relaxed text-ink-soft">
+            <p className="mx-auto max-w-[640px] text-base leading-relaxed text-white/70">
               A Meu Flat na Praia não recebe nem retém nenhum valor de
               hospedagem. Cada reserva é paga diretamente ao proprietário,
               com relatórios claros de ocupação, receita e repasses na sua
@@ -146,18 +146,18 @@ export default function ParaProprietariosPage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal>
-              <h2 className="mb-12 text-center font-heading text-[26px] text-navy sm:text-[32px]">
+              <h2 className="mb-12 text-center font-heading text-[26px] text-white sm:text-[32px]">
                 O que você ganha ao colocar seu imóvel sob nossa gestão
               </h2>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-8">
               {BENEFITS.map((benefit, i) => (
                 <Reveal key={benefit.title} delay={i * 0.08}>
-                  <benefit.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
-                  <h3 className="mb-2 font-heading text-[18px] text-navy">
+                  <benefit.icon className="mb-3.5 h-6 w-6 text-orange-light" aria-hidden />
+                  <h3 className="mb-2 font-heading text-[18px] text-white">
                     {benefit.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-ink-soft">
+                  <p className="text-[15px] leading-relaxed text-white/70">
                     {benefit.desc}
                   </p>
                 </Reveal>
@@ -170,20 +170,20 @@ export default function ParaProprietariosPage() {
         <section className="border-b border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal>
-              <h2 className="mb-12 text-center font-heading text-[26px] text-navy sm:text-[32px]">
+              <h2 className="mb-12 text-center font-heading text-[26px] text-white sm:text-[32px]">
                 Como começamos a trabalhar juntos
               </h2>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
               {STEPS.map((step, i) => (
                 <Reveal key={step.n} delay={i * 0.08}>
-                  <div className="mb-3 font-heading text-[17px] text-orange">
+                  <div className="mb-3 font-heading text-[17px] text-orange-light">
                     {step.n}
                   </div>
-                  <h3 className="mb-2 font-heading text-[18px] text-navy">
+                  <h3 className="mb-2 font-heading text-[18px] text-white">
                     {step.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-ink-soft">
+                  <p className="text-[15px] leading-relaxed text-white/70">
                     {step.desc}
                   </p>
                 </Reveal>

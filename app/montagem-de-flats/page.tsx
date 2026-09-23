@@ -152,18 +152,18 @@ export default function MontagemDeFlatsPage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-20">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <h2 className="font-heading text-[28px] text-navy sm:text-[34px]">
+              <h2 className="font-heading text-[28px] text-white sm:text-[34px]">
                 Um único time cuida de todas as frentes
               </h2>
             </Reveal>
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
               {FRONTS.map((front, i) => (
-                <Reveal key={front.title} delay={i * 0.08} className="border-t border-orange pt-6">
-                  <front.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
-                  <h3 className="mb-2 font-heading text-[17px] text-navy">
+                <Reveal key={front.title} delay={i * 0.08} className="border-t border-orange-light pt-6">
+                  <front.icon className="mb-3.5 h-6 w-6 text-orange-light" aria-hidden />
+                  <h3 className="mb-2 font-heading text-[17px] text-white">
                     {front.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-ink-soft">
+                  <p className="text-sm leading-relaxed text-white/70">
                     {front.desc}
                   </p>
                 </Reveal>
@@ -205,13 +205,13 @@ export default function MontagemDeFlatsPage() {
           >
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
               <Reveal className={trade.alt ? "lg:order-2" : ""}>
-                <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
+                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${trade.alt ? "text-orange-light" : "text-orange"}`}>
                   {trade.tag}
                 </p>
-                <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
+                <h2 className={`mb-4 font-heading text-[26px] sm:text-[30px] ${trade.alt ? "text-white" : "text-navy"}`}>
                   {trade.title}
                 </h2>
-                <p className="text-base leading-relaxed text-ink-soft">
+                <p className={`text-base leading-relaxed ${trade.alt ? "text-white/70" : "text-ink-soft"}`}>
                   {trade.desc}
                 </p>
               </Reveal>
@@ -263,7 +263,7 @@ export default function MontagemDeFlatsPage() {
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[32px]">
+            <h2 className="mb-4 font-heading text-[26px] text-white sm:text-[32px]">
               Quer um flat pronto para hospedar desde o primeiro dia?
             </h2>
             <Link

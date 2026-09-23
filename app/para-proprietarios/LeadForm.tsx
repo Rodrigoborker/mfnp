@@ -19,13 +19,13 @@ export default function LeadForm() {
     return (
       <div className="border border-border bg-surface-alt p-10 text-center">
         <CheckCircle2
-          className="mx-auto mb-4 h-10 w-10 text-orange"
+          className="mx-auto mb-4 h-10 w-10 text-orange-light"
           aria-hidden
         />
-        <h3 className="mb-2 font-heading text-lg font-bold text-navy">
+        <h3 className="mb-2 font-heading text-lg font-bold text-white">
           Recebemos seus dados
         </h3>
-        <p className="text-[15px] text-ink-soft">
+        <p className="text-[15px] text-white/70">
           Nossa equipe entra em contato em breve pelo WhatsApp informado.
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="name"
-          className="mb-1.5 block text-[13px] font-semibold text-navy"
+          className="mb-1.5 block text-[13px] font-semibold text-white"
         >
           Nome
         </label>
@@ -87,7 +87,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="phone"
-          className="mb-1.5 block text-[13px] font-semibold text-navy"
+          className="mb-1.5 block text-[13px] font-semibold text-white"
         >
           WhatsApp
         </label>
@@ -104,7 +104,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="location"
-          className="mb-1.5 block text-[13px] font-semibold text-navy"
+          className="mb-1.5 block text-[13px] font-semibold text-white"
         >
           Localização do imóvel
         </label>
@@ -121,7 +121,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="propertyType"
-          className="mb-1.5 block text-[13px] font-semibold text-navy"
+          className="mb-1.5 block text-[13px] font-semibold text-white"
         >
           Tipo do imóvel
         </label>
@@ -142,7 +142,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="rentalStatus"
-          className="mb-1.5 block text-[13px] font-semibold text-navy"
+          className="mb-1.5 block text-[13px] font-semibold text-white"
         >
           Já trabalha com temporada?
         </label>
@@ -161,7 +161,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="message"
-          className="mb-1.5 block text-[13px] font-semibold text-navy"
+          className="mb-1.5 block text-[13px] font-semibold text-white"
         >
           Mensagem (opcional)
         </label>
@@ -186,7 +186,7 @@ export default function LeadForm() {
       >
         {isPending ? "Enviando..." : "Enviar e receber avaliação"}
       </button>
-      <p className="text-center text-xs text-ink-soft/70">
+      <p className="text-center text-xs text-white/60">
         Seus dados são usados apenas para contato.
       </p>
     </form>

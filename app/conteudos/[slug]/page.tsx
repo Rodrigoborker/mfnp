@@ -112,7 +112,7 @@ export default async function ArtigoPage({
           </div>
 
           <Reveal className="mt-14 border border-border bg-surface-alt p-8 text-center">
-            <h3 className="mb-3 font-heading text-lg text-navy">
+            <h3 className="mb-3 font-heading text-lg text-white">
               Quer saber quanto seu imóvel pode gerar?
             </h3>
             <Link
@@ -128,7 +128,7 @@ export default async function ArtigoPage({
           <section className="border-t border-border bg-surface-alt">
             <div className="mx-auto max-w-brand px-6 py-16">
               <Reveal>
-                <h2 className="mb-8 font-heading text-xl text-navy">
+                <h2 className="mb-8 font-heading text-xl text-white">
                   Continue lendo
                 </h2>
               </Reveal>
