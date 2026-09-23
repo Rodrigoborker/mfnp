@@ -23,7 +23,7 @@ const script = Alex_Brush({
 
 export const metadata: Metadata = {
   title: {
-    default: "Meu Flat na Praia — Gestão de imóveis por temporada",
+    default: "Meu Flat na Praia | Gestão de imóveis por temporada",
     template: "%s | Meu Flat na Praia",
   },
   description:

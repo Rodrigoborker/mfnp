@@ -191,21 +191,21 @@ export default function GestaoDeImoveisPage() {
 
         {/* Hero */}
         <Reveal className="mx-auto max-w-[840px] px-6 pt-10 pb-16 text-center">
-          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+          <p className="mb-4 text-[15px] font-medium uppercase tracking-[0.14em] text-orange">
             Gestão de imóveis por temporada
           </p>
-          <h1 className="mb-5 font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
+          <h1 className="mb-5 font-heading text-[34px] leading-[1.15] text-navy sm:text-[42px] lg:text-[46px]">
             Gestão profissional de temporada, do imóvel vazio à reserva
             confirmada.
           </h1>
-          <p className="mx-auto mb-8 max-w-[620px] text-lg leading-relaxed text-ink">
+          <p className="mx-auto mb-8 max-w-[620px] text-xl leading-relaxed text-ink">
             Cuidamos de todo o processo de locação por temporada com
             tecnologia e foco em rentabilidade: você entrega as chaves, a
             gente entrega resultado.
           </p>
           <Link
             href="/para-proprietarios"
-            className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
+            className="inline-block bg-orange px-7 py-4 text-lg text-white hover:bg-orange/90"
           >
             Quero rentabilizar meu imóvel
           </Link>
@@ -229,10 +229,10 @@ export default function GestaoDeImoveisPage() {
               <div key={pillar.id}>
               <section className="px-6 pb-14 pt-8 text-center">
                 <Reveal className="mx-auto max-w-[760px]">
-                  <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+                  <p className="mb-3 text-[15px] font-medium uppercase tracking-[0.14em] text-orange">
                     {pillar.tag}
                   </p>
-                  <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
+                  <h2 className="font-heading text-[30px] text-navy sm:text-[40px]">
                     {pillar.title}
                   </h2>
                 </Reveal>
@@ -248,7 +248,7 @@ export default function GestaoDeImoveisPage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
                   <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
                     <div className="max-w-xl text-white">
-                      <p className="mb-5 text-base leading-relaxed text-white/85">
+                      <p className="mb-5 text-lg leading-relaxed text-white/85">
                         {pillar.intro}
                       </p>
                       <div className="flex flex-col gap-3.5">
@@ -256,10 +256,10 @@ export default function GestaoDeImoveisPage() {
                           <div key={point.title} className="flex items-start gap-3">
                             <Check className="mt-0.5 h-4.5 w-4.5 shrink-0 text-orange-light" aria-hidden />
                             <div>
-                              <div className="mb-0.5 text-[15px] font-semibold text-white">
+                              <div className="mb-0.5 text-[17px] font-semibold text-white">
                                 {point.title}
                               </div>
-                              <div className="text-sm leading-relaxed text-white/80">
+                              <div className="text-base leading-relaxed text-white/80">
                                 {point.desc}
                               </div>
                             </div>
@@ -269,7 +269,7 @@ export default function GestaoDeImoveisPage() {
                       {pillar.link && (
                         <Link
                           href={pillar.link}
-                          className="mt-5 inline-block border-b border-white/70 pb-0.5 text-sm text-white hover:border-orange-light hover:text-orange-light"
+                          className="mt-5 inline-block border-b border-white/70 pb-0.5 text-base text-white hover:border-orange-light hover:text-orange-light"
                         >
                           {pillar.linkLabel}
                         </Link>
@@ -289,13 +289,13 @@ export default function GestaoDeImoveisPage() {
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
               <Reveal className={pillar.link ? "" : ""} delay={0.05}>
                 <div className={isAlt ? "lg:order-2" : ""}>
-                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${isAlt ? "text-white" : "text-orange"}`}>
+                <p className={`mb-3 text-sm font-medium uppercase tracking-[0.14em] ${isAlt ? "text-white" : "text-orange"}`}>
                   {pillar.tag}
                 </p>
-                <h2 className={`mb-4 font-heading text-[26px] sm:text-[30px] ${isAlt ? "text-white" : "text-navy"}`}>
+                <h2 className={`mb-4 font-heading text-[28px] sm:text-[32px] ${isAlt ? "text-white" : "text-navy"}`}>
                   {pillar.title}
                 </h2>
-                <p className={`mb-5 text-base leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
+                <p className={`mb-5 text-lg leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
                   {pillar.intro}
                 </p>
                 <div className="flex flex-col gap-3.5">
@@ -306,10 +306,10 @@ export default function GestaoDeImoveisPage() {
                         aria-hidden
                       />
                       <div>
-                        <div className={`mb-0.5 text-[15px] font-semibold ${isAlt ? "text-white" : "text-navy"}`}>
+                        <div className={`mb-0.5 text-[17px] font-semibold ${isAlt ? "text-white" : "text-navy"}`}>
                           {point.title}
                         </div>
-                        <div className={`text-sm leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
+                        <div className={`text-base leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
                           {point.desc}
                         </div>
                       </div>
@@ -321,8 +321,8 @@ export default function GestaoDeImoveisPage() {
                     href={pillar.link}
                     className={
                       isAlt
-                        ? "mt-5 inline-block border-b border-white/70 pb-0.5 text-sm text-white hover:border-orange-light hover:text-orange-light"
-                        : "mt-5 inline-block border-b border-navy pb-0.5 text-sm text-navy hover:border-orange hover:text-orange"
+                        ? "mt-5 inline-block border-b border-white/70 pb-0.5 text-base text-white hover:border-orange-light hover:text-orange-light"
+                        : "mt-5 inline-block border-b border-navy pb-0.5 text-base text-navy hover:border-orange hover:text-orange"
                     }
                   >
                     {pillar.linkLabel}
@@ -345,10 +345,10 @@ export default function GestaoDeImoveisPage() {
         {/* Canais */}
         <section className="bg-navy">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-white">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-white">
               Distribuição multicanal
             </p>
-            <h2 className="mb-8 font-heading text-[26px] text-white sm:text-[32px]">
+            <h2 className="mb-8 font-heading text-[28px] text-white sm:text-[34px]">
               Seu flat nas maiores plataformas de reservas do mundo
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
@@ -357,10 +357,10 @@ export default function GestaoDeImoveisPage() {
                   key={channel.name}
                   className="min-w-[180px] border border-white/20 px-7 py-5"
                 >
-                  <div className="mb-1.5 font-heading text-base text-white">
+                  <div className="mb-1.5 font-heading text-lg text-white">
                     {channel.name}
                   </div>
-                  <div className="text-[13px] text-footer-text">
+                  <div className="text-[15px] text-footer-text">
                     {channel.desc}
                   </div>
                 </div>
@@ -371,7 +371,7 @@ export default function GestaoDeImoveisPage() {
 
         {/* FAQ */}
         <Reveal className="mx-auto max-w-[820px] px-6 py-24">
-          <h2 className="mb-10 text-center font-heading text-[26px] text-navy sm:text-[30px]">
+          <h2 className="mb-10 text-center font-heading text-[28px] text-navy sm:text-[32px]">
             Perguntas frequentes
           </h2>
           <FaqAccordion items={FAQS} defaultOpenIds={["faq-1"]} />
@@ -380,12 +380,12 @@ export default function GestaoDeImoveisPage() {
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[26px] text-white sm:text-[32px]">
+            <h2 className="mb-4 font-heading text-[28px] text-white sm:text-[34px]">
               Pronto para rentabilizar seu imóvel?
             </h2>
             <Link
               href="/para-proprietarios"
-              className="inline-block bg-orange px-8 py-4 text-base text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-lg text-white hover:bg-orange/90"
             >
               Quero rentabilizar meu imóvel
             </Link>

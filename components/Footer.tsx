@@ -16,8 +16,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-3.5 text-sm font-bold text-white">Empresa</div>
-          <div className="flex flex-col gap-2.5 text-sm">
+          <div className="mb-3.5 text-base font-bold text-white">Empresa</div>
+          <div className="flex flex-col gap-2.5 text-base">
             <Link href="#" className="text-footer-text hover:text-white">
               Sobre
             </Link>
@@ -40,8 +40,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-3.5 text-sm font-bold text-white">Destinos</div>
-          <div className="flex flex-col gap-2.5 text-sm">
+          <div className="mb-3.5 text-base font-bold text-white">Destinos</div>
+          <div className="flex flex-col gap-2.5 text-base">
             <Link href="#" className="text-footer-text hover:text-white">
               Muro Alto
             </Link>
@@ -58,8 +58,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-3.5 text-sm font-bold text-white">Explorar</div>
-          <div className="flex flex-col gap-2.5 text-sm">
+          <div className="mb-3.5 text-base font-bold text-white">Explorar</div>
+          <div className="flex flex-col gap-2.5 text-base">
             <Link href="#" className="text-footer-text hover:text-white">
               Imóveis
             </Link>
@@ -85,8 +85,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-3.5 text-sm font-bold text-white">Contato</div>
-          <div className="flex flex-col gap-2.5 text-sm">
+          <div className="mb-3.5 text-base font-bold text-white">Contato</div>
+          <div className="flex flex-col gap-2.5 text-base">
             <a
               href="https://wa.me/5581994869792"
               className="text-footer-text hover:text-white"
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-brand flex-wrap justify-between gap-3 border-t border-white/10 px-6 py-5 text-[13px] text-footer-text-dim">
+      <div className="mx-auto flex max-w-brand flex-wrap justify-between gap-3 border-t border-white/10 px-6 py-5 text-[15px] text-footer-text-dim">
         <span>
           © {new Date().getFullYear()} Meu Flat na Praia Locações por Temporada.
         </span>

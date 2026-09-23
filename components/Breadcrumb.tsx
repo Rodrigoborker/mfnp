@@ -4,7 +4,7 @@ export default function Breadcrumb({ current }: { current: string }) {
   return (
     <nav
       aria-label="breadcrumb"
-      className="mx-auto max-w-brand px-6 pt-5 text-[13px] text-ink-soft"
+      className="mx-auto max-w-brand px-6 pt-5 text-[15px] text-ink-soft"
     >
       <Link href="/" className="text-ink-soft hover:text-navy">
         Home

@@ -22,7 +22,7 @@ export default function Header() {
             className="h-12 w-auto"
           />
         </Link>
-        <nav className="flex flex-wrap items-center gap-7 text-[13px] font-medium tracking-[0.04em] uppercase">
+        <nav className="flex flex-wrap items-center gap-7 text-[15px] font-medium tracking-[0.04em] uppercase">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}

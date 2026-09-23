@@ -60,7 +60,7 @@ export default async function ArtigoPage({
         <article className="mx-auto max-w-[720px] px-6 pt-12 pb-24">
           <nav
             aria-label="breadcrumb"
-            className="mb-6 text-[13px] text-ink-soft"
+            className="mb-6 text-[15px] text-ink-soft"
           >
             <Link href="/" className="text-ink-soft hover:text-navy">
               Home
@@ -73,14 +73,14 @@ export default async function ArtigoPage({
           </nav>
 
           <Reveal>
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.08em] text-orange">
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.08em] text-orange">
               {article.category} · {readingTime(article.content)} min de
               leitura
             </p>
-            <h1 className="mb-5 font-heading text-[30px] leading-tight text-navy sm:text-[38px]">
+            <h1 className="mb-5 font-heading text-[32px] leading-tight text-navy sm:text-[40px]">
               {article.title}
             </h1>
-            <div className="mb-8 flex items-center gap-3 text-sm text-ink-soft">
+            <div className="mb-8 flex items-center gap-3 text-base text-ink-soft">
               <div className="h-9 w-9 overflow-hidden rounded-full">
                 <ImageSlot placeholder={article.author ?? ""} shape="circle" />
               </div>
@@ -94,7 +94,7 @@ export default async function ArtigoPage({
             <ImageSlot placeholder="Foto real: imóvel administrado, ambiente decorado" />
           </RevealImage>
 
-          <div className="text-[17px] leading-[1.8] text-ink">
+          <div className="text-[19px] leading-[1.8] text-ink">
             {article.content.map((block, i) =>
               block.type === "h2" ? (
                 <h2
@@ -112,12 +112,12 @@ export default async function ArtigoPage({
           </div>
 
           <Reveal className="mt-14 border border-border bg-surface-alt p-8 text-center">
-            <h3 className="mb-3 font-heading text-lg text-white">
+            <h3 className="mb-3 font-heading text-xl text-white">
               Quer saber quanto seu imóvel pode gerar?
             </h3>
             <Link
               href="/para-proprietarios#lead-form"
-              className="inline-block bg-orange px-6 py-3.5 text-[15px] text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-6 py-3.5 text-[17px] text-white hover:bg-orange/90"
             >
               Quero rentabilizar meu imóvel
             </Link>
@@ -139,10 +139,10 @@ export default async function ArtigoPage({
                       href={`/conteudos/${a.slug}`}
                       className="block border border-border bg-surface p-5"
                     >
-                      <p className="mb-2 text-xs font-medium uppercase tracking-[0.08em] text-orange">
+                      <p className="mb-2 text-sm font-medium uppercase tracking-[0.08em] text-orange">
                         {a.category}
                       </p>
-                      <h3 className="font-heading text-[16px] leading-snug text-navy">
+                      <h3 className="font-heading text-[18px] leading-snug text-navy">
                         {a.title}
                       </h3>
                     </Link>

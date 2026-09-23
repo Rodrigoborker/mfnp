@@ -41,7 +41,7 @@ const TRADES = [
   {
     tag: "Marcenaria",
     title: "Equipe própria de marcenaria",
-    desc: "Nada de correr atrás de prestadores terceirizados. Nossa equipe executa a marcenaria com agilidade, qualidade e padronização entre os imóveis administrados.",
+    desc: "Você não precisa correr atrás de prestadores terceirizados. Nossa equipe executa a marcenaria com agilidade, qualidade e padronização entre os imóveis administrados.",
     imgPlaceholder: "Foto real: móveis planejados sob medida",
     alt: false,
   },
@@ -54,7 +54,7 @@ const TRADES = [
   },
   {
     tag: "Pintura e decoração",
-    title: "Pintura e decoração estratégica",
+    title: "Pintura e decoração pensadas para os anúncios",
     desc: "Layouts modernos e enxutos, com paleta de cores e acabamento pensados para ficarem fotogênicos nos anúncios e agradáveis na estadia.",
     imgPlaceholder: "Foto real: ambiente pintado e decorado, pronto para fotos",
     alt: false,
@@ -78,7 +78,7 @@ const FAQS = [
     id: "f1",
     question: "Preciso reformar o imóvel antes de contratar a gestão?",
     answer:
-      "Não necessariamente. Avaliamos o imóvel na visita técnica e definimos junto com você o escopo real de intervenção — da decoração simples a uma montagem completa.",
+      "Não necessariamente. Avaliamos o imóvel na visita técnica e definimos junto com você o escopo real de intervenção, da decoração simples a uma montagem completa.",
   },
   {
     id: "f2",
@@ -107,7 +107,7 @@ export default function MontagemDeFlatsPage() {
       <main>
         <nav
           aria-label="breadcrumb"
-          className="mx-auto max-w-brand px-6 pt-5 text-[13px] text-ink-soft"
+          className="mx-auto max-w-brand px-6 pt-5 text-[15px] text-ink-soft"
         >
           <Link href="/" className="text-ink-soft hover:text-navy">
             Home
@@ -125,10 +125,10 @@ export default function MontagemDeFlatsPage() {
         {/* Hero */}
         <section className="px-6 pb-14 pt-16 text-center">
           <Reveal className="mx-auto max-w-[860px]">
-            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+            <p className="mb-4 text-[15px] font-medium uppercase tracking-[0.14em] text-orange">
               Montagem e decoração de flats
             </p>
-            <h1 className="font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
+            <h1 className="font-heading text-[34px] leading-[1.15] text-navy sm:text-[42px] lg:text-[46px]">
               Do projeto de arquitetura ao flat pronto para hospedar.
             </h1>
           </Reveal>
@@ -145,14 +145,14 @@ export default function MontagemDeFlatsPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
-                <p className="mb-8 text-lg leading-relaxed text-white/90">
+                <p className="mb-8 text-xl leading-relaxed text-white/90">
                   Projetamos, executamos e decoramos o seu imóvel para locação
                   por temporada: arquitetura, marcenaria, elétrica e pintura,
                   com equipe própria e padrão profissional.
                 </p>
                 <Link
                   href="/para-proprietarios"
-                  className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
+                  className="inline-block bg-orange px-7 py-4 text-lg text-white hover:bg-orange/90"
                 >
                   Quero montar e decorar meu flat
                 </Link>
@@ -165,7 +165,7 @@ export default function MontagemDeFlatsPage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-20">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <h2 className="font-heading text-[28px] text-white sm:text-[34px]">
+              <h2 className="font-heading text-[30px] text-white sm:text-[36px]">
                 Um único time cuida de todas as frentes
               </h2>
             </Reveal>
@@ -173,10 +173,10 @@ export default function MontagemDeFlatsPage() {
               {FRONTS.map((front, i) => (
                 <Reveal key={front.title} delay={i * 0.08} className="border-t border-orange-light pt-6">
                   <front.icon className="mb-3.5 h-6 w-6 text-orange-light" aria-hidden />
-                  <h3 className="mb-2 font-heading text-[17px] text-white">
+                  <h3 className="mb-2 font-heading text-[19px] text-white">
                     {front.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-white/70">
+                  <p className="text-base leading-relaxed text-white/70">
                     {front.desc}
                   </p>
                 </Reveal>
@@ -191,18 +191,18 @@ export default function MontagemDeFlatsPage() {
             <ImageSlot placeholder="Foto real: planta baixa ou render do projeto de ambientação" />
           </RevealImage>
           <Reveal>
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.14em] text-orange">
               Projeto de arquitetura
             </p>
-            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
+            <h2 className="mb-4 font-heading text-[28px] text-navy sm:text-[32px]">
               Cada metro pensado para hospedar mais e melhor
             </h2>
-            <p className="mb-4 text-base leading-relaxed text-ink-soft">
+            <p className="mb-4 text-lg leading-relaxed text-ink-soft">
               Antes da execução, desenvolvemos um projeto de ambientação que
               aproveita a metragem do imóvel para maximizar conforto,
               capacidade e apelo visual nos anúncios.
             </p>
-            <p className="text-base leading-relaxed text-ink-soft">
+            <p className="text-lg leading-relaxed text-ink-soft">
               O layout considera fluxo de circulação, iluminação natural e
               os pontos que mais influenciam a decisão de reserva de um
               hóspede de temporada.
@@ -218,13 +218,13 @@ export default function MontagemDeFlatsPage() {
           >
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
               <Reveal className={trade.alt ? "lg:order-2" : ""}>
-                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${trade.alt ? "text-white" : "text-orange"}`}>
+                <p className={`mb-3 text-sm font-medium uppercase tracking-[0.14em] ${trade.alt ? "text-white" : "text-orange"}`}>
                   {trade.tag}
                 </p>
-                <h2 className={`mb-4 font-heading text-[26px] sm:text-[30px] ${trade.alt ? "text-white" : "text-navy"}`}>
+                <h2 className={`mb-4 font-heading text-[28px] sm:text-[32px] ${trade.alt ? "text-white" : "text-navy"}`}>
                   {trade.title}
                 </h2>
-                <p className={`text-base leading-relaxed ${trade.alt ? "text-white/70" : "text-ink-soft"}`}>
+                <p className={`text-lg leading-relaxed ${trade.alt ? "text-white/70" : "text-ink-soft"}`}>
                   {trade.desc}
                 </p>
               </Reveal>
@@ -243,20 +243,20 @@ export default function MontagemDeFlatsPage() {
         <section className="bg-navy">
           <div className="mx-auto max-w-brand px-6 py-20">
             <Reveal>
-              <h2 className="mb-12 text-center font-heading text-[26px] text-white sm:text-[32px]">
+              <h2 className="mb-12 text-center font-heading text-[28px] text-white sm:text-[34px]">
                 Como funciona a montagem do seu flat
               </h2>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8">
               {STEPS.map((step, i) => (
                 <Reveal key={step.n} delay={i * 0.06}>
-                  <div className="mb-3 font-heading text-[17px] text-white">
+                  <div className="mb-3 font-heading text-[19px] text-white">
                     {step.n}
                   </div>
-                  <h3 className="mb-2 font-heading text-base text-white">
+                  <h3 className="mb-2 font-heading text-lg text-white">
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-footer-text">
+                  <p className="text-base leading-relaxed text-footer-text">
                     {step.desc}
                   </p>
                 </Reveal>
@@ -267,7 +267,7 @@ export default function MontagemDeFlatsPage() {
 
         {/* FAQ */}
         <Reveal className="mx-auto max-w-[820px] px-6 py-24">
-          <h2 className="mb-10 text-center font-heading text-[26px] text-navy sm:text-[30px]">
+          <h2 className="mb-10 text-center font-heading text-[28px] text-navy sm:text-[32px]">
             Perguntas frequentes
           </h2>
           <FaqAccordion items={FAQS} />
@@ -276,12 +276,12 @@ export default function MontagemDeFlatsPage() {
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[26px] text-white sm:text-[32px]">
+            <h2 className="mb-4 font-heading text-[28px] text-white sm:text-[34px]">
               Quer um flat pronto para hospedar desde o primeiro dia?
             </h2>
             <Link
               href="/para-proprietarios"
-              className="inline-block bg-orange px-8 py-4 text-base text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-lg text-white hover:bg-orange/90"
             >
               Quero montar e decorar meu flat
             </Link>
