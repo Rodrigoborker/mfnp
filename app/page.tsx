@@ -89,17 +89,17 @@ export default function HomePage() {
           video={<HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />}
         >
           <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-10 text-white sm:pb-16" delay={0.15}>
-            <p className="mb-4 text-[18px] font-medium uppercase tracking-[0.14em] text-white">
+            <p className="mb-4 text-[16px] font-medium uppercase tracking-[0.14em] text-white">
               Gestão de imóveis por temporada
             </p>
-            <h1 className="mb-6 max-w-3xl font-heading text-[34px] leading-[1.15] sm:text-[52px] lg:text-[63px]">
+            <h1 className="mb-6 max-w-3xl font-heading text-[30px] leading-[1.15] sm:text-[40px] lg:text-[48px]">
               A solução{" "}
-              <span className="font-script text-[1.3em] leading-none text-white">
+              <span className="font-script text-[1.1em] leading-none text-orange">
                 definitiva
               </span>{" "}
               para gestão de locações por temporada.
             </h1>
-            <p className="mb-8 max-w-2xl text-[19px] leading-relaxed text-white/85 sm:text-[23px]">
+            <p className="mb-8 max-w-2xl text-[17px] leading-relaxed text-white/85 sm:text-[20px]">
               25 anos de experiência a serviço de sua propriedade. Maximize
               seus ganhos com uma administração profissional, locações
               seguras e alta ocupação, sem se preocupar com a rotina do dia
@@ -108,13 +108,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/para-proprietarios#lead-form"
-                className="bg-orange px-7 py-4 text-[21px] text-white hover:bg-orange/90"
+                className="bg-orange px-7 py-4 text-[19px] text-white hover:bg-orange/90"
               >
                 Quero rentabilizar meu imóvel
               </Link>
               <Link
                 href="/gestao-de-imoveis"
-                className="border border-white/70 px-7 py-4 text-[21px] text-white hover:bg-white/10"
+                className="border border-white/70 px-7 py-4 text-[19px] text-white hover:bg-white/10"
               >
                 Conhecer nossa gestão
               </Link>
