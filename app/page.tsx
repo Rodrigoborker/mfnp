@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
 import Reveal from "@/components/Reveal";
 import RevealImage from "@/components/RevealImage";
+import HeroVideo from "@/components/HeroVideo";
 
 const SERVICES = [
   {
@@ -104,11 +105,7 @@ export default function HomePage() {
         {/* Hero — full-bleed */}
         <section className="relative flex h-[82vh] min-h-[560px] items-end overflow-hidden">
           <RevealImage className="absolute inset-0">
-            <ImageSlot
-              src="/photos/hero-jangada.jpg"
-              placeholder="Jangada em Porto de Galinhas"
-              priority
-            />
+            <HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />
           </RevealImage>
           <div className="absolute inset-0 bg-navy/35" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/35 to-navy/10" />
