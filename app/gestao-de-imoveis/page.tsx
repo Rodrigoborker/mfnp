@@ -195,7 +195,7 @@ export default function GestaoDeImoveisPage() {
             Gestão de imóveis por temporada
           </p>
           <h1 className="mb-5 font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
-            Gestão profissional de Airbnb, do imóvel vazio à reserva
+            Gestão profissional de temporada, do imóvel vazio à reserva
             confirmada.
           </h1>
           <p className="mx-auto mb-8 max-w-[620px] text-lg leading-relaxed text-ink-soft">
