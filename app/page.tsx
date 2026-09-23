@@ -11,7 +11,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
 import Reveal from "@/components/Reveal";
-import RevealImage from "@/components/RevealImage";
 import HeroVideo from "@/components/HeroVideo";
 import ParallaxHero from "@/components/ParallaxHero";
 
@@ -85,7 +84,7 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* Hero — full-bleed, com parallax ao rolar */}
+        {/* Hero — full-bleed, vídeo fixo na tela */}
         <ParallaxHero
           video={<HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />}
         >
@@ -305,32 +304,36 @@ export default function HomePage() {
         </section>
 
         {/* Pagamento direto */}
-        <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <RevealImage className="relative order-2 h-[300px] overflow-hidden lg:order-1 lg:h-[420px]">
+        <section className="relative h-[100vh] min-h-[750px]">
+          <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
               src="/photos/transparencia-financeira.jpg"
               placeholder="Acompanhamento financeiro das reservas e repasses"
-              objectPosition="center 20%"
+              objectPosition="center 25%"
             />
-          </RevealImage>
-          <Reveal className="order-1 lg:order-2">
-            <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
-              Transparência financeira
-            </p>
-            <h2 className="mb-5 font-heading text-[28px] text-navy sm:text-[34px]">
-              Os pagamentos das reservas são feitos diretamente ao
-              proprietário.
-            </h2>
-            <p className="mb-4 text-[17px] leading-relaxed text-ink-soft">
-              O valor de cada reserva cai diretamente na conta cadastrada
-              pelo proprietário. A Meu Flat na Praia não recebe nem retém
-              nenhum valor das hospedagens.
-            </p>
-            <p className="text-[17px] leading-relaxed text-ink-soft">
-              Você acompanha reservas, ocupação e repasses em tempo real pela
-              área exclusiva do proprietário.
-            </p>
-          </Reveal>
+            <div className="absolute inset-0 bg-navy/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/55 to-navy/20" />
+            <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+              <div className="max-w-xl text-white">
+                <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
+                  Transparência financeira
+                </p>
+                <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
+                  Os pagamentos das reservas são feitos diretamente ao
+                  proprietário.
+                </h2>
+                <p className="mb-4 text-[17px] leading-relaxed text-white/85">
+                  O valor de cada reserva cai diretamente na conta cadastrada
+                  pelo proprietário. A Meu Flat na Praia não recebe nem retém
+                  nenhum valor das hospedagens.
+                </p>
+                <p className="text-[17px] leading-relaxed text-white/85">
+                  Você acompanha reservas, ocupação e repasses em tempo real pela
+                  área exclusiva do proprietário.
+                </p>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         {/* Destinos */}
