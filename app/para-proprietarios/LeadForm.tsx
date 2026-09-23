@@ -41,6 +41,10 @@ function buildMessage(data: FormData) {
 
 const subscribe = () => () => {};
 
+// Campos escuros com texto branco, para o que a pessoa digita ficar visível.
+const fieldClass =
+  "w-full rounded-brand border border-border bg-transparent px-3.5 py-3 text-[20px] text-white placeholder:text-white/50 focus:border-orange-light focus:outline-none";
+
 export default function LeadForm() {
   const [sentUrl, setSentUrl] = useState<string | null>(null);
   // Só libera o envio depois da hidratação: antes disso o navegador faria um
@@ -88,7 +92,7 @@ export default function LeadForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 border border-border bg-surface-alt p-8"
+      className="flex flex-col gap-4 border border-border bg-surface-alt p-8 [color-scheme:dark]"
     >
       <input
         type="hidden"
@@ -133,7 +137,7 @@ export default function LeadForm() {
           name="name"
           type="text"
           required
-          className="w-full rounded-brand border border-border px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
+          className={fieldClass}
         />
       </div>
 
@@ -150,7 +154,7 @@ export default function LeadForm() {
           type="tel"
           required
           placeholder="(81) 90000-0000"
-          className="w-full rounded-brand border border-border px-3.5 py-3 text-[20px] placeholder:text-ink-soft/60 focus:border-navy focus:outline-none"
+          className={fieldClass}
         />
       </div>
 
@@ -167,7 +171,7 @@ export default function LeadForm() {
           type="text"
           required
           placeholder="Ex: Porto de Galinhas"
-          className="w-full rounded-brand border border-border px-3.5 py-3 text-[20px] placeholder:text-ink-soft/60 focus:border-navy focus:outline-none"
+          className={fieldClass}
         />
       </div>
 
@@ -182,7 +186,7 @@ export default function LeadForm() {
           id="propertyType"
           name="propertyType"
           defaultValue=""
-          className="w-full rounded-brand border border-border bg-white px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
+          className={fieldClass}
         >
           <option value="">Selecione...</option>
           <option value="flat">Flat</option>
@@ -203,7 +207,7 @@ export default function LeadForm() {
           id="rentalStatus"
           name="rentalStatus"
           defaultValue=""
-          className="w-full rounded-brand border border-border bg-white px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
+          className={fieldClass}
         >
           <option value="">Selecione...</option>
           <option value="sim">Sim</option>
@@ -222,7 +226,7 @@ export default function LeadForm() {
           id="message"
           name="message"
           rows={3}
-          className="w-full resize-y rounded-brand border border-border px-3.5 py-3 text-[20px] focus:border-navy focus:outline-none"
+          className={`${fieldClass} resize-y`}
         />
       </div>
 
