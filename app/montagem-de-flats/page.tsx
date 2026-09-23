@@ -188,7 +188,10 @@ export default function MontagemDeFlatsPage() {
         {/* Detalhe arquitetura */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
           <RevealImage className="relative h-[280px] overflow-hidden lg:h-[360px]">
-            <ImageSlot placeholder="Foto real: planta baixa ou render do projeto de ambientação" />
+            <ImageSlot
+              src="/photos/projeto-arquitetura.png"
+              placeholder="Studio decorado a partir do projeto de ambientação"
+            />
           </RevealImage>
           <Reveal>
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.14em] text-orange">
