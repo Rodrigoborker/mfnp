@@ -111,13 +111,19 @@ export default function HomePage() {
             <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
               Gestão de imóveis por temporada
             </p>
-            <h1 className="mb-6 max-w-2xl font-heading text-[38px] leading-[1.15] sm:text-[52px] lg:text-[64px]">
-              Seu imóvel gerando{" "}
-              <span className="font-script text-[1.35em] leading-none text-orange-light">
-                mais
-              </span>
-              , sem dar mais trabalho.
+            <h1 className="mb-6 max-w-3xl font-heading text-[34px] leading-[1.15] sm:text-[46px] lg:text-[56px]">
+              A solução{" "}
+              <span className="font-script text-[1.3em] leading-none text-orange-light">
+                definitiva
+              </span>{" "}
+              para gestão de locações por temporada.
             </h1>
+            <p className="mb-8 max-w-2xl text-[17px] leading-relaxed text-white/85 sm:text-lg">
+              25 anos de experiência a serviço de sua propriedade. Maximize
+              seus ganhos com uma administração profissional, locações
+              seguras e alta ocupação — sem se preocupar com a rotina do dia
+              a dia.
+            </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/para-proprietarios#lead-form"
