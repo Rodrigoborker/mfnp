@@ -268,39 +268,41 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Montagem de Flats */}
-        <section className="border-y border-border bg-surface-alt">
-          <div className="mx-auto grid max-w-brand grid-cols-1 items-stretch gap-14 px-6 py-24 lg:grid-cols-2">
-            <Reveal className="flex flex-col justify-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
+        {/* Montagem de Flats — full-bleed com parallax */}
+        <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+          <ParallaxImage className="absolute inset-0">
+            <ImageSlot
+              src="/photos/flat-decorado-quarto.jpg"
+              placeholder="Flat decorado e mobiliado após a montagem"
+            />
+          </ParallaxImage>
+          <div className="absolute inset-0 bg-navy/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/35 to-transparent" />
+          <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+            <div className="max-w-xl text-white">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
                 Montagem e decoração completa
               </p>
-              <h2 className="mb-5 font-heading text-[28px] text-navy sm:text-[34px]">
+              <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
                 Do projeto de arquitetura ao flat pronto para hospedar.
               </h2>
-              <p className="mb-4 text-[17px] leading-relaxed text-ink-soft">
+              <p className="mb-4 text-[17px] leading-relaxed text-white/85">
                 Cuidamos de todo o processo de montagem: projeto de
                 arquitetura e ambientação, marcenaria sob medida, instalação
                 elétrica e pintura, executados por equipe própria.
               </p>
-              <p className="mb-7 text-[17px] leading-relaxed text-ink-soft">
+              <p className="mb-7 text-[17px] leading-relaxed text-white/85">
                 Você entrega as chaves. Nós entregamos o flat decorado,
                 fotografado e pronto para receber hóspedes.
               </p>
               <Link
                 href="/montagem-de-flats"
-                className="border-b border-navy pb-0.5 text-[16px] text-navy hover:border-orange hover:text-orange"
+                className="border-b border-white/70 pb-0.5 text-[16px] text-white hover:border-orange-light hover:text-orange-light"
               >
                 Conhecer o serviço de montagem →
               </Link>
-            </Reveal>
-            <ParallaxImage className="min-h-[340px]">
-              <ImageSlot
-                src="/photos/flat-decorado-quarto.jpg"
-                placeholder="Flat decorado e mobiliado após a montagem"
-              />
-            </ParallaxImage>
-          </div>
+            </div>
+          </Reveal>
         </section>
 
         {/* Pagamento direto */}
