@@ -74,33 +74,42 @@ export default function ParaProprietariosPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-16 pb-20 lg:grid-cols-2">
-          <Reveal>
+        <section className="px-6 pb-14 pt-16 text-center">
+          <Reveal className="mx-auto max-w-[860px]">
             <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
               Para proprietários
             </p>
-            <h1 className="mb-5 font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
+            <h1 className="font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
               Transforme seu imóvel em renda, sem abrir mão do controle.
             </h1>
-            <p className="mb-8 max-w-[500px] text-lg leading-relaxed text-ink-soft">
-              Cuidamos de todo o processo, da preparação às reservas,
-              enquanto você acompanha tudo em tempo real e recebe os
-              pagamentos direto na sua conta.
-            </p>
-            <Link
-              href="#lead-form"
-              className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
-            >
-              Quero uma avaliação do meu imóvel
-            </Link>
           </Reveal>
-          <RevealImage className="relative h-[320px] overflow-hidden lg:h-[440px]">
+        </section>
+        <section className="relative h-[100vh] min-h-[750px]">
+          <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
               src="/photos/para-proprietarios-hero.jpg"
               placeholder="Flat decorado e pronto para hospedar"
+              objectPosition="center 45%"
               priority
             />
-          </RevealImage>
+            <div className="absolute inset-0 bg-navy/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
+            <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+              <div className="max-w-xl text-white">
+                <p className="mb-8 text-lg leading-relaxed text-white/90">
+                  Cuidamos de todo o processo, da preparação às reservas,
+                  enquanto você acompanha tudo em tempo real e recebe os
+                  pagamentos direto na sua conta.
+                </p>
+                <Link
+                  href="#lead-form"
+                  className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
+                >
+                  Quero uma avaliação do meu imóvel
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         {/* Pagamento direto */}
