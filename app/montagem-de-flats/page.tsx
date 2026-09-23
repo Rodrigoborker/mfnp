@@ -141,7 +141,7 @@ export default function MontagemDeFlatsPage() {
         <section className="relative h-[100vh] min-h-[750px]">
           <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
-              src="/photos/montagem-flats-hero.png"
+              src="/photos/montagem-flats-hero.jpg"
               placeholder="Flat decorado e mobiliado após a montagem"
               objectPosition="center 55%"
               priority

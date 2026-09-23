@@ -25,7 +25,7 @@ export default function ImageSlot({
         alt={placeholder}
         fill
         priority={priority}
-        sizes="(min-width: 1024px) 50vw, 100vw"
+        sizes="100vw"
         style={{ objectPosition }}
         className={`object-cover ${
           shape === "circle" ? "rounded-full" : ""
