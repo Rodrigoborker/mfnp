@@ -110,7 +110,9 @@ export default function HomePage() {
               priority
             />
           </RevealImage>
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+          <div className="absolute inset-0 bg-navy/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/35 to-navy/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/10 to-transparent" />
           <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-16 text-white" delay={0.15}>
             <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
               Gestão de imóveis por temporada
@@ -423,9 +425,10 @@ export default function HomePage() {
               <Reveal delay={0.1} className="flex items-start gap-5">
                 <div className="relative h-22 w-22 shrink-0 overflow-hidden rounded-full">
                   <ImageSlot
-                    src="/photos/rosana-costa.jpg"
+                    src="/photos/rosana-costa.png"
                     placeholder="Rosana Costa"
                     shape="circle"
+                    objectPosition="center 15%"
                   />
                 </div>
                 <div>

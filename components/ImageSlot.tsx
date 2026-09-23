@@ -7,6 +7,7 @@ type ImageSlotProps = {
   shape?: "rect" | "circle";
   className?: string;
   priority?: boolean;
+  objectPosition?: string;
 };
 
 export default function ImageSlot({
@@ -15,6 +16,7 @@ export default function ImageSlot({
   shape = "rect",
   className = "",
   priority = false,
+  objectPosition = "center",
 }: ImageSlotProps) {
   if (src) {
     return (
@@ -24,6 +26,7 @@ export default function ImageSlot({
         fill
         priority={priority}
         sizes="(min-width: 1024px) 50vw, 100vw"
+        style={{ objectPosition }}
         className={`object-cover ${
           shape === "circle" ? "rounded-full" : ""
         } ${className}`}
