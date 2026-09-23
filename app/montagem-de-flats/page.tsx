@@ -46,10 +46,12 @@ const TRADES = [
     alt: false,
   },
   {
-    tag: "Elétrica",
-    title: "Instalação elétrica completa",
-    desc: "Revisamos e executamos a parte elétrica do imóvel, com segurança e infraestrutura adequada para eletrodomésticos e climatização.",
-    imgPlaceholder: "Foto real: instalação elétrica ou quadro de distribuição",
+    tag: "Projeto de iluminação",
+    title: "Iluminação pensada para cada ambiente",
+    desc: "Planejamos a iluminação junto com o projeto de ambientação: pontos de luz embutidos, luz indireta e pendentes que valorizam a decoração e deixam o flat aconchegante. A parte elétrica é executada por equipe própria, com segurança e infraestrutura adequada para eletrodomésticos e climatização.",
+    imgPlaceholder: "Projeto de iluminação com spots embutidos e parede de pedra",
+    imgSrc: "/photos/projeto-iluminacao.jpg",
+    imgPosition: "center 55%",
     alt: true,
   },
   {
@@ -189,7 +191,7 @@ export default function MontagemDeFlatsPage() {
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
           <RevealImage className="relative h-[280px] overflow-hidden lg:h-[360px]">
             <ImageSlot
-              src="/photos/projeto-arquitetura.png"
+              src="/photos/projeto-arquitetura.jpg"
               placeholder="Studio decorado a partir do projeto de ambientação"
             />
           </RevealImage>
@@ -236,7 +238,11 @@ export default function MontagemDeFlatsPage() {
                   trade.alt ? "lg:order-1" : ""
                 }`}
               >
-                <ImageSlot placeholder={trade.imgPlaceholder} />
+                <ImageSlot
+                  src={trade.imgSrc}
+                  placeholder={trade.imgPlaceholder}
+                  objectPosition={trade.imgPosition}
+                />
               </RevealImage>
             </div>
           </section>
