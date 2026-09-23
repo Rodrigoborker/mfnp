@@ -39,15 +39,6 @@ export default function Footer() {
         <div>
           <div className="mb-3.5 text-[19px] font-bold text-white">Explorar</div>
           <div className="flex flex-col gap-2.5 text-[19px]">
-            <Link href="#" className="text-footer-text hover:text-white">
-              Imóveis
-            </Link>
-            <Link
-              href="/conteudos"
-              className="text-footer-text hover:text-white"
-            >
-              Conteúdos
-            </Link>
             <Link
               href="/gestao-de-imoveis"
               className="text-footer-text hover:text-white"

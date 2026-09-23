@@ -1,40 +1,93 @@
 "use client";
 
-import { useActionState } from "react";
+import { useState, useSyncExternalStore, type FormEvent } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { CheckCircle2 } from "lucide-react";
-import { submitLead, type LeadFormState } from "./actions";
+import { MessageCircle } from "lucide-react";
+import { whatsappUrl } from "@/lib/whatsapp";
+import { saveLead } from "./actions";
 
-const initialState: LeadFormState = { status: "idle" };
+const PROPERTY_TYPES: Record<string, string> = {
+  flat: "Flat",
+  apartamento: "Apartamento",
+  casa: "Casa",
+  outro: "Outro",
+};
+
+const RENTAL_STATUS: Record<string, string> = {
+  sim: "Sim",
+  nao: "Não",
+};
+
+function field(data: FormData, key: string) {
+  return String(data.get(key) ?? "").trim();
+}
+
+function buildMessage(data: FormData) {
+  const lines = [
+    "Olá! Vim pelo site e quero uma avaliação do meu imóvel.",
+    "",
+    `*Nome:* ${field(data, "name")}`,
+    `*WhatsApp:* ${field(data, "phone")}`,
+    `*Localização do imóvel:* ${field(data, "location")}`,
+  ];
+  const type = PROPERTY_TYPES[field(data, "propertyType")];
+  if (type) lines.push(`*Tipo do imóvel:* ${type}`);
+  const rental = RENTAL_STATUS[field(data, "rentalStatus")];
+  if (rental) lines.push(`*Já trabalha com temporada?* ${rental}`);
+  const message = field(data, "message");
+  if (message) lines.push(`*Mensagem:* ${message}`);
+  return lines.join("\n");
+}
+
+const subscribe = () => () => {};
 
 export default function LeadForm() {
-  const [state, formAction, isPending] = useActionState(
-    submitLead,
-    initialState,
-  );
+  const [sentUrl, setSentUrl] = useState<string | null>(null);
+  // Só libera o envio depois da hidratação: antes disso o navegador faria um
+  // envio nativo e os dados iriam parar na URL em vez do WhatsApp.
+  const ready = useSyncExternalStore(subscribe, () => true, () => false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  if (state.status === "success") {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const url = whatsappUrl(buildMessage(data));
+    // Abre o WhatsApp no mesmo gesto do clique, para o navegador não bloquear.
+    window.open(url, "_blank", "noopener,noreferrer");
+    saveLead(data).catch(() => {});
+    setSentUrl(url);
+  }
+
+  if (sentUrl) {
     return (
       <div className="border border-border bg-surface-alt p-10 text-center">
-        <CheckCircle2
+        <MessageCircle
           className="mx-auto mb-4 h-10 w-10 text-orange-light"
           aria-hidden
         />
         <h3 className="mb-2 font-heading text-[23px] font-bold text-white">
-          Recebemos seus dados
+          Falta só enviar no WhatsApp
         </h3>
-        <p className="text-[20px] text-white/70">
-          Nossa equipe entra em contato em breve pelo WhatsApp informado.
+        <p className="mb-6 text-[20px] text-white/70">
+          Abrimos o WhatsApp com seus dados já preenchidos. É só tocar em
+          enviar para falar com a nossa equipe.
         </p>
+        <a
+          href={sentUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-brand bg-orange px-6 py-3.5 text-[20px] font-semibold text-white hover:bg-orange/90"
+        >
+          Abrir o WhatsApp de novo
+        </a>
       </div>
     );
   }
 
   return (
     <form
-      action={formAction}
+      onSubmit={handleSubmit}
       className="flex flex-col gap-4 border border-border bg-surface-alt p-8"
     >
       <input
@@ -173,21 +226,16 @@ export default function LeadForm() {
         />
       </div>
 
-      {state.status === "error" && (
-        <p role="alert" className="text-[19px] font-medium text-red-600">
-          {state.message}
-        </p>
-      )}
-
       <button
         type="submit"
-        disabled={isPending}
+        disabled={!ready}
         className="mt-1 rounded-brand bg-orange px-6 py-3.5 text-[20px] font-semibold text-white hover:bg-orange/90 disabled:opacity-60"
       >
-        {isPending ? "Enviando..." : "Enviar e receber avaliação"}
+        Enviar pelo WhatsApp
       </button>
       <p className="text-center text-[17px] text-white/60">
-        Seus dados são usados apenas para contato.
+        Ao enviar, abrimos o WhatsApp com sua mensagem pronta. Seus dados são
+        usados apenas para contato.
       </p>
     </form>
   );
