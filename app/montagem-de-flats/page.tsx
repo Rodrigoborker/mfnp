@@ -141,8 +141,8 @@ export default function MontagemDeFlatsPage() {
               objectPosition="center 55%"
               priority
             />
-            <div className="absolute inset-0 bg-navy/35" />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-transparent" />
+            <div className="absolute inset-0 bg-navy/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
                 <p className="mb-8 text-lg leading-relaxed text-white/90">
