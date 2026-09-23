@@ -323,8 +323,8 @@ export default function HomePage() {
               placeholder="Acompanhamento financeiro das reservas e repasses"
               objectPosition="center 25%"
             />
-            <div className="absolute inset-0 bg-navy/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/55 to-navy/20" />
+            <div className="absolute inset-0 bg-navy/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/30 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
                 <p className="mb-4 text-[17px] leading-relaxed text-white/85">
