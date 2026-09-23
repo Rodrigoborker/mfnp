@@ -73,7 +73,7 @@ const STEPS = [
 const DESTINATIONS = [
   { slug: "dest-muro-alto", name: "Muro Alto", photo: "/photos/destino-muro-alto.jpg" },
   { slug: "dest-porto", name: "Porto de Galinhas", photo: "/photos/destino-porto-de-galinhas.jpg" },
-  { slug: "dest-tamandare", name: "Tamandaré", photo: "/photos/destino-tamandare.jpg" },
+  { slug: "dest-tamandare", name: "Tamandaré", photo: "/photos/destino-tamandare.webp" },
   { slug: "dest-carneiros", name: "Praia dos Carneiros", photo: undefined },
 ];
 
