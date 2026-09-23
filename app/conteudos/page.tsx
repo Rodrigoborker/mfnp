@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Conteúdos",
   description:
-    "Guias sobre gestão de imóveis por temporada, precificação e os destinos onde atuamos no litoral de PE e AL.",
+    "Guias sobre gestão de imóveis por temporada, precificação e os destinos onde atuamos no litoral de Pernambuco.",
 };
 
 const CATEGORIES = ["Todos", "Gestão", "Destinos"];
@@ -38,7 +38,7 @@ export default async function ConteudosPage({
           </h1>
           <p className="max-w-[600px] text-base text-ink-soft">
             Conteúdo prático sobre Airbnb, precificação e os destinos onde
-            atuamos no litoral de PE e AL.
+            atuamos no litoral de Pernambuco.
           </p>
         </Reveal>
 

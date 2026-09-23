@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Meu Flat na Praia",
   },
   description:
-    "Gestão profissional de imóveis por temporada no litoral de Pernambuco e Alagoas: preparação do imóvel, reservas, precificação e distribuição multicanal.",
+    "Gestão profissional de imóveis por temporada no litoral de Pernambuco: preparação do imóvel, reservas, precificação e distribuição multicanal.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

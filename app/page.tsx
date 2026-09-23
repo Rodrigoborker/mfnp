@@ -17,12 +17,12 @@ const SERVICES = [
   {
     icon: Hammer,
     title: "Montagem e decoração",
-    desc: "Projeto de arquitetura, marcenaria, elétrica e pintura com equipe própria. Você entrega as chaves, recebe o flat pronto para hospedar.",
+    desc: "Da marcenaria sob medida à instalação elétrica, pintura e decoração. Você entrega as chaves, nós entregamos o flat pronto para receber hóspedes.",
   },
   {
     icon: CalendarCheck,
     title: "Gestão de reservas e canais",
-    desc: "Anúncios e calendário unificado em Airbnb, Booking, Decolar e Google Vacation Rentals.",
+    desc: "Anúncios profissionais e fotos atrativas em Airbnb, Booking, Decolar.com e Google VR, com precificação automatizada.",
   },
   {
     icon: TrendingUp,
@@ -31,13 +31,13 @@ const SERVICES = [
   },
   {
     icon: Megaphone,
-    title: "Marketing digital",
-    desc: "Tráfego pago, SEO local e redes sociais para manter a ocupação alta.",
+    title: "Marketing digital que vende",
+    desc: "Tráfego pago, SEO local e redes sociais para manter seu imóvel sempre reservado.",
   },
   {
     icon: Headphones,
-    title: "Atendimento 24h",
-    desc: "Check-in, suporte ao hóspede, limpeza e enxoval sob nosso controle.",
+    title: "Atendimento de ponta a ponta",
+    desc: "Check-in, suporte durante a estadia, limpeza e gestão do enxoval: tudo sob nosso controle para garantir nota máxima.",
   },
   {
     icon: BarChart3,
@@ -121,7 +121,7 @@ export default function HomePage() {
             <p className="mb-8 max-w-2xl text-[17px] leading-relaxed text-white/85 sm:text-lg">
               25 anos de experiência a serviço de sua propriedade. Maximize
               seus ganhos com uma administração profissional, locações
-              seguras e alta ocupação — sem se preocupar com a rotina do dia
+              seguras e alta ocupação, sem se preocupar com a rotina do dia
               a dia.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -138,6 +138,30 @@ export default function HomePage() {
                 Conhecer nossa gestão
               </Link>
             </div>
+          </Reveal>
+        </section>
+
+        {/* Locação eficiente + Cuidamos de todo o processo */}
+        <section className="mx-auto grid max-w-brand grid-cols-1 gap-14 px-6 py-20 sm:grid-cols-2">
+          <Reveal>
+            <h2 className="mb-4 font-heading text-[24px] text-navy sm:text-[28px]">
+              Locação eficiente e segura para o seu imóvel.
+            </h2>
+            <p className="text-[17px] leading-relaxed text-ink-soft">
+              Cuidamos de tudo pra você: reservas em tempo real, atendimento
+              24h aos hóspedes e um controle de qualidade que garante sua
+              tranquilidade.
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h2 className="mb-4 font-heading text-[24px] text-navy sm:text-[28px]">
+              Cuidamos de todo o processo.
+            </h2>
+            <p className="text-[17px] leading-relaxed text-ink-soft">
+              Vendemos, acompanhamos a obra, ajudamos com o registro no
+              cartório, montamos o projeto de decoração e administramos seu
+              imóvel.
+            </p>
           </Reveal>
         </section>
 
@@ -159,7 +183,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div>
-                <div className="font-heading text-[30px] text-navy">6</div>
+                <div className="font-heading text-[30px] text-navy">4</div>
                 <div className="text-[13px] text-ink-soft">
                   destinos atendidos no litoral
                 </div>
@@ -326,7 +350,7 @@ export default function HomePage() {
                 Onde atuamos
               </p>
               <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
-                Destinos atendidos no litoral de PE e AL
+                Destinos atendidos no litoral de Pernambuco
               </h2>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">

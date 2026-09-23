@@ -11,12 +11,8 @@ export default function Footer() {
             alt="Meu Flat na Praia"
             width={676}
             height={316}
-            className="mb-4 h-10 w-auto"
+            className="h-10 w-auto"
           />
-          <p className="max-w-60 text-sm leading-6 text-footer-text">
-            Administração profissional de imóveis por temporada no litoral de
-            Pernambuco e Alagoas.
-          </p>
         </div>
 
         <div>
@@ -47,6 +43,9 @@ export default function Footer() {
           <div className="mb-3.5 text-sm font-bold text-white">Destinos</div>
           <div className="flex flex-col gap-2.5 text-sm">
             <Link href="#" className="text-footer-text hover:text-white">
+              Muro Alto
+            </Link>
+            <Link href="#" className="text-footer-text hover:text-white">
               Porto de Galinhas
             </Link>
             <Link href="#" className="text-footer-text hover:text-white">
@@ -74,7 +73,7 @@ export default function Footer() {
               href="/gestao-de-imoveis"
               className="text-footer-text hover:text-white"
             >
-              Gestão de Airbnb
+              Gestão por temporada
             </Link>
             <Link
               href="/montagem-de-flats"
