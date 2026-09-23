@@ -198,7 +198,7 @@ export default function GestaoDeImoveisPage() {
             Gestão profissional de temporada, do imóvel vazio à reserva
             confirmada.
           </h1>
-          <p className="mx-auto mb-8 max-w-[620px] text-lg leading-relaxed text-ink-soft">
+          <p className="mx-auto mb-8 max-w-[620px] text-lg leading-relaxed text-ink">
             Cuidamos de todo o processo de locação por temporada com
             tecnologia e foco em rentabilidade: você entrega as chaves, a
             gente entrega resultado.
