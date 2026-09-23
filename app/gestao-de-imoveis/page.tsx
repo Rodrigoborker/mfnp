@@ -224,6 +224,57 @@ export default function GestaoDeImoveisPage() {
         {/* Pilares */}
         {PILLARS.map((pillar, i) => {
           const isAlt = i % 2 === 1;
+          if (i === 0) {
+            return (
+              <section key={pillar.id} className="relative h-[120vh] min-h-[860px]">
+                <div className="sticky top-0 h-[85vh] min-h-[620px] overflow-hidden">
+                  <ImageSlot
+                    src="/photos/preparacao-mare-alta.jpg"
+                    placeholder="Flat decorado e equipado após a preparação"
+                    objectPosition="center 60%"
+                  />
+                  <div className="absolute inset-0 bg-navy/45" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/50 to-transparent" />
+                  <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+                    <div className="max-w-xl text-white">
+                      <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-white">
+                        {pillar.tag}
+                      </p>
+                      <h2 className="mb-4 font-heading text-[26px] sm:text-[34px]">
+                        {pillar.title}
+                      </h2>
+                      <p className="mb-5 text-base leading-relaxed text-white/85">
+                        {pillar.intro}
+                      </p>
+                      <div className="flex flex-col gap-3.5">
+                        {pillar.points.map((point) => (
+                          <div key={point.title} className="flex items-start gap-3">
+                            <Check className="mt-0.5 h-4.5 w-4.5 shrink-0 text-orange-light" aria-hidden />
+                            <div>
+                              <div className="mb-0.5 text-[15px] font-semibold text-white">
+                                {point.title}
+                              </div>
+                              <div className="text-sm leading-relaxed text-white/80">
+                                {point.desc}
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      {pillar.link && (
+                        <Link
+                          href={pillar.link}
+                          className="mt-5 inline-block border-b border-white/70 pb-0.5 text-sm text-white hover:border-orange-light hover:text-orange-light"
+                        >
+                          {pillar.linkLabel}
+                        </Link>
+                      )}
+                    </div>
+                  </Reveal>
+                </div>
+              </section>
+            );
+          }
           return (
           <section
             key={pillar.id}
