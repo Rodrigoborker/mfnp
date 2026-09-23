@@ -148,15 +148,15 @@ export default function HomePage() {
 
         {/* Autoridade */}
         <section className="border-b border-border bg-surface-alt">
-          <Reveal className="mx-auto flex max-w-brand flex-wrap items-center justify-between gap-8 px-6 py-12">
-            <p className="max-w-[640px] text-[24px] leading-relaxed text-white/70">
+          <Reveal className="mx-auto flex max-w-brand flex-col items-center gap-10 px-6 py-14 text-center">
+            <p className="max-w-[760px] text-[24px] leading-relaxed text-white/70">
               <strong className="font-normal text-white">
                 25 anos de experiência em hotelaria
               </strong>{" "}
               no litoral de Pernambuco, à frente da gestão de propriedades por
               temporada em Porto de Galinhas e região.
             </p>
-            <div className="flex flex-wrap gap-10">
+            <div className="flex flex-wrap justify-center gap-x-14 gap-y-8">
               <div>
                 <div className="font-heading text-[36px] text-white">25 anos</div>
                 <div className="text-[18px] text-white/70">

@@ -61,7 +61,9 @@ const TRADES = [
     tag: "Pintura e decoração",
     title: "Pintura e decoração pensadas para os anúncios",
     desc: "Layouts modernos e enxutos, com paleta de cores e acabamento pensados para ficarem fotogênicos nos anúncios e agradáveis na estadia.",
-    imgPlaceholder: "Foto real: ambiente pintado e decorado, pronto para fotos",
+    imgPlaceholder: "Sala decorada com vista para o mar, pintura e iluminação prontas para os anúncios",
+    imgSrc: "/photos/pintura-decoracao.jpg",
+    imgPosition: "center 50%",
     alt: false,
   },
 ];

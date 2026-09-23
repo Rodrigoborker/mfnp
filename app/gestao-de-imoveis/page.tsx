@@ -141,7 +141,8 @@ const PILLARS: Pillar[] = [
     id: "p5",
     tag: "Alcance",
     title: "Site próprio para reservas diretas",
-    imgPlaceholder: "Foto real: página de reserva direta em um notebook",
+    imgPlaceholder: "Site próprio de reservas diretas do Meu Flat na Praia",
+    imgSrc: "/photos/site-reservas-diretas.jpg",
     intro:
       "Além das grandes plataformas, seu flat ganha uma vitrine própria: reservas diretas, sem comissão de terceiros.",
     points: [
