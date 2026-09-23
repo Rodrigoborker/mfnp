@@ -177,7 +177,7 @@ export default function ParaProprietariosPage() {
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
               {STEPS.map((step, i) => (
                 <Reveal key={step.n} delay={i * 0.08}>
-                  <div className="mb-3 font-heading text-[17px] text-orange-light">
+                  <div className="mb-3 font-heading text-[17px] text-white">
                     {step.n}
                   </div>
                   <h3 className="mb-2 font-heading text-[18px] text-white">

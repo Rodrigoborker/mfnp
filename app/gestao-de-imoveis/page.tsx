@@ -228,7 +228,7 @@ export default function GestaoDeImoveisPage() {
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
               <Reveal className={pillar.link ? "" : ""} delay={0.05}>
                 <div className={isAlt ? "lg:order-2" : ""}>
-                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${isAlt ? "text-orange-light" : "text-orange"}`}>
+                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${isAlt ? "text-white" : "text-orange"}`}>
                   {pillar.tag}
                 </p>
                 <h2 className={`mb-4 font-heading text-[26px] sm:text-[30px] ${isAlt ? "text-white" : "text-navy"}`}>
@@ -284,7 +284,7 @@ export default function GestaoDeImoveisPage() {
         {/* Canais */}
         <section className="bg-navy">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-orange-light">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-white">
               Distribuição multicanal
             </p>
             <h2 className="mb-8 font-heading text-[26px] text-white sm:text-[32px]">

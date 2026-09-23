@@ -205,7 +205,7 @@ export default function MontagemDeFlatsPage() {
           >
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
               <Reveal className={trade.alt ? "lg:order-2" : ""}>
-                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${trade.alt ? "text-orange-light" : "text-orange"}`}>
+                <p className={`mb-3 text-xs font-medium uppercase tracking-[0.14em] ${trade.alt ? "text-white" : "text-orange"}`}>
                   {trade.tag}
                 </p>
                 <h2 className={`mb-4 font-heading text-[26px] sm:text-[30px] ${trade.alt ? "text-white" : "text-navy"}`}>
@@ -237,7 +237,7 @@ export default function MontagemDeFlatsPage() {
             <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8">
               {STEPS.map((step, i) => (
                 <Reveal key={step.n} delay={i * 0.06}>
-                  <div className="mb-3 font-heading text-[17px] text-orange-light">
+                  <div className="mb-3 font-heading text-[17px] text-white">
                     {step.n}
                   </div>
                   <h3 className="mb-2 font-heading text-base text-white">

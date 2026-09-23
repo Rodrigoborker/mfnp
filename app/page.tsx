@@ -242,7 +242,7 @@ export default function HomePage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
                 Como funciona
               </p>
               <h2 className="font-heading text-[28px] text-white sm:text-[38px]">
@@ -252,7 +252,7 @@ export default function HomePage() {
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
               {STEPS.map((step, i) => (
                 <Reveal key={step.n} delay={i * 0.08}>
-                  <div className="mb-3 font-heading text-[18px] text-orange-light">
+                  <div className="mb-3 font-heading text-[18px] text-white">
                     {step.n}
                   </div>
                   <h3 className="mb-2 font-heading text-[19px] text-white">
@@ -278,7 +278,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/35 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
-                <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+                <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
                   Montagem e decoração completa
                 </p>
                 <h2 className="mb-5 font-heading text-[28px] sm:text-[34px]">
@@ -333,7 +333,7 @@ export default function HomePage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
                 Onde atuamos
               </p>
               <h2 className="font-heading text-[28px] text-white sm:text-[38px]">
@@ -377,7 +377,7 @@ export default function HomePage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
             <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white">
                 Quem administra
               </p>
               <h2 className="font-heading text-[28px] text-white sm:text-[38px]">
@@ -398,7 +398,7 @@ export default function HomePage() {
                   <h3 className="mb-0.5 font-heading text-[19px] text-white">
                     Rodrigo Montenegro
                   </h3>
-                  <p className="mb-2 text-[13px] font-medium text-orange-light">
+                  <p className="mb-2 text-[13px] font-medium text-white">
                     Corretor de imóveis · CRECI-PE 16191
                   </p>
                   <p className="text-[15px] leading-relaxed text-white/70">
@@ -421,7 +421,7 @@ export default function HomePage() {
                   <h3 className="mb-0.5 font-heading text-[19px] text-white">
                     Rosana Costa
                   </h3>
-                  <p className="mb-2 text-[13px] font-medium text-orange-light">
+                  <p className="mb-2 text-[13px] font-medium text-white">
                     Administradora
                   </p>
                   <p className="text-[15px] leading-relaxed text-white/70">
@@ -440,7 +440,7 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-brand px-6 py-24 text-center">
             <h2 className="mb-4 font-heading text-[30px] text-white sm:text-[42px]">
               Quer saber quanto seu{" "}
-              <span className="font-script text-[1.3em] text-orange-light">
+              <span className="font-script text-[1.3em] text-white">
                 imóvel
               </span>{" "}
               pode gerar?
