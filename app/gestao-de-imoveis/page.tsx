@@ -213,7 +213,11 @@ export default function GestaoDeImoveisPage() {
 
         <RevealImage className="mx-auto max-w-brand px-6 pb-20">
           <div className="relative h-[420px] overflow-hidden">
-            <ImageSlot placeholder="Foto real: equipe preparando um flat ou vista do imóvel" />
+            <ImageSlot
+              src="/photos/rodrigo-rosana-013.jpg"
+              placeholder="Rodrigo e Rosana em reunião de gestão"
+              objectPosition="center 45%"
+            />
           </div>
         </RevealImage>
 
