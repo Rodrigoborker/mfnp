@@ -95,7 +95,11 @@ export default function ParaProprietariosPage() {
             </Link>
           </Reveal>
           <RevealImage className="relative h-[320px] overflow-hidden lg:h-[440px]">
-            <ImageSlot placeholder="Foto real: proprietário entregando as chaves ou vista do flat" />
+            <ImageSlot
+              src="/photos/para-proprietarios-hero.jpg"
+              placeholder="Flat decorado e pronto para hospedar"
+              priority
+            />
           </RevealImage>
         </section>
 
