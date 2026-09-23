@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
+import Reveal from "@/components/Reveal";
 import { getArticles, readingTime } from "@/lib/articles";
 
 export const revalidate = 3600;
@@ -28,18 +29,18 @@ export default async function ConteudosPage({
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-brand px-6 pt-14 pb-6">
-          <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+        <Reveal className="mx-auto max-w-brand px-6 pt-14 pb-6">
+          <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
             Conteúdos
           </p>
-          <h1 className="mb-2 font-heading text-[28px] font-extrabold text-navy sm:text-[38px]">
+          <h1 className="mb-2 font-heading text-[30px] text-navy sm:text-[40px]">
             Guias sobre gestão de imóveis por temporada
           </h1>
           <p className="max-w-[600px] text-base text-ink-soft">
             Conteúdo prático sobre Airbnb, precificação e os destinos onde
             atuamos no litoral de PE e AL.
           </p>
-        </section>
+        </Reveal>
 
         <section className="mx-auto max-w-brand px-6 pt-6">
           <div className="flex flex-wrap gap-2.5">
@@ -49,10 +50,10 @@ export default async function ConteudosPage({
                 <Link
                   key={cat}
                   href={cat === "Todos" ? "/conteudos" : `/conteudos?category=${encodeURIComponent(cat)}`}
-                  className={`rounded-full border px-4.5 py-2 text-[13px] font-semibold ${
+                  className={`border px-4.5 py-2 text-[13px] font-medium ${
                     isActive
                       ? "border-navy bg-navy text-white"
-                      : "border-border bg-white text-navy"
+                      : "border-border bg-surface text-navy"
                   }`}
                 >
                   {cat}
@@ -69,25 +70,23 @@ export default async function ConteudosPage({
             </p>
           ) : (
             <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
-              {articles.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/conteudos/${article.slug}`}
-                  className="block"
-                >
-                  <div className="mb-4 h-[180px]">
-                    <ImageSlot placeholder={article.title} />
-                  </div>
-                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.04em] text-orange">
-                    {article.category} · {readingTime(article.content)} min
-                  </p>
-                  <h3 className="mb-2 font-heading text-lg font-bold leading-snug text-navy">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-ink-soft">
-                    {article.excerpt}
-                  </p>
-                </Link>
+              {articles.map((article, i) => (
+                <Reveal key={article.slug} delay={i * 0.06}>
+                  <Link href={`/conteudos/${article.slug}`} className="block">
+                    <div className="mb-4 h-[190px] overflow-hidden">
+                      <ImageSlot placeholder={article.title} />
+                    </div>
+                    <p className="mb-2 text-xs font-medium uppercase tracking-[0.08em] text-orange">
+                      {article.category} · {readingTime(article.content)} min
+                    </p>
+                    <h3 className="mb-2 font-heading text-lg leading-snug text-navy">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-ink-soft">
+                      {article.excerpt}
+                    </p>
+                  </Link>
+                </Reveal>
               ))}
             </div>
           )}

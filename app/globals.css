@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #123a59;
-  --color-navy-dark: #092d47;
-  --color-orange: #ff4b12;
-  --color-orange-light: #ff9b7a;
-  --color-ink: #252525;
-  --color-ink-soft: #666666;
-  --color-surface: #ffffff;
-  --color-surface-alt: #f6f7f8;
-  --color-border: #e5e7e9;
-  --color-footer-text: #a9bbc8;
-  --color-footer-text-dim: #7f94a2;
+  /* Editorial travel palette — warm cream & ink, terracotta accent */
+  --color-navy: #241f1a;
+  --color-navy-dark: #1a1512;
+  --color-orange: #b3572f;
+  --color-orange-light: #d9a679;
+  --color-ink: #2b2620;
+  --color-ink-soft: #7a7166;
+  --color-surface: #f8f5ef;
+  --color-surface-alt: #ece4d5;
+  --color-border: #ddd2c0;
+  --color-footer-text: #cbbfa9;
+  --color-footer-text-dim: #9c8f78;
 
-  --font-heading: var(--font-montserrat), Arial, sans-serif;
-  --font-sans: var(--font-inter), Arial, sans-serif;
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-cormorant), Georgia, serif;
+  --font-script: var(--font-script), cursive;
 
-  --radius-brand: 4px;
+  --radius-brand: 0px;
 
   --container-brand: 1240px;
 }
@@ -25,4 +27,8 @@ body {
   background: var(--color-surface);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }

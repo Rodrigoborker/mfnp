@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
 import FaqAccordion from "@/components/FaqAccordion";
+import Reveal from "@/components/Reveal";
+import RevealImage from "@/components/RevealImage";
 
 export const metadata: Metadata = {
   title: "Montagem e decoração de flats",
@@ -122,11 +124,11 @@ export default function MontagemDeFlatsPage() {
 
         {/* Hero */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-16 lg:grid-cols-2">
-          <div>
-            <p className="mb-4 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+          <Reveal>
+            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
               Montagem e decoração de flats
             </p>
-            <h1 className="mb-5 font-heading text-[30px] font-extrabold leading-[1.15] text-navy sm:text-[38px] lg:text-[44px]">
+            <h1 className="mb-5 font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
               Do projeto de arquitetura ao flat pronto para hospedar.
             </h1>
             <p className="mb-8 max-w-[520px] text-lg leading-relaxed text-ink-soft">
@@ -136,38 +138,35 @@ export default function MontagemDeFlatsPage() {
             </p>
             <Link
               href="/para-proprietarios"
-              className="inline-block rounded-brand bg-orange px-7 py-4 text-base font-semibold text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
             >
               Quero montar e decorar meu flat
             </Link>
-          </div>
-          <div className="h-[320px] overflow-hidden rounded-sm lg:h-[440px]">
+          </Reveal>
+          <RevealImage className="h-[320px] overflow-hidden lg:h-[440px]">
             <ImageSlot placeholder="Foto real: flat decorado e mobiliado, antes/depois da montagem" />
-          </div>
+          </RevealImage>
         </section>
 
         {/* 4 frentes */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-20">
-            <div className="mx-auto mb-14 max-w-[640px] text-center">
-              <h2 className="font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
+            <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+              <h2 className="font-heading text-[28px] text-navy sm:text-[34px]">
                 Um único time cuida de todas as frentes
               </h2>
-            </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-px border border-border bg-border">
-              {FRONTS.map((front) => (
-                <div key={front.title} className="bg-white p-8">
-                  <front.icon
-                    className="mb-3.5 h-6.5 w-6.5 text-orange"
-                    aria-hidden
-                  />
-                  <h3 className="mb-2 font-heading text-base font-bold text-navy">
+            </Reveal>
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              {FRONTS.map((front, i) => (
+                <Reveal key={front.title} delay={i * 0.08} className="border-t border-orange pt-6">
+                  <front.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
+                  <h3 className="mb-2 font-heading text-[17px] text-navy">
                     {front.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-ink-soft">
                     {front.desc}
                   </p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -175,14 +174,14 @@ export default function MontagemDeFlatsPage() {
 
         {/* Detalhe arquitetura */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <div className="h-[280px] overflow-hidden rounded-sm lg:h-[360px]">
+          <RevealImage className="h-[280px] overflow-hidden lg:h-[360px]">
             <ImageSlot placeholder="Foto real: planta baixa ou render do projeto de ambientação" />
-          </div>
-          <div>
-            <p className="mb-3 font-heading text-xs font-bold uppercase tracking-[0.08em] text-orange">
+          </RevealImage>
+          <Reveal>
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
               Projeto de arquitetura
             </p>
-            <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
               Cada metro pensado para hospedar mais e melhor
             </h2>
             <p className="mb-4 text-base leading-relaxed text-ink-soft">
@@ -195,7 +194,7 @@ export default function MontagemDeFlatsPage() {
               os pontos que mais influenciam a decisão de reserva de um
               hóspede de temporada.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         {/* Marcenaria / Elétrica / Pintura */}
@@ -205,24 +204,24 @@ export default function MontagemDeFlatsPage() {
             className={trade.alt ? "border-y border-border bg-surface-alt" : ""}
           >
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
-              <div className={trade.alt ? "lg:order-2" : ""}>
-                <p className="mb-3 font-heading text-xs font-bold uppercase tracking-[0.08em] text-orange">
+              <Reveal className={trade.alt ? "lg:order-2" : ""}>
+                <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
                   {trade.tag}
                 </p>
-                <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+                <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
                   {trade.title}
                 </h2>
                 <p className="text-base leading-relaxed text-ink-soft">
                   {trade.desc}
                 </p>
-              </div>
-              <div
-                className={`h-[280px] overflow-hidden rounded-sm lg:h-[320px] ${
+              </Reveal>
+              <RevealImage
+                className={`h-[280px] overflow-hidden lg:h-[320px] ${
                   trade.alt ? "lg:order-1" : ""
                 }`}
               >
                 <ImageSlot placeholder={trade.imgPlaceholder} />
-              </div>
+              </RevealImage>
             </div>
           </section>
         ))}
@@ -230,48 +229,50 @@ export default function MontagemDeFlatsPage() {
         {/* Processo */}
         <section className="bg-navy">
           <div className="mx-auto max-w-brand px-6 py-20">
-            <h2 className="mb-12 text-center font-heading text-[24px] font-extrabold text-white sm:text-[32px]">
-              Como funciona a montagem do seu flat
-            </h2>
+            <Reveal>
+              <h2 className="mb-12 text-center font-heading text-[26px] text-white sm:text-[32px]">
+                Como funciona a montagem do seu flat
+              </h2>
+            </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8">
-              {STEPS.map((step) => (
-                <div key={step.n}>
-                  <div className="mb-3 font-heading text-[15px] font-extrabold text-orange-light">
+              {STEPS.map((step, i) => (
+                <Reveal key={step.n} delay={i * 0.06}>
+                  <div className="mb-3 font-heading text-[17px] text-orange-light">
                     {step.n}
                   </div>
-                  <h3 className="mb-2 font-heading text-base font-bold text-white">
+                  <h3 className="mb-2 font-heading text-base text-white">
                     {step.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-footer-text">
                     {step.desc}
                   </p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section className="mx-auto max-w-[820px] px-6 py-24">
-          <h2 className="mb-10 text-center font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+        <Reveal className="mx-auto max-w-[820px] px-6 py-24">
+          <h2 className="mb-10 text-center font-heading text-[26px] text-navy sm:text-[30px]">
             Perguntas frequentes
           </h2>
           <FaqAccordion items={FAQS} />
-        </section>
+        </Reveal>
 
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
-          <div className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
+          <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
+            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[32px]">
               Quer um flat pronto para hospedar desde o primeiro dia?
             </h2>
             <Link
               href="/para-proprietarios"
-              className="inline-block rounded-brand bg-orange px-8 py-4 text-base font-semibold text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-base text-white hover:bg-orange/90"
             >
               Quero montar e decorar meu flat
             </Link>
-          </div>
+          </Reveal>
         </section>
       </main>
       <Footer />

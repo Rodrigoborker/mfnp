@@ -1,13 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-navy-dark text-surface-alt">
       <div className="mx-auto grid max-w-brand grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-10 px-6 py-16 pb-8">
         <div>
-          <div className="mb-3 font-heading text-lg font-extrabold text-white">
-            Meu Flat na Praia
-          </div>
+          <Image
+            src="/brand/logo-branco.png"
+            alt="Meu Flat na Praia"
+            width={676}
+            height={316}
+            className="mb-4 h-10 w-auto"
+          />
           <p className="max-w-60 text-sm leading-6 text-footer-text">
             Administração profissional de imóveis por temporada no litoral de
             Pernambuco e Alagoas.

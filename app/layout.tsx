@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, Alex_Brush } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+});
+
+const script = Alex_Brush({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +32,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={`${montserrat.variable} ${inter.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${playfair.variable} ${cormorant.variable} ${script.variable}`}
+    >
       <body className="flex min-h-screen flex-col font-sans text-ink antialiased">
         {children}
       </body>

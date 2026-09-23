@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import ImageSlot from "@/components/ImageSlot";
 import FaqAccordion from "@/components/FaqAccordion";
+import Reveal from "@/components/Reveal";
+import RevealImage from "@/components/RevealImage";
 
 export const metadata: Metadata = {
   title: "Gestão de imóveis por temporada",
@@ -188,11 +190,11 @@ export default function GestaoDeImoveisPage() {
         <Breadcrumb current="Gestão de imóveis por temporada" />
 
         {/* Hero */}
-        <section className="mx-auto max-w-[840px] px-6 pt-10 pb-16 text-center">
-          <p className="mb-4 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+        <Reveal className="mx-auto max-w-[840px] px-6 pt-10 pb-16 text-center">
+          <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
             Gestão de imóveis por temporada
           </p>
-          <h1 className="mb-5 font-heading text-[30px] font-extrabold leading-[1.15] text-navy sm:text-[38px] lg:text-[44px]">
+          <h1 className="mb-5 font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
             Gestão profissional de Airbnb, do imóvel vazio à reserva
             confirmada.
           </h1>
@@ -203,17 +205,17 @@ export default function GestaoDeImoveisPage() {
           </p>
           <Link
             href="/para-proprietarios"
-            className="inline-block rounded-brand bg-orange px-7 py-4 text-base font-semibold text-white hover:bg-orange/90"
+            className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
           >
             Quero rentabilizar meu imóvel
           </Link>
-        </section>
+        </Reveal>
 
-        <div className="mx-auto max-w-brand px-6 pb-20">
-          <div className="h-[420px] overflow-hidden rounded-sm">
+        <RevealImage className="mx-auto max-w-brand px-6 pb-20">
+          <div className="h-[420px] overflow-hidden">
             <ImageSlot placeholder="Foto real: equipe preparando um flat ou vista do imóvel" />
           </div>
-        </div>
+        </RevealImage>
 
         {/* Pilares */}
         {PILLARS.map((pillar, i) => (
@@ -222,11 +224,12 @@ export default function GestaoDeImoveisPage() {
             className={i % 2 === 1 ? "border-y border-border bg-surface-alt" : ""}
           >
             <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
-              <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                <p className="mb-3 font-heading text-xs font-bold uppercase tracking-[0.08em] text-orange">
+              <Reveal className={pillar.link ? "" : ""} delay={0.05}>
+                <div className={i % 2 === 1 ? "lg:order-2" : ""}>
+                <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
                   {pillar.tag}
                 </p>
-                <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+                <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
                   {pillar.title}
                 </h2>
                 <p className="mb-5 text-base leading-relaxed text-ink-soft">
@@ -253,39 +256,40 @@ export default function GestaoDeImoveisPage() {
                 {pillar.link && (
                   <Link
                     href={pillar.link}
-                    className="mt-5 inline-block text-sm font-semibold text-navy hover:text-orange"
+                    className="mt-5 inline-block border-b border-navy pb-0.5 text-sm text-navy hover:border-orange hover:text-orange"
                   >
                     {pillar.linkLabel}
                   </Link>
                 )}
-              </div>
-              <div
-                className={`h-[340px] overflow-hidden rounded-sm ${
+                </div>
+              </Reveal>
+              <RevealImage
+                className={`h-[340px] overflow-hidden ${
                   i % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
                 <ImageSlot placeholder={pillar.imgPlaceholder} />
-              </div>
+              </RevealImage>
             </div>
           </section>
         ))}
 
         {/* Canais */}
         <section className="bg-navy">
-          <div className="mx-auto max-w-brand px-6 py-18 text-center">
-            <p className="mb-4 font-heading text-xs font-bold uppercase tracking-[0.08em] text-orange-light">
+          <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-orange-light">
               Distribuição multicanal
             </p>
-            <h2 className="mb-8 font-heading text-[24px] font-extrabold text-white sm:text-[32px]">
+            <h2 className="mb-8 font-heading text-[26px] text-white sm:text-[32px]">
               Seu flat nas maiores plataformas de reservas do mundo
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               {CHANNELS.map((channel) => (
                 <div
                   key={channel.name}
-                  className="min-w-[180px] rounded-brand border border-white/20 px-7 py-5"
+                  className="min-w-[180px] border border-white/20 px-7 py-5"
                 >
-                  <div className="mb-1.5 font-heading text-base font-bold text-white">
+                  <div className="mb-1.5 font-heading text-base text-white">
                     {channel.name}
                   </div>
                   <div className="text-[13px] text-footer-text">
@@ -294,30 +298,30 @@ export default function GestaoDeImoveisPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </section>
 
         {/* FAQ */}
-        <section className="mx-auto max-w-[820px] px-6 py-24">
-          <h2 className="mb-10 text-center font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+        <Reveal className="mx-auto max-w-[820px] px-6 py-24">
+          <h2 className="mb-10 text-center font-heading text-[26px] text-navy sm:text-[30px]">
             Perguntas frequentes
           </h2>
           <FaqAccordion items={FAQS} defaultOpenIds={["faq-1"]} />
-        </section>
+        </Reveal>
 
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
-          <div className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
+          <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
+            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[32px]">
               Pronto para rentabilizar seu imóvel?
             </h2>
             <Link
               href="/para-proprietarios"
-              className="inline-block rounded-brand bg-orange px-8 py-4 text-base font-semibold text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-base text-white hover:bg-orange/90"
             >
               Quero rentabilizar meu imóvel
             </Link>
-          </div>
+          </Reveal>
         </section>
       </main>
       <Footer />

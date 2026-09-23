@@ -10,6 +10,8 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
+import Reveal from "@/components/Reveal";
+import RevealImage from "@/components/RevealImage";
 
 const SERVICES = [
   {
@@ -68,10 +70,10 @@ const STEPS = [
 ];
 
 const DESTINATIONS = [
+  { slug: "dest-muro-alto", name: "Muro Alto" },
   { slug: "dest-porto", name: "Porto de Galinhas" },
   { slug: "dest-tamandare", name: "Tamandaré" },
   { slug: "dest-carneiros", name: "Praia dos Carneiros" },
-  { slug: "dest-smm", name: "São Miguel dos Milagres" },
 ];
 
 const CHANNELS = ["Airbnb", "Booking.com", "Decolar/Despegar", "Google Vacation Rentals"];
@@ -99,45 +101,45 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* Hero */}
-        <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-16 pb-20 lg:grid-cols-2">
-          <div>
-            <p className="mb-4 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+        {/* Hero — full-bleed */}
+        <section className="relative flex h-[82vh] min-h-[560px] items-end overflow-hidden">
+          <RevealImage className="absolute inset-0">
+            <ImageSlot placeholder="Foto real: flat decorado frente-mar, Porto de Galinhas" />
+          </RevealImage>
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+          <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-16 text-white" delay={0.15}>
+            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange-light">
               Gestão de imóveis por temporada
             </p>
-            <h1 className="mb-5 font-heading text-[32px] font-extrabold leading-[1.12] text-navy sm:text-[40px] lg:text-[48px]">
-              Seu imóvel de temporada gerando mais, sem dar mais trabalho.
+            <h1 className="mb-6 max-w-2xl font-heading text-[38px] leading-[1.15] sm:text-[52px] lg:text-[64px]">
+              Seu imóvel gerando{" "}
+              <span className="font-script text-[1.35em] leading-none text-orange-light">
+                mais
+              </span>
+              , sem dar mais trabalho.
             </h1>
-            <p className="mb-8 max-w-[520px] text-lg leading-relaxed text-ink-soft">
-              Gestão profissional de imóveis por temporada, da preparação do
-              imóvel às reservas, precificação e distribuição nos principais
-              canais.
-            </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/para-proprietarios#lead-form"
-                className="rounded-brand bg-orange px-7 py-4 text-base font-semibold text-white hover:bg-orange/90"
+                className="bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
               >
                 Quero rentabilizar meu imóvel
               </Link>
               <Link
                 href="/gestao-de-imoveis"
-                className="rounded-brand border border-border px-7 py-4 text-base font-semibold text-navy hover:bg-surface-alt"
+                className="border border-white/70 px-7 py-4 text-base text-white hover:bg-white/10"
               >
                 Conhecer nossa gestão
               </Link>
             </div>
-          </div>
-          <div className="h-[320px] overflow-hidden rounded-sm lg:h-[480px]">
-            <ImageSlot placeholder="Foto real: flat decorado frente-mar, Porto de Galinhas" />
-          </div>
+          </Reveal>
         </section>
 
         {/* Autoridade */}
-        <section className="border-y border-border bg-surface-alt">
-          <div className="mx-auto flex max-w-brand flex-wrap items-center justify-between gap-8 px-6 py-12">
-            <p className="max-w-[640px] text-[17px] leading-relaxed">
-              <strong className="text-navy">
+        <section className="border-b border-border bg-surface-alt">
+          <Reveal className="mx-auto flex max-w-brand flex-wrap items-center justify-between gap-8 px-6 py-12">
+            <p className="max-w-[640px] text-[19px] leading-relaxed text-ink-soft">
+              <strong className="font-normal text-navy">
                 25 anos de experiência em hotelaria
               </strong>{" "}
               no litoral de Pernambuco, à frente da gestão de propriedades por
@@ -145,53 +147,50 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-10">
               <div>
-                <div className="font-heading text-[28px] font-extrabold text-navy">
-                  25 anos
-                </div>
+                <div className="font-heading text-[30px] text-navy">25 anos</div>
                 <div className="text-[13px] text-ink-soft">
                   de experiência em hotelaria
                 </div>
               </div>
               <div>
-                <div className="font-heading text-[28px] font-extrabold text-navy">
-                  6
-                </div>
+                <div className="font-heading text-[30px] text-navy">6</div>
                 <div className="text-[13px] text-ink-soft">
                   destinos atendidos no litoral
                 </div>
               </div>
               <div>
-                <div className="font-heading text-[28px] font-extrabold text-navy">
-                  4
-                </div>
+                <div className="font-heading text-[30px] text-navy">4</div>
                 <div className="text-[13px] text-ink-soft">
                   canais de distribuição integrados
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </section>
 
         {/* Compromisso */}
-        <section className="mx-auto max-w-[840px] px-6 pt-24 text-center">
-          <h2 className="mb-6 font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
-            Mais que uma simples administradora
+        <Reveal className="mx-auto max-w-[780px] px-6 pt-28 pb-4 text-center">
+          <h2 className="mb-8 font-heading text-[30px] leading-tight text-navy sm:text-[40px]">
+            Mais que uma simples{" "}
+            <span className="font-script text-[1.3em] text-orange">
+              administradora
+            </span>
           </h2>
-          <p className="mb-5 text-[17px] leading-[1.7] text-ink-soft">
+          <p className="mb-5 text-[19px] leading-[1.75] text-ink-soft">
             Nosso compromisso é simples: transformar seu imóvel em uma fonte
             de renda segura, constante e sem preocupações.
           </p>
-          <p className="mb-5 text-[17px] leading-[1.7] text-ink-soft">
+          <p className="mb-5 text-[19px] leading-[1.75] text-ink-soft">
             Cuidamos de todo o processo para você: divulgação profissional
             nas principais plataformas, seleção criteriosa de hóspedes,
             check-in e check-out, limpeza e suporte 24 horas.
           </p>
-          <p className="mb-5 text-[17px] leading-[1.7] text-ink-soft">
+          <p className="mb-5 text-[19px] leading-[1.75] text-ink-soft">
             Nosso objetivo é maximizar seus lucros enquanto preservamos e
             valorizamos seu patrimônio.
           </p>
-          <p className="text-[17px] leading-[1.7] text-ink-soft">
-            <strong className="text-navy">
+          <p className="text-[19px] leading-[1.75] text-ink-soft">
+            <strong className="font-normal text-navy">
               Somos a solução completa para locação de curta temporada no
               litoral.
             </strong>
@@ -200,32 +199,29 @@ export default function HomePage() {
             como uma parceira estratégica para transformar seu imóvel em uma
             fonte sólida de renda com zero preocupação.
           </p>
-        </section>
+        </Reveal>
 
         {/* Soluções */}
         <section className="mx-auto max-w-brand px-6 py-16 pb-24">
-          <div className="mx-auto mb-14 max-w-[640px] text-center">
-            <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+          <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+            <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
               Soluções completas
             </p>
-            <h2 className="font-heading text-[26px] font-extrabold text-navy sm:text-[34px]">
+            <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
               Da preparação do imóvel à reserva confirmada
             </h2>
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-px border border-border bg-border">
-            {SERVICES.map((service) => (
-              <div key={service.title} className="bg-white p-8">
-                <service.icon
-                  className="mb-4 h-7 w-7 text-orange"
-                  aria-hidden
-                />
-                <h3 className="mb-2 font-heading text-[17px] font-bold text-navy">
+          </Reveal>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((service, i) => (
+              <Reveal key={service.title} delay={i * 0.08} className="border-t border-orange pt-6">
+                <service.icon className="mb-4 h-6 w-6 text-orange" aria-hidden />
+                <h3 className="mb-2 font-heading text-[19px] text-navy">
                   {service.title}
                 </h3>
-                <p className="text-[15px] leading-relaxed text-ink-soft">
+                <p className="text-[16px] leading-relaxed text-ink-soft">
                   {service.desc}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </section>
@@ -233,27 +229,27 @@ export default function HomePage() {
         {/* Como funciona */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
-            <div className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+            <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
                 Como funciona
               </p>
-              <h2 className="font-heading text-[26px] font-extrabold text-navy sm:text-[34px]">
+              <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
                 Você entrega as chaves. A gente entrega resultado.
               </h2>
-            </div>
+            </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
-              {STEPS.map((step) => (
-                <div key={step.n}>
-                  <div className="mb-3 font-heading text-[15px] font-extrabold text-orange">
+              {STEPS.map((step, i) => (
+                <Reveal key={step.n} delay={i * 0.08}>
+                  <div className="mb-3 font-heading text-[18px] text-orange">
                     {step.n}
                   </div>
-                  <h3 className="mb-2 font-heading text-[17px] font-bold text-navy">
+                  <h3 className="mb-2 font-heading text-[19px] text-navy">
                     {step.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-ink-soft">
+                  <p className="text-[16px] leading-relaxed text-ink-soft">
                     {step.desc}
                   </p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -262,209 +258,208 @@ export default function HomePage() {
         {/* Montagem de Flats */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-            <div>
-              <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+            <Reveal>
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
                 Montagem e decoração completa
               </p>
-              <h2 className="mb-5 font-heading text-[26px] font-extrabold text-navy sm:text-[32px]">
+              <h2 className="mb-5 font-heading text-[28px] text-navy sm:text-[34px]">
                 Do projeto de arquitetura ao flat pronto para hospedar.
               </h2>
-              <p className="mb-4 text-base leading-relaxed text-ink-soft">
+              <p className="mb-4 text-[17px] leading-relaxed text-ink-soft">
                 Cuidamos de todo o processo de montagem: projeto de
                 arquitetura e ambientação, marcenaria sob medida, instalação
                 elétrica e pintura, executados por equipe própria.
               </p>
-              <p className="mb-7 text-base leading-relaxed text-ink-soft">
+              <p className="mb-7 text-[17px] leading-relaxed text-ink-soft">
                 Você entrega as chaves. Nós entregamos o flat decorado,
                 fotografado e pronto para receber hóspedes.
               </p>
               <Link
                 href="/montagem-de-flats"
-                className="text-[15px] font-semibold text-navy hover:text-orange"
+                className="border-b border-navy pb-0.5 text-[16px] text-navy hover:border-orange hover:text-orange"
               >
                 Conhecer o serviço de montagem →
               </Link>
-            </div>
-            <div className="h-[300px] overflow-hidden rounded-sm lg:h-[380px]">
+            </Reveal>
+            <RevealImage className="h-[300px] overflow-hidden lg:h-[420px]">
               <ImageSlot placeholder="Foto real: flat decorado e mobiliado após a montagem" />
-            </div>
+            </RevealImage>
           </div>
         </section>
 
         {/* Pagamento direto */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <div className="order-2 h-[300px] overflow-hidden rounded-sm lg:order-1 lg:h-[380px]">
+          <RevealImage className="order-2 h-[300px] overflow-hidden lg:order-1 lg:h-[420px]">
             <ImageSlot placeholder="Foto real: proprietário e equipe, ou detalhe do imóvel" />
-          </div>
-          <div className="order-1 lg:order-2">
-            <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+          </RevealImage>
+          <Reveal className="order-1 lg:order-2">
+            <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
               Transparência financeira
             </p>
-            <h2 className="mb-5 font-heading text-[26px] font-extrabold text-navy sm:text-[32px]">
+            <h2 className="mb-5 font-heading text-[28px] text-navy sm:text-[34px]">
               Os pagamentos das reservas são feitos diretamente ao
               proprietário.
             </h2>
-            <p className="mb-4 text-base leading-relaxed text-ink-soft">
+            <p className="mb-4 text-[17px] leading-relaxed text-ink-soft">
               O valor de cada reserva cai diretamente na conta cadastrada
               pelo proprietário. A Meu Flat na Praia não recebe nem retém
               nenhum valor das hospedagens.
             </p>
-            <p className="text-base leading-relaxed text-ink-soft">
+            <p className="text-[17px] leading-relaxed text-ink-soft">
               Você acompanha reservas, ocupação e repasses em tempo real pela
               área exclusiva do proprietário.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         {/* Destinos */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
-            <div className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+            <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
                 Onde atuamos
               </p>
-              <h2 className="font-heading text-[26px] font-extrabold text-navy sm:text-[34px]">
+              <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
                 Destinos atendidos no litoral de PE e AL
               </h2>
-            </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
-              {DESTINATIONS.map((dest) => (
-                <Link
-                  key={dest.slug}
-                  href="#"
-                  className="block border border-border bg-white"
-                >
-                  <div className="h-[140px]">
+            </Reveal>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
+              {DESTINATIONS.map((dest, i) => (
+                <Reveal key={dest.slug} delay={i * 0.08}>
+                  <Link href="#" className="group relative block h-[280px] overflow-hidden">
                     <ImageSlot placeholder={dest.name} />
-                  </div>
-                  <div className="px-4.5 py-4 font-heading text-[15px] font-bold text-navy">
-                    {dest.name}
-                  </div>
-                </Link>
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/0 to-transparent transition-opacity group-hover:from-navy/85" />
+                    <div className="absolute bottom-0 left-0 p-5 font-heading text-[19px] text-white">
+                      {dest.name}
+                    </div>
+                  </Link>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
         {/* Canais */}
-        <section className="mx-auto max-w-brand px-6 py-20 text-center">
-          <p className="mb-6 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+        <Reveal className="mx-auto max-w-brand px-6 py-20 text-center">
+          <p className="mb-6 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
             Distribuição multicanal
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             {CHANNELS.map((channel) => (
               <span
                 key={channel}
-                className="rounded-brand border border-border px-6 py-3 font-heading text-[15px] font-bold text-navy"
+                className="border border-border px-6 py-3 font-heading text-[16px] text-navy"
               >
                 {channel}
               </span>
             ))}
           </div>
-        </section>
+        </Reveal>
 
         {/* Equipe */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
-            <div className="mx-auto mb-14 max-w-[640px] text-center">
-              <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+            <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
                 Quem administra
               </p>
-              <h2 className="font-heading text-[26px] font-extrabold text-navy sm:text-[34px]">
+              <h2 className="font-heading text-[28px] text-navy sm:text-[38px]">
                 Uma operação conduzida por quem entende o mercado
               </h2>
-            </div>
+            </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10">
-              <div className="flex items-start gap-5">
+              <Reveal className="flex items-start gap-5">
                 <div className="h-22 w-22 shrink-0 overflow-hidden rounded-full">
                   <ImageSlot placeholder="Rodrigo Montenegro" shape="circle" />
                 </div>
                 <div>
-                  <h3 className="mb-0.5 font-heading text-[17px] font-bold text-navy">
+                  <h3 className="mb-0.5 font-heading text-[19px] text-navy">
                     Rodrigo Montenegro
                   </h3>
-                  <p className="mb-2 text-[13px] font-semibold text-orange">
+                  <p className="mb-2 text-[13px] font-medium text-orange">
                     Corretor de imóveis · CRECI-PE 16191
                   </p>
-                  <p className="text-sm leading-relaxed text-ink-soft">
+                  <p className="text-[15px] leading-relaxed text-ink-soft">
                     25 anos de experiência em hotelaria, ex-gerente de
                     resorts em Porto de Galinhas (Enotel, Solar, Village).
                     Especialista em investimento imobiliário no litoral.
                   </p>
                 </div>
-              </div>
-              <div className="flex items-start gap-5">
+              </Reveal>
+              <Reveal delay={0.1} className="flex items-start gap-5">
                 <div className="h-22 w-22 shrink-0 overflow-hidden rounded-full">
                   <ImageSlot placeholder="Rosana Costa" shape="circle" />
                 </div>
                 <div>
-                  <h3 className="mb-0.5 font-heading text-[17px] font-bold text-navy">
+                  <h3 className="mb-0.5 font-heading text-[19px] text-navy">
                     Rosana Costa
                   </h3>
-                  <p className="mb-2 text-[13px] font-semibold text-orange">
+                  <p className="mb-2 text-[13px] font-medium text-orange">
                     Administradora
                   </p>
-                  <p className="text-sm leading-relaxed text-ink-soft">
+                  <p className="text-[15px] leading-relaxed text-ink-soft">
                     Mais de 20 anos em gestão de equipes na indústria
                     farmacêutica no Nordeste. Responsável pelos projetos de
                     decoração dos imóveis administrados.
                   </p>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
         {/* Conteúdos */}
         <section className="mx-auto max-w-brand px-6 py-24">
-          <div className="mb-10 flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="font-heading text-[26px] font-extrabold text-navy sm:text-[32px]">
+          <Reveal className="mb-10 flex flex-wrap items-baseline justify-between gap-3">
+            <h2 className="font-heading text-[28px] text-navy sm:text-[34px]">
               Conteúdos sobre gestão por temporada
             </h2>
             <Link
               href="/conteudos"
-              className="text-[15px] font-semibold text-navy hover:text-orange"
+              className="border-b border-navy pb-0.5 text-[16px] text-navy hover:border-orange hover:text-orange"
             >
               Ver todos os conteúdos →
             </Link>
-          </div>
+          </Reveal>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-7">
-            {ARTICLES.map((article) => (
-              <Link
-                key={article.slug}
-                href={`/conteudos/${article.slug}`}
-                className="block"
-              >
-                <div className="mb-4 h-[170px]">
-                  <ImageSlot placeholder={article.title} />
-                </div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.04em] text-orange">
-                  {article.category}
-                </p>
-                <h3 className="font-heading text-[17px] font-bold leading-snug text-navy">
-                  {article.title}
-                </h3>
-              </Link>
+            {ARTICLES.map((article, i) => (
+              <Reveal key={article.slug} delay={i * 0.08}>
+                <Link href={`/conteudos/${article.slug}`} className="block">
+                  <div className="mb-4 h-[190px] overflow-hidden">
+                    <ImageSlot placeholder={article.title} />
+                  </div>
+                  <p className="mb-2 text-[12px] font-medium uppercase tracking-[0.08em] text-orange">
+                    {article.category}
+                  </p>
+                  <h3 className="font-heading text-[19px] leading-snug text-navy">
+                    {article.title}
+                  </h3>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </section>
 
         {/* CTA final */}
         <section className="bg-navy">
-          <div className="mx-auto max-w-brand px-6 py-20 text-center">
-            <h2 className="mb-4 font-heading text-[26px] font-extrabold text-white sm:text-[36px]">
-              Quer saber quanto seu imóvel pode gerar?
+          <Reveal className="mx-auto max-w-brand px-6 py-24 text-center">
+            <h2 className="mb-4 font-heading text-[30px] text-white sm:text-[42px]">
+              Quer saber quanto seu{" "}
+              <span className="font-script text-[1.3em] text-orange-light">
+                imóvel
+              </span>{" "}
+              pode gerar?
             </h2>
-            <p className="mx-auto mb-8 max-w-[560px] text-[17px] text-footer-text">
+            <p className="mx-auto mb-8 max-w-[560px] text-[18px] text-footer-text">
               Fale com nossa equipe e receba uma avaliação sem compromisso.
             </p>
             <Link
               href="/para-proprietarios#lead-form"
-              className="inline-block rounded-brand bg-orange px-8 py-4 text-base font-semibold text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-base text-white hover:bg-orange/90"
             >
               Quero rentabilizar meu imóvel
             </Link>
-          </div>
+          </Reveal>
         </section>
       </main>
       <Footer />

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
+import Reveal from "@/components/Reveal";
+import RevealImage from "@/components/RevealImage";
 import { getArticleBySlug, getArticles, readingTime } from "@/lib/articles";
 
 export const revalidate = 3600;
@@ -70,32 +72,34 @@ export default async function ArtigoPage({
             <span className="mx-1.5">›</span> {article.category}
           </nav>
 
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.04em] text-orange">
-            {article.category} · {readingTime(article.content)} min de
-            leitura
-          </p>
-          <h1 className="mb-5 font-heading text-[28px] font-extrabold leading-tight text-navy sm:text-[38px]">
-            {article.title}
-          </h1>
-          <div className="mb-8 flex items-center gap-3 text-sm text-ink-soft">
-            <div className="h-9 w-9 overflow-hidden rounded-full">
-              <ImageSlot placeholder={article.author ?? ""} shape="circle" />
+          <Reveal>
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.08em] text-orange">
+              {article.category} · {readingTime(article.content)} min de
+              leitura
+            </p>
+            <h1 className="mb-5 font-heading text-[30px] leading-tight text-navy sm:text-[38px]">
+              {article.title}
+            </h1>
+            <div className="mb-8 flex items-center gap-3 text-sm text-ink-soft">
+              <div className="h-9 w-9 overflow-hidden rounded-full">
+                <ImageSlot placeholder={article.author ?? ""} shape="circle" />
+              </div>
+              <span>
+                {article.author}
+                {publishedLabel ? ` · Atualizado em ${publishedLabel}` : null}
+              </span>
             </div>
-            <span>
-              {article.author}
-              {publishedLabel ? ` · Atualizado em ${publishedLabel}` : null}
-            </span>
-          </div>
-          <div className="mb-10 h-[300px] sm:h-[360px]">
+          </Reveal>
+          <RevealImage className="mb-10 h-[300px] sm:h-[360px]">
             <ImageSlot placeholder="Foto real: imóvel administrado, ambiente decorado" />
-          </div>
+          </RevealImage>
 
           <div className="text-[17px] leading-[1.8] text-ink">
             {article.content.map((block, i) =>
               block.type === "h2" ? (
                 <h2
                   key={i}
-                  className="mb-4 mt-10 font-heading text-2xl font-bold text-navy"
+                  className="mb-4 mt-10 font-heading text-2xl text-navy"
                 >
                   {block.text}
                 </h2>
@@ -107,39 +111,42 @@ export default async function ArtigoPage({
             )}
           </div>
 
-          <div className="mt-14 border border-border bg-surface-alt p-8 text-center">
-            <h3 className="mb-3 font-heading text-lg font-bold text-navy">
+          <Reveal className="mt-14 border border-border bg-surface-alt p-8 text-center">
+            <h3 className="mb-3 font-heading text-lg text-navy">
               Quer saber quanto seu imóvel pode gerar?
             </h3>
             <Link
               href="/para-proprietarios#lead-form"
-              className="inline-block rounded-brand bg-orange px-6 py-3.5 text-[15px] font-semibold text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-6 py-3.5 text-[15px] text-white hover:bg-orange/90"
             >
               Quero rentabilizar meu imóvel
             </Link>
-          </div>
+          </Reveal>
         </article>
 
         {related.length > 0 && (
           <section className="border-t border-border bg-surface-alt">
             <div className="mx-auto max-w-brand px-6 py-16">
-              <h2 className="mb-8 font-heading text-xl font-extrabold text-navy">
-                Continue lendo
-              </h2>
+              <Reveal>
+                <h2 className="mb-8 font-heading text-xl text-navy">
+                  Continue lendo
+                </h2>
+              </Reveal>
               <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-7">
-                {related.map((a) => (
-                  <Link
-                    key={a.slug}
-                    href={`/conteudos/${a.slug}`}
-                    className="block border border-border bg-white p-5"
-                  >
-                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.04em] text-orange">
-                      {a.category}
-                    </p>
-                    <h3 className="font-heading text-[15px] font-bold leading-snug text-navy">
-                      {a.title}
-                    </h3>
-                  </Link>
+                {related.map((a, i) => (
+                  <Reveal key={a.slug} delay={i * 0.06}>
+                    <Link
+                      href={`/conteudos/${a.slug}`}
+                      className="block border border-border bg-surface p-5"
+                    >
+                      <p className="mb-2 text-xs font-medium uppercase tracking-[0.08em] text-orange">
+                        {a.category}
+                      </p>
+                      <h3 className="font-heading text-[16px] leading-snug text-navy">
+                        {a.title}
+                      </h3>
+                    </Link>
+                  </Reveal>
                 ))}
               </div>
             </div>

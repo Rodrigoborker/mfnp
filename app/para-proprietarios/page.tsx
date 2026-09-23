@@ -12,6 +12,8 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlot from "@/components/ImageSlot";
+import Reveal from "@/components/Reveal";
+import RevealImage from "@/components/RevealImage";
 import LeadForm from "./LeadForm";
 
 export const metadata: Metadata = {
@@ -73,11 +75,11 @@ export default function ParaProprietariosPage() {
       <main>
         {/* Hero */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-16 pb-20 lg:grid-cols-2">
-          <div>
-            <p className="mb-4 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+          <Reveal>
+            <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
               Para proprietários
             </p>
-            <h1 className="mb-5 font-heading text-[30px] font-extrabold leading-[1.15] text-navy sm:text-[38px] lg:text-[44px]">
+            <h1 className="mb-5 font-heading text-[32px] leading-[1.15] text-navy sm:text-[40px] lg:text-[46px]">
               Transforme seu imóvel em renda, sem abrir mão do controle.
             </h1>
             <p className="mb-8 max-w-[500px] text-lg leading-relaxed text-ink-soft">
@@ -87,24 +89,21 @@ export default function ParaProprietariosPage() {
             </p>
             <Link
               href="#lead-form"
-              className="inline-block rounded-brand bg-orange px-7 py-4 text-base font-semibold text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-7 py-4 text-base text-white hover:bg-orange/90"
             >
               Quero uma avaliação do meu imóvel
             </Link>
-          </div>
-          <div className="h-[320px] overflow-hidden rounded-sm lg:h-[440px]">
+          </Reveal>
+          <RevealImage className="h-[320px] overflow-hidden lg:h-[440px]">
             <ImageSlot placeholder="Foto real: proprietário entregando as chaves ou vista do flat" />
-          </div>
+          </RevealImage>
         </section>
 
         {/* Pagamento direto */}
         <section className="border-y border-border bg-surface-alt">
-          <div className="mx-auto max-w-[960px] px-6 py-16 text-center">
-            <ShieldCheck
-              className="mx-auto mb-4 h-9 w-9 text-orange"
-              aria-hidden
-            />
-            <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+          <Reveal className="mx-auto max-w-[960px] px-6 py-16 text-center">
+            <ShieldCheck className="mx-auto mb-4 h-9 w-9 text-orange" aria-hidden />
+            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
               Os pagamentos das reservas caem direto na sua conta.
             </h2>
             <p className="mx-auto max-w-[640px] text-base leading-relaxed text-ink-soft">
@@ -113,19 +112,19 @@ export default function ParaProprietariosPage() {
               com relatórios claros de ocupação, receita e repasses na sua
               área exclusiva.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         {/* Montagem de flats */}
         <section className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-24 lg:grid-cols-2">
-          <div className="h-[280px] overflow-hidden rounded-sm lg:h-[360px]">
+          <RevealImage className="h-[280px] overflow-hidden lg:h-[360px]">
             <ImageSlot placeholder="Foto real: flat decorado e mobiliado após a montagem" />
-          </div>
-          <div>
-            <p className="mb-3 font-heading text-xs font-bold uppercase tracking-[0.08em] text-orange">
+          </RevealImage>
+          <Reveal>
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.14em] text-orange">
               Montagem e decoração completa
             </p>
-            <h2 className="mb-4 font-heading text-[24px] font-extrabold text-navy sm:text-[30px]">
+            <h2 className="mb-4 font-heading text-[26px] text-navy sm:text-[30px]">
               Do projeto de arquitetura ao flat pronto para hospedar.
             </h2>
             <p className="mb-4 text-base leading-relaxed text-ink-soft">
@@ -136,33 +135,32 @@ export default function ParaProprietariosPage() {
             </p>
             <Link
               href="/montagem-de-flats"
-              className="text-[15px] font-semibold text-navy hover:text-orange"
+              className="border-b border-navy pb-0.5 text-[16px] text-navy hover:border-orange hover:text-orange"
             >
               Ver detalhes da montagem →
             </Link>
-          </div>
+          </Reveal>
         </section>
 
         {/* Benefícios */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
-            <h2 className="mb-12 text-center font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
-              O que você ganha ao colocar seu imóvel sob nossa gestão
-            </h2>
+            <Reveal>
+              <h2 className="mb-12 text-center font-heading text-[26px] text-navy sm:text-[32px]">
+                O que você ganha ao colocar seu imóvel sob nossa gestão
+              </h2>
+            </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-8">
-              {BENEFITS.map((benefit) => (
-                <div key={benefit.title}>
-                  <benefit.icon
-                    className="mb-3.5 h-6.5 w-6.5 text-orange"
-                    aria-hidden
-                  />
-                  <h3 className="mb-2 font-heading text-[17px] font-bold text-navy">
+              {BENEFITS.map((benefit, i) => (
+                <Reveal key={benefit.title} delay={i * 0.08}>
+                  <benefit.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
+                  <h3 className="mb-2 font-heading text-[18px] text-navy">
                     {benefit.title}
                   </h3>
                   <p className="text-[15px] leading-relaxed text-ink-soft">
                     {benefit.desc}
                   </p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -171,22 +169,24 @@ export default function ParaProprietariosPage() {
         {/* Como começamos */}
         <section className="border-b border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
-            <h2 className="mb-12 text-center font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
-              Como começamos a trabalhar juntos
-            </h2>
+            <Reveal>
+              <h2 className="mb-12 text-center font-heading text-[26px] text-navy sm:text-[32px]">
+                Como começamos a trabalhar juntos
+              </h2>
+            </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
-              {STEPS.map((step) => (
-                <div key={step.n}>
-                  <div className="mb-3 font-heading text-[15px] font-extrabold text-orange">
+              {STEPS.map((step, i) => (
+                <Reveal key={step.n} delay={i * 0.08}>
+                  <div className="mb-3 font-heading text-[17px] text-orange">
                     {step.n}
                   </div>
-                  <h3 className="mb-2 font-heading text-[17px] font-bold text-navy">
+                  <h3 className="mb-2 font-heading text-[18px] text-navy">
                     {step.title}
                   </h3>
                   <p className="text-[15px] leading-relaxed text-ink-soft">
                     {step.desc}
                   </p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -195,11 +195,11 @@ export default function ParaProprietariosPage() {
         {/* Formulário */}
         <section id="lead-form" className="mx-auto max-w-brand px-6 py-24">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_420px]">
-            <div>
-              <p className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.08em] text-orange">
+            <Reveal>
+              <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.14em] text-orange">
                 Fale com a gente
               </p>
-              <h2 className="mb-5 font-heading text-[24px] font-extrabold text-navy sm:text-[32px]">
+              <h2 className="mb-5 font-heading text-[26px] text-navy sm:text-[32px]">
                 Receba uma avaliação sem compromisso
               </h2>
               <p className="mb-6 max-w-[420px] text-base leading-relaxed text-ink-soft">
@@ -207,7 +207,7 @@ export default function ParaProprietariosPage() {
                 WhatsApp para entender seu objetivo e propor os próximos
                 passos.
               </p>
-              <div className="flex items-center gap-3 text-[15px] font-semibold text-navy">
+              <div className="flex items-center gap-3 text-[15px] font-medium text-navy">
                 <MessageCircle className="h-5 w-5 text-orange" aria-hidden />
                 <a
                   href="https://wa.me/5581994869792"
@@ -216,11 +216,13 @@ export default function ParaProprietariosPage() {
                   Ou fale direto pelo WhatsApp
                 </a>
               </div>
-            </div>
+            </Reveal>
 
-            <Suspense fallback={<div className="h-[520px]" />}>
-              <LeadForm />
-            </Suspense>
+            <Reveal delay={0.1}>
+              <Suspense fallback={<div className="h-[520px]" />}>
+                <LeadForm />
+              </Suspense>
+            </Reveal>
           </div>
         </section>
       </main>
