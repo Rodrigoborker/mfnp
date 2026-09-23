@@ -268,7 +268,7 @@ export default function HomePage() {
         </section>
 
         {/* Montagem de Flats — banner fixo: a imagem prende na tela enquanto o site rola por cima */}
-        <section className="relative h-[140vh] min-h-[1000px]">
+        <section className="relative h-[100vh] min-h-[750px]">
           <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
             <ImageSlot
               src="/photos/flat-decorado-quarto.jpg"
