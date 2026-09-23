@@ -39,13 +39,6 @@ const FRONTS = [
 
 const TRADES = [
   {
-    tag: "Marcenaria",
-    title: "Equipe própria de marcenaria",
-    desc: "Você não precisa correr atrás de prestadores terceirizados. Nossa equipe executa a marcenaria com agilidade, qualidade e padronização entre os imóveis administrados.",
-    imgPlaceholder: "Foto real: móveis planejados sob medida",
-    alt: false,
-  },
-  {
     tag: "Projeto de iluminação",
     title: "Iluminação pensada para cada ambiente",
     desc: "Planejamos a iluminação junto com o projeto de ambientação: pontos de luz embutidos, luz indireta e pendentes que valorizam a decoração e deixam o flat aconchegante. A parte elétrica é executada por equipe própria, com segurança e infraestrutura adequada para eletrodomésticos e climatização.",
@@ -53,6 +46,16 @@ const TRADES = [
     imgSrc: "/photos/projeto-iluminacao.jpg",
     imgPosition: "center 55%",
     alt: true,
+  },
+  {
+    tag: "Marcenaria",
+    title: "Equipe própria de marcenaria",
+    desc: "Você não precisa correr atrás de prestadores terceirizados. Nossa equipe executa a marcenaria com agilidade, qualidade e padronização entre os imóveis administrados.",
+    imgPlaceholder: "Marcenaria própria cortando madeira sob medida",
+    imgSrc: "/photos/marcenaria.jpg",
+    imgPosition: "center 60%",
+    parallax: true,
+    alt: false,
   },
   {
     tag: "Pintura e decoração",
@@ -216,7 +219,39 @@ export default function MontagemDeFlatsPage() {
         </section>
 
         {/* Marcenaria / Elétrica / Pintura */}
-        {TRADES.map((trade) => (
+        {TRADES.map((trade) =>
+          trade.parallax ? (
+            <div key={trade.tag}>
+              <section className="px-6 pb-14 pt-24 text-center">
+                <Reveal className="mx-auto max-w-[760px]">
+                  <p className="mb-3 text-[15px] font-medium uppercase tracking-[0.14em] text-orange">
+                    {trade.tag}
+                  </p>
+                  <h2 className="font-heading text-[30px] text-navy sm:text-[40px]">
+                    {trade.title}
+                  </h2>
+                </Reveal>
+              </section>
+              <section className="relative h-[100vh] min-h-[750px]">
+                <div className="sticky top-0 h-[70vh] min-h-[500px] overflow-hidden">
+                  <ImageSlot
+                    src={trade.imgSrc}
+                    placeholder={trade.imgPlaceholder}
+                    objectPosition={trade.imgPosition}
+                  />
+                  <div className="absolute inset-0 bg-navy/10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
+                  <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
+                    <div className="max-w-xl text-white">
+                      <p className="text-[22px] leading-relaxed text-white/90">
+                        {trade.desc}
+                      </p>
+                    </div>
+                  </Reveal>
+                </div>
+              </section>
+            </div>
+          ) : (
           <section
             key={trade.tag}
             className={trade.alt ? "border-y border-border bg-surface-alt" : ""}
@@ -246,7 +281,8 @@ export default function MontagemDeFlatsPage() {
               </RevealImage>
             </div>
           </section>
-        ))}
+          ),
+        )}
 
         {/* Processo */}
         <section className="bg-navy">
