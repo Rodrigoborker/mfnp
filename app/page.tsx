@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Administramos seu flat em Porto de Galinhas, Tamandaré e Carneiros com repasse direto e sem taxas ocultas. Peça uma avaliação gratuita.",
 };
 
-const TURNKEY = [
+const FULL_SERVICE = [
   {
     icon: Banknote,
     title: "Repasses diretos e rastreáveis",
@@ -273,18 +273,18 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        {/* Quebra de objeções: gestão turnkey */}
+        {/* Quebra de objeções: gestão completa */}
         <section className="mx-auto max-w-brand px-6 py-20">
           <Reveal className="mx-auto mb-14 max-w-[680px] text-center">
             <p className="mb-3 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
-              Gestão turnkey, sem letras miúdas
+              Gestão completa, sem letras miúdas
             </p>
             <h2 className="font-heading text-[34px] text-navy sm:text-[45px]">
-              Como funciona a gestão turnkey, do repasse à vistoria
+              Como funciona a gestão completa, do repasse à vistoria
             </h2>
           </Reveal>
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {TURNKEY.map((item, i) => (
+            {FULL_SERVICE.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.08} className="border-t border-orange pt-6">
                 <item.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
                 <h3 className="mb-2 font-heading text-[22px] text-navy">
