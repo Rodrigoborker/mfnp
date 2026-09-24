@@ -94,7 +94,7 @@ export default function HomePage() {
             </p>
             <h1 className="mb-6 max-w-3xl font-heading text-[30px] leading-[1.15] sm:text-[40px] lg:text-[48px]">
               A solução{" "}
-              <span className="font-script text-[1.1em] leading-none text-orange">
+              <span className="font-script text-[1.1em] leading-none text-white">
                 definitiva
               </span>{" "}
               para gestão de locações por temporada.
