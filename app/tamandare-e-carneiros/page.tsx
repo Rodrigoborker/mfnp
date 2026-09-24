@@ -37,7 +37,10 @@ export default function TamandareCarneirosPage() {
     <>
       <Header />
       <main>
-        <Breadcrumb current="Tamandaré e Praia dos Carneiros" />
+        <Breadcrumb
+          current="Tamandaré e Praia dos Carneiros"
+          href="/tamandare-e-carneiros"
+        />
 
         {/* Hero */}
         <section className="px-6 pb-14 pt-10 text-center">

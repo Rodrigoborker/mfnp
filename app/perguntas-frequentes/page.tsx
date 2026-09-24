@@ -77,7 +77,7 @@ export default function PerguntasFrequentesPage() {
       />
       <Header />
       <main>
-        <Breadcrumb current="Perguntas frequentes" />
+        <Breadcrumb current="Perguntas frequentes" href="/perguntas-frequentes" />
 
         <section className="px-6 pb-14 pt-10 text-center">
           <Reveal className="mx-auto max-w-[860px]">

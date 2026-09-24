@@ -37,7 +37,7 @@ export default function PortoDeGalinhasPage() {
     <>
       <Header />
       <main>
-        <Breadcrumb current="Porto de Galinhas" />
+        <Breadcrumb current="Porto de Galinhas" href="/porto-de-galinhas" />
 
         {/* Hero */}
         <section className="px-6 pb-14 pt-10 text-center">
