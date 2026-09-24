@@ -18,7 +18,7 @@ const DYNAMICS = [
   {
     icon: Repeat,
     title: "Giro de limpeza acelerado",
-    desc: "Fluxo turístico intenso o ano inteiro significa estadias mais curtas e check-in/check-out no mesmo dia com frequência. A limpeza e a vistoria precisam de uma equipe local dimensionada para esse ritmo, não para o volume de um destino de baixa rotatividade.",
+    desc: "Fluxo turístico intenso o ano inteiro significa estadias mais curtas e check-in/check-out no mesmo dia com frequência. A limpeza e a vistoria precisam de uma equipe dimensionada para esse ritmo, bem diferente do volume de um destino de baixa rotatividade.",
   },
   {
     icon: Users,
@@ -118,7 +118,7 @@ export default function PortoDeGalinhasPage() {
                 Operação local
               </p>
               <h2 className="mb-4 font-heading text-[31px] text-white sm:text-[36px]">
-                Presença física em Porto de Galinhas, não apenas anúncio
+                Presença física em Porto de Galinhas, além do anúncio
                 publicado
               </h2>
               <p className="mb-4 text-[21px] leading-relaxed text-white/70">

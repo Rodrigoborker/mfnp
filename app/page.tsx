@@ -33,7 +33,7 @@ const TURNKEY = [
   {
     icon: Banknote,
     title: "Repasses diretos e rastreáveis",
-    desc: "O valor de cada reserva cai direto na conta cadastrada pelo proprietário. Você acompanha entrada, taxa de cada canal e saldo líquido na área exclusiva, sem esperar relatório manual de fim de mês.",
+    desc: "O valor de cada reserva cai direto na conta cadastrada pelo proprietário. Entrada, taxa de cada canal e saldo líquido aparecem na área exclusiva assim que a reserva é confirmada.",
   },
   {
     icon: TrendingUp,
@@ -43,12 +43,12 @@ const TURNKEY = [
   {
     icon: ClipboardCheck,
     title: "Vistorias em toda estadia",
-    desc: "Checklist fotográfico de entrada e saída em cada hospedagem, com registro de avarias e conferência de enxoval. Dano identificado é cobrado do responsável, não absorvido pelo proprietário.",
+    desc: "Checklist fotográfico de entrada e saída em cada hospedagem, com registro de avarias e conferência de enxoval. Dano identificado é registrado e cobrado do responsável pela reserva; o proprietário não entra com essa conta.",
   },
   {
     icon: KeyRound,
     title: "Uso próprio sem burocracia",
-    desc: "Reserve o período de férias da sua família com antecedência pela área do proprietário. O calendário fica bloqueado para hóspedes, sem multa e sem negociação caso a caso.",
+    desc: "O proprietário avisa com antecedência pela área exclusiva e o período fica reservado no calendário, sem multa nem negociação caso a caso.",
   },
 ];
 
@@ -61,12 +61,12 @@ const DIFFERENTIATORS = [
   {
     icon: Users,
     title: "Equipe local de limpeza e suporte",
-    desc: "Equipe própria de limpeza, manutenção e atendimento presencial em Porto de Galinhas, Tamandaré e Carneiros: resposta rápida a hóspede e a imprevisto, sem depender de terceiros distantes.",
+    desc: "Equipe própria de limpeza, manutenção e atendimento presencial em Porto de Galinhas, Tamandaré e Carneiros. Quem resolve um imprevisto do hóspede está na região, não numa central distante.",
   },
   {
     icon: ShieldCheck,
     title: "Proteção patrimonial ativa",
-    desc: "Seleção de hóspede, vistoria fotográfica, política de cobrança por dano e manutenção preventiva contra maresia. O objetivo é a valorização do imóvel, não apenas a ocupação.",
+    desc: "Seleção de hóspede, vistoria fotográfica, política de cobrança por dano e manutenção preventiva contra maresia protegem o valor do imóvel no longo prazo, que é o que sustenta o retorno do investimento.",
   },
 ];
 
@@ -537,11 +537,10 @@ export default function HomePage() {
               </h2>
               <p className="text-[21px] leading-relaxed text-white/70">
                 Porto de Galinhas, Tamandaré e Praia dos Carneiros têm
-                dinâmicas de mercado, perfil de hóspede e giro operacional
-                diferentes entre si. Gerir um flat nessas praias exige
-                conhecimento local: da agenda de eventos à rede de
-                manutenção, passando pela expectativa de diária média de
-                cada destino.
+                dinâmicas de mercado e perfil de hóspede bem diferentes.
+                Gerir um flat nessas praias exige conhecimento local: saber
+                a agenda de eventos, ter uma rede de manutenção de confiança
+                e entender a diária média que cada destino sustenta.
               </p>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">

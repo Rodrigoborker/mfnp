@@ -18,7 +18,7 @@ const DYNAMICS = [
   {
     icon: Gem,
     title: "Ticket médio mais alto",
-    desc: "Tamandaré e Praia dos Carneiros atraem um hóspede disposto a pagar mais por privacidade, paisagem e tranquilidade. Isso muda a estratégia de precificação: o objetivo não é maximizar o número de reservas a qualquer preço, e sim capturar o valor real que o destino sustenta.",
+    desc: "Tamandaré e Praia dos Carneiros atraem um hóspede disposto a pagar mais por privacidade, paisagem e tranquilidade. Isso muda a estratégia de precificação: o foco vai para captar o valor real que o destino sustenta, mais do que empilhar reservas a qualquer preço.",
   },
   {
     icon: CalendarRange,
@@ -28,7 +28,7 @@ const DYNAMICS = [
   {
     icon: Leaf,
     title: "Posicionamento de tranquilidade",
-    desc: "Anúncio, fotografia e comunicação precisam refletir o que o hóspede busca nesses destinos: sossego, natureza preservada e exclusividade, não o mesmo discurso usado para um destino de alto fluxo.",
+    desc: "Anúncio, fotografia e comunicação precisam refletir o que o hóspede busca nesses destinos: sossego, natureza preservada e exclusividade. É um discurso bem diferente do que funciona num destino de alto fluxo.",
   },
 ];
 
@@ -71,9 +71,9 @@ export default function TamandareCarneirosPage() {
                 <p className="mb-8 text-[23px] leading-relaxed text-white/90">
                   Precificação orientada a valor, curadoria de hóspede e
                   comunicação alinhada ao perfil de quem busca Tamandaré e
-                  Carneiros, para transformar rendimento de aluguel por
-                  temporada em receita consistente, sem depender de alto
-                  volume.
+                  Carneiros. O objetivo é transformar rendimento de aluguel
+                  por temporada em receita consistente, mesmo com um volume
+                  de reservas menor.
                 </p>
                 <Link
                   href="/para-proprietarios#lead-form"
@@ -119,8 +119,8 @@ export default function TamandareCarneirosPage() {
                 Operação local
               </p>
               <h2 className="mb-4 font-heading text-[31px] text-white sm:text-[36px]">
-                Curadoria de hóspede e padrão de experiência, não apenas
-                ocupação
+                Curadoria de hóspede e padrão de experiência acima da
+                simples ocupação
               </h2>
               <p className="mb-4 text-[21px] leading-relaxed text-white/70">
                 Em Tamandaré e Praia dos Carneiros, o resultado financeiro
@@ -133,8 +133,8 @@ export default function TamandareCarneirosPage() {
               <p className="text-[21px] leading-relaxed text-white/70">
                 A precificação dinâmica considera a sazonalidade específica
                 da região e a concorrência direta de pousadas e casas de
-                temporada, sem copiar o modelo de giro rápido usado em
-                destinos de alto fluxo.
+                temporada, com uma lógica própria, diferente do modelo de
+                giro rápido usado em destinos de alto fluxo.
               </p>
             </Reveal>
             <RevealImage className="relative h-[300px] overflow-hidden lg:h-[380px]">
