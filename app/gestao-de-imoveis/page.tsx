@@ -243,15 +243,16 @@ export default function GestaoDeImoveisPage() {
           </Link>
         </Reveal>
 
-        <RevealImage className="mx-auto max-w-brand px-6 pb-20">
-          <div className="relative h-[420px] overflow-hidden">
+        {/* Foto em parallax, sem escurecer */}
+        <section className="relative h-[480px] sm:h-[115vh] sm:min-h-[840px]">
+          <div className="sticky top-[104px] h-[300px] overflow-hidden sm:top-0 sm:h-[80vh] sm:min-h-[560px]">
             <ImageSlot
               src="/photos/rodrigo-rosana-013.jpg"
               placeholder="Rodrigo e Rosana em reunião de gestão"
               objectPosition="center 45%"
             />
           </div>
-        </RevealImage>
+        </section>
 
         {/* Pilares */}
         {PILLARS.map((pillar, i) => {
