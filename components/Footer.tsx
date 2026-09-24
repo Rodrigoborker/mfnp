@@ -51,6 +51,30 @@ export default function Footer() {
             >
               Montagem de flats
             </Link>
+            <Link
+              href="/perguntas-frequentes"
+              className="text-footer-text hover:text-white"
+            >
+              Perguntas frequentes
+            </Link>
+          </div>
+        </div>
+
+        <div>
+          <div className="mb-3.5 text-[19px] font-bold text-white">Destinos</div>
+          <div className="flex flex-col gap-2.5 text-[19px]">
+            <Link
+              href="/porto-de-galinhas"
+              className="text-footer-text hover:text-white"
+            >
+              Porto de Galinhas
+            </Link>
+            <Link
+              href="/tamandare-e-carneiros"
+              className="text-footer-text hover:text-white"
+            >
+              Tamandaré e Carneiros
+            </Link>
           </div>
         </div>
 
