@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   },
   description:
     "Gestão profissional de imóveis por temporada no litoral de Pernambuco: preparação do imóvel, reservas, precificação e distribuição multicanal.",
+  verification: {
+    google: "EmuX4Cgq_zkWIE8d11czpeAEEonm39QQOetKfCbHXC4",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
