@@ -8,6 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gestao-de-imoveis",
     "/montagem-de-flats",
     "/para-proprietarios",
+    "/porto-de-galinhas",
+    "/tamandare-e-carneiros",
+    "/perguntas-frequentes",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),

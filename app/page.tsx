@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Hammer,
@@ -6,6 +7,12 @@ import {
   Megaphone,
   Headphones,
   BarChart3,
+  Banknote,
+  ClipboardCheck,
+  KeyRound,
+  Cpu,
+  Users,
+  ShieldCheck,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,6 +20,93 @@ import ImageSlot from "@/components/ImageSlot";
 import Reveal from "@/components/Reveal";
 import HeroVideo from "@/components/HeroVideo";
 import ParallaxHero from "@/components/ParallaxHero";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Administradora de Flats em Porto de Galinhas e Carneiros",
+  },
+  description:
+    "Administramos seu flat em Porto de Galinhas, Tamandaré e Carneiros com repasse direto e sem taxas ocultas. Peça uma avaliação gratuita.",
+};
+
+const FULL_SERVICE = [
+  {
+    icon: Banknote,
+    title: "Repasses diretos e rastreáveis",
+    desc: "O valor de cada reserva cai direto na conta cadastrada pelo proprietário. Entrada, taxa de cada canal e saldo líquido aparecem na área exclusiva assim que a reserva é confirmada.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Precificação dinâmica por dados",
+    desc: "Tarifas ajustadas diariamente conforme demanda, sazonalidade, eventos e concorrência direta em Porto de Galinhas, Tamandaré e Carneiros, para reduzir vacância na baixa temporada sem sacrificar a diária média na alta.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Vistorias em toda estadia",
+    desc: "Checklist fotográfico de entrada e saída em cada hospedagem, com registro de avarias e conferência de enxoval. Dano identificado é registrado e cobrado do responsável pela reserva; o proprietário não entra com essa conta.",
+  },
+  {
+    icon: KeyRound,
+    title: "Uso próprio sem burocracia",
+    desc: "O proprietário avisa com antecedência pela área exclusiva e o período fica reservado no calendário, sem multa nem negociação caso a caso.",
+  },
+];
+
+const DIFFERENTIATORS = [
+  {
+    icon: Cpu,
+    title: "Tecnologia de precificação e distribuição",
+    desc: "Motor de precificação dinâmica integrado a Airbnb, Booking, Decolar e Google Vacation Rentals, com calendário unificado e bloqueios automáticos entre canais.",
+  },
+  {
+    icon: Users,
+    title: "Equipe local de limpeza e suporte",
+    desc: "Equipe própria de limpeza, manutenção e atendimento presencial em Porto de Galinhas, Tamandaré e Carneiros. Quem resolve um imprevisto do hóspede está na região, não numa central distante.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Proteção patrimonial ativa",
+    desc: "Seleção de hóspede, vistoria fotográfica, política de cobrança por dano e manutenção preventiva contra maresia protegem o valor do imóvel no longo prazo, que é o que sustenta o retorno do investimento.",
+  },
+];
+
+const COMPARISON_ROWS = [
+  {
+    criterio: "Distribuição em canais",
+    sozinho: "Cadastro manual em 1 ou 2 plataformas",
+    gestao: "Airbnb, Booking, Decolar e Google VR simultâneos",
+  },
+  {
+    criterio: "Precificação",
+    sozinho: "Tarifa fixa ou ajuste manual esporádico",
+    gestao: "Precificação dinâmica diária por demanda e concorrência",
+  },
+  {
+    criterio: "Repasse financeiro",
+    sozinho: "Cobrança e conciliação manual entre canais",
+    gestao: "Repasse direto à sua conta, com relatório em tempo real",
+  },
+  {
+    criterio: "Manutenção e limpeza",
+    sozinho: "Rede de terceiros a contratar e supervisionar",
+    gestao: "Equipe própria local e padronizada",
+  },
+  {
+    criterio: "Proteção contra danos",
+    sozinho: "Sem checklist formal de vistoria",
+    gestao: "Vistoria fotográfica de entrada e saída",
+  },
+  {
+    criterio: "Tempo dedicado pelo proprietário",
+    sozinho: "Alto: mensagens, check-in, limpeza, preço",
+    gestao: "Baixo: acompanhamento pela área exclusiva",
+  },
+  {
+    criterio: "Uso próprio do imóvel",
+    sozinho: "Livre, mas sem controle da ocupação perdida",
+    gestao: "Reservado sem burocracia, com calendário bloqueado",
+  },
+];
 
 const SERVICES = [
   {
@@ -70,11 +164,11 @@ const STEPS = [
   },
 ];
 
-const DESTINATIONS = [
+const DESTINATIONS: { slug: string; name: string; photo: string; href?: string }[] = [
   { slug: "dest-muro-alto", name: "Muro Alto", photo: "/photos/destino-muro-alto.jpg" },
-  { slug: "dest-porto", name: "Porto de Galinhas", photo: "/photos/destino-porto-de-galinhas.jpg" },
-  { slug: "dest-tamandare", name: "Tamandaré", photo: "/photos/destino-tamandare.webp" },
-  { slug: "dest-carneiros", name: "Praia dos Carneiros", photo: "/photos/destino-carneiros.webp" },
+  { slug: "dest-porto", name: "Porto de Galinhas", photo: "/photos/destino-porto-de-galinhas.jpg", href: "/porto-de-galinhas" },
+  { slug: "dest-tamandare", name: "Tamandaré", photo: "/photos/destino-tamandare.webp", href: "/tamandare-e-carneiros" },
+  { slug: "dest-carneiros", name: "Praia dos Carneiros", photo: "/photos/destino-carneiros.webp", href: "/tamandare-e-carneiros" },
 ];
 
 const CHANNELS = ["Airbnb", "Booking.com", "Decolar/Despegar", "Google Vacation Rentals"];
@@ -179,6 +273,31 @@ export default function HomePage() {
           </Reveal>
         </section>
 
+        {/* Quebra de objeções: gestão completa */}
+        <section className="mx-auto max-w-brand px-6 py-20">
+          <Reveal className="mx-auto mb-14 max-w-[680px] text-center">
+            <p className="mb-3 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
+              Gestão completa, sem letras miúdas
+            </p>
+            <h2 className="font-heading text-[34px] text-navy sm:text-[45px]">
+              Como funciona a gestão completa, do repasse à vistoria
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {FULL_SERVICE.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.08} className="border-t border-orange pt-6">
+                <item.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
+                <h3 className="mb-2 font-heading text-[22px] text-navy">
+                  {item.title}
+                </h3>
+                <p className="text-[19px] leading-relaxed text-ink-soft">
+                  {item.desc}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
         {/* Compromisso */}
         <Reveal className="mx-auto max-w-[780px] px-6 pt-28 pb-4 text-center">
           <h2 className="mb-8 font-heading text-[36px] leading-tight text-navy sm:text-[47px]">
@@ -234,6 +353,72 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </section>
+
+        {/* Diferenciais competitivos */}
+        <section className="mx-auto max-w-brand px-6 py-16 pb-4">
+          <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+            <p className="mb-3 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
+              Por que a Meu Flat na Praia
+            </p>
+            <h2 className="font-heading text-[34px] text-navy sm:text-[45px]">
+              Tecnologia, equipe local e proteção patrimonial em um só contrato
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+            {DIFFERENTIATORS.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.08} className="border-t border-orange pt-6">
+                <item.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
+                <h3 className="mb-2 font-heading text-[24px] text-navy">
+                  {item.title}
+                </h3>
+                <p className="text-[21px] leading-relaxed text-ink-soft">
+                  {item.desc}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* Tabela comparativa */}
+        <section className="mx-auto max-w-brand px-6 py-16 pb-24">
+          <Reveal className="mx-auto mb-10 max-w-[680px] text-center">
+            <h2 className="font-heading text-[28px] text-navy sm:text-[32px]">
+              Gerenciar sozinho vs. gerir com a Meu Flat na Praia
+            </h2>
+          </Reveal>
+          <Reveal className="overflow-x-auto">
+            <table className="w-full min-w-[640px] border-collapse border border-border text-left text-[18px]">
+              <thead>
+                <tr className="bg-surface-alt text-white">
+                  <th className="border border-border px-5 py-4 font-heading text-[19px] font-normal">
+                    Critério
+                  </th>
+                  <th className="border border-border px-5 py-4 font-heading text-[19px] font-normal">
+                    Gerenciar sozinho
+                  </th>
+                  <th className="border border-border px-5 py-4 font-heading text-[19px] font-normal text-orange-light">
+                    Gerir com a Meu Flat na Praia
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON_ROWS.map((row) => (
+                  <tr key={row.criterio}>
+                    <td className="border border-border px-5 py-4 font-medium text-navy">
+                      {row.criterio}
+                    </td>
+                    <td className="border border-border px-5 py-4 text-ink-soft">
+                      {row.sozinho}
+                    </td>
+                    <td className="border border-border bg-surface-alt/[0.03] px-5 py-4 text-ink">
+                      {row.gestao}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Reveal>
         </section>
 
         {/* Como funciona */}
@@ -343,17 +528,24 @@ export default function HomePage() {
         {/* Destinos */}
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto max-w-brand px-6 py-24">
-            <Reveal className="mx-auto mb-14 max-w-[640px] text-center">
+            <Reveal className="mx-auto mb-14 max-w-[760px] text-center">
               <p className="mb-3 text-[18px] font-medium uppercase tracking-[0.14em] text-white">
                 Onde atuamos
               </p>
-              <h2 className="font-heading text-[34px] text-white sm:text-[45px]">
+              <h2 className="mb-5 font-heading text-[34px] text-white sm:text-[45px]">
                 Destinos atendidos no litoral de Pernambuco
               </h2>
+              <p className="text-[21px] leading-relaxed text-white/70">
+                Porto de Galinhas, Tamandaré e Praia dos Carneiros têm
+                dinâmicas de mercado e perfil de hóspede bem diferentes.
+                Gerir um flat nessas praias exige conhecimento local: saber
+                a agenda de eventos, ter uma rede de manutenção de confiança
+                e entender a diária média que cada destino sustenta.
+              </p>
             </Reveal>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
-              {DESTINATIONS.map((dest, i) => (
-                <Reveal key={dest.slug} delay={i * 0.08}>
+              {DESTINATIONS.map((dest, i) => {
+                const card = (
                   <div className="relative block h-[280px] overflow-hidden">
                     <ImageSlot src={dest.photo} placeholder={dest.name} />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/0 to-transparent" />
@@ -361,8 +553,19 @@ export default function HomePage() {
                       {dest.name}
                     </div>
                   </div>
-                </Reveal>
-              ))}
+                );
+                return (
+                  <Reveal key={dest.slug} delay={i * 0.08}>
+                    {dest.href ? (
+                      <Link href={dest.href} className="group">
+                        {card}
+                      </Link>
+                    ) : (
+                      card
+                    )}
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
