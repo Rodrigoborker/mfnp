@@ -343,6 +343,49 @@ export default function GestaoDeImoveisPage() {
               </div>
             );
           }
+          if (!pillar.imgSrc) {
+            // Sem foto: o texto ocupa a largura toda da seção.
+            return (
+              <section
+                key={pillar.id}
+                className={isAlt ? "border-y border-border bg-surface-alt" : ""}
+              >
+                <div className="mx-auto max-w-brand px-6 py-20">
+                  <Reveal className="mx-auto mb-14 max-w-[760px] text-center">
+                    <p className={`mb-3 text-[17px] font-medium uppercase tracking-[0.14em] ${isAlt ? "text-white" : "text-orange"}`}>
+                      {pillar.tag}
+                    </p>
+                    <h2 className={`mb-4 font-heading text-[31px] sm:text-[36px] ${isAlt ? "text-white" : "text-navy"}`}>
+                      {pillar.title}
+                    </h2>
+                    <p className={`text-[21px] leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
+                      {pillar.intro}
+                    </p>
+                  </Reveal>
+                  <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+                    {pillar.points.map((point, j) => (
+                      <Reveal
+                        key={point.title}
+                        delay={j * 0.08}
+                        className={`border-t pt-6 ${isAlt ? "border-orange-light" : "border-orange"}`}
+                      >
+                        <Check
+                          className={`mb-3.5 h-6 w-6 ${isAlt ? "text-orange-light" : "text-orange"}`}
+                          aria-hidden
+                        />
+                        <div className={`mb-2 font-heading text-[22px] ${isAlt ? "text-white" : "text-navy"}`}>
+                          {point.title}
+                        </div>
+                        <div className={`text-[19px] leading-relaxed ${isAlt ? "text-white/70" : "text-ink-soft"}`}>
+                          {point.desc}
+                        </div>
+                      </Reveal>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            );
+          }
           return (
           <section
             key={pillar.id}
