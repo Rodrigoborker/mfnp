@@ -1,20 +1,21 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://www.meuflatnapraia.com.br";
+// lastModified reflects the date each page's content last actually changed.
+// Update the entry when you edit a route's page.tsx.
+const ROUTES: { path: string; lastModified: string }[] = [
+  { path: "", lastModified: "2026-09-24" },
+  { path: "/gestao-de-imoveis", lastModified: "2026-09-23" },
+  { path: "/montagem-de-flats", lastModified: "2026-09-23" },
+  { path: "/para-proprietarios", lastModified: "2026-09-23" },
+  { path: "/porto-de-galinhas", lastModified: "2026-09-24" },
+  { path: "/tamandare-e-carneiros", lastModified: "2026-09-24" },
+  { path: "/perguntas-frequentes", lastModified: "2026-09-24" },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = [
-    "",
-    "/gestao-de-imoveis",
-    "/montagem-de-flats",
-    "/para-proprietarios",
-    "/porto-de-galinhas",
-    "/tamandare-e-carneiros",
-    "/perguntas-frequentes",
-  ].map((path) => ({
-    url: `${BASE_URL}${path}`,
-    lastModified: new Date(),
+  return ROUTES.map(({ path, lastModified }) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified,
   }));
-
-  return staticRoutes;
 }

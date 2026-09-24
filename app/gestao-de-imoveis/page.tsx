@@ -219,7 +219,10 @@ export default function GestaoDeImoveisPage() {
     <>
       <Header />
       <main>
-        <Breadcrumb current="Gestão de imóveis por temporada" />
+        <Breadcrumb
+          current="Gestão de imóveis por temporada"
+          href="/gestao-de-imoveis"
+        />
 
         {/* Hero */}
         <Reveal className="mx-auto max-w-[840px] px-6 pt-10 pb-16 text-center">
