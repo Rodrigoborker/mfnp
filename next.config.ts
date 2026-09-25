@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
       { source: "/videos/:path*", headers: cache },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "meuflatnapraia.com.br" }],
+        destination: "https://www.meuflatnapraia.com.br/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 import RevealImage from "@/components/RevealImage";
 
 export const metadata: Metadata = {
-  title: "Gestão de flats em Tamandaré e Praia dos Carneiros",
+  title: "Gestão de flats em Tamandaré e Carneiros",
   description:
     "Gestora de short stay em Tamandaré e Carneiros: posicionamento para diária média mais alta, turismo de experiência e rendimento de aluguel por temporada sustentável.",
 };
