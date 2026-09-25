@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   verification: {
     google: "EmuX4Cgq_zkWIE8d11czpeAEEonm39QQOetKfCbHXC4",
   },
+  alternates: {
+    types: {
+      "text/plain": "/llms.txt",
+    },
+  },
 };
 
 const organizationJsonLd = {
