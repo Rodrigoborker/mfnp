@@ -17,6 +17,12 @@ const nextConfig: NextConfig = {
       { source: "/photos/:path*", headers: cache },
       { source: "/brand/:path*", headers: cache },
       { source: "/videos/:path*", headers: cache },
+      {
+        source: "/llms.txt",
+        headers: [
+          { key: "Content-Type", value: "text/plain; charset=utf-8" },
+        ],
+      },
     ];
   },
   async redirects() {
