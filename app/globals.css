@@ -34,6 +34,34 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Revelação ao rolar (Reveal / RevealImage): mesma curva e durações da versão
+   anterior em motion, mas só com CSS + IntersectionObserver. */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 28px));
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s);
+}
+
+.reveal[data-revealed] {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-image {
+  opacity: 0;
+  transform: scale(1.08);
+  transition:
+    opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-image[data-revealed] {
+  opacity: 1;
+  transform: none;
+}
+
 /* Preenchimento automático do navegador: mantém fundo escuro e texto branco. */
 input:-webkit-autofill,
 input:-webkit-autofill:focus,

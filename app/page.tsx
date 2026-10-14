@@ -180,7 +180,7 @@ export default function HomePage() {
       <main>
         {/* Hero, full-bleed, vídeo fixo na tela */}
         <ParallaxHero
-          video={<HeroVideo src="/videos/hero.mp4" poster="/photos/hero-jangada.jpg" />}
+          video={<HeroVideo src="/videos/hero.mp4" />}
         >
           <Reveal className="relative mx-auto w-full max-w-brand px-6 pb-10 text-white sm:pb-16" delay={0.15}>
             <p className="mb-4 text-[16px] font-medium uppercase tracking-[0.14em] text-white">

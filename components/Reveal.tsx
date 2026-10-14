@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { useRevealOnce } from "./useRevealOnce";
 
 type RevealProps = {
   children: ReactNode;
@@ -16,15 +16,20 @@ export default function Reveal({
   y = 28,
   className,
 }: RevealProps) {
+  const ref = useRevealOnce<HTMLDivElement>();
+
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+    <div
+      ref={ref}
+      className={className ? `reveal ${className}` : "reveal"}
+      style={
+        {
+          "--reveal-y": `${y}px`,
+          "--reveal-delay": `${delay}s`,
+        } as CSSProperties
+      }
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
