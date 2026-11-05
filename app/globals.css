@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* Editorial travel palette — warm cream & ink, terracotta accent */
-  --color-navy: #241f1a;
-  --color-navy-dark: #1a1512;
-  --color-orange: #b3572f;
-  --color-orange-light: #d9a679;
-  --color-ink: #2b2620;
-  --color-ink-soft: #4d453d;
-  --color-surface: #f8f5ef;
-  --color-surface-alt: #241f1a;
-  --color-border: #ddd2c0;
-  --color-footer-text: #cbbfa9;
-  --color-footer-text-dim: #9c8f78;
+  /* Paleta: azul #064071 + laranja #FF4B01 */
+  --color-navy: #064071;
+  --color-navy-dark: #042c4e;
+  --color-orange: #ff4b01;
+  --color-orange-light: #ff8a57;
+  --color-ink: #0b2a47;
+  --color-ink-soft: #35536e;
+  --color-surface: #f4f8fc;
+  --color-surface-alt: #064071;
+  --color-border: #cfdeec;
+  --color-footer-text: #c9dbed;
+  --color-footer-text-dim: #8fb0cf;
 
-  --font-heading: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-cormorant), Georgia, serif;
+  --font-heading: var(--font-poppins), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-script: var(--font-script), cursive;
 
   --radius-brand: 0px;
@@ -24,6 +24,8 @@
 }
 
 body {
+  font-size: 18px;
+  line-height: 1.65;
   overflow-x: clip;
   background: var(--color-surface);
   color: var(--color-ink);

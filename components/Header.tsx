@@ -21,7 +21,7 @@ export default function Header() {
             className="h-14 w-auto sm:h-20"
           />
         </Link>
-        <nav className="flex flex-wrap items-center gap-5 text-[15px] font-medium tracking-[0.04em] uppercase sm:gap-7 sm:text-[18px]">
+        <nav className="flex flex-wrap items-center gap-5 text-[17px] font-medium tracking-[0.04em] uppercase sm:gap-7 sm:text-[20px]">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}

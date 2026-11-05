@@ -30,7 +30,7 @@ export default function Breadcrumb({
       />
       <nav
         aria-label="breadcrumb"
-        className="mx-auto max-w-brand px-6 pt-5 text-[18px] text-ink-soft"
+        className="mx-auto max-w-brand px-6 pt-5 text-[20px] text-ink-soft"
       >
         <Link href="/" className="text-ink-soft hover:text-navy">
           Home

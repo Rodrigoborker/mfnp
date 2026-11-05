@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant_Garamond, Alex_Brush } from "next/font/google";
+import { Poppins, Inter, Alex_Brush } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${playfair.variable} ${cormorant.variable} ${script.variable}`}
+      className={`${poppins.variable} ${inter.variable} ${script.variable}`}
     >
       <body className="flex min-h-screen flex-col font-sans text-ink antialiased">
         <script

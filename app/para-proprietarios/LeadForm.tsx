@@ -43,7 +43,7 @@ const subscribe = () => () => {};
 
 // Campos escuros com texto branco, para o que a pessoa digita ficar visível.
 const fieldClass =
-  "w-full rounded-brand border border-border bg-transparent px-3.5 py-3 text-[20px] text-white placeholder:text-white/50 focus:border-orange-light focus:outline-none";
+  "w-full rounded-brand border border-border bg-transparent px-3.5 py-3 text-[22px] text-white placeholder:text-white/50 focus:border-orange-light focus:outline-none";
 
 export default function LeadForm() {
   const [sentUrl, setSentUrl] = useState<string | null>(null);
@@ -70,10 +70,10 @@ export default function LeadForm() {
           className="mx-auto mb-4 h-10 w-10 text-orange-light"
           aria-hidden
         />
-        <h3 className="mb-2 font-heading text-[23px] font-bold text-white">
+        <h3 className="mb-2 font-heading text-[25px] font-bold text-white">
           Falta só enviar no WhatsApp
         </h3>
-        <p className="mb-6 text-[20px] text-white/70">
+        <p className="mb-6 text-[22px] text-white/70">
           Abrimos o WhatsApp com seus dados já preenchidos. É só tocar em
           enviar para falar com a nossa equipe.
         </p>
@@ -81,7 +81,7 @@ export default function LeadForm() {
           href={sentUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-brand bg-orange px-6 py-3.5 text-[20px] font-semibold text-white hover:bg-orange/90"
+          className="inline-block rounded-brand bg-orange px-6 py-3.5 text-[22px] font-semibold text-white hover:bg-orange/90"
         >
           Abrir o WhatsApp de novo
         </a>
@@ -128,7 +128,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="name"
-          className="mb-1.5 block text-[18px] font-semibold text-white"
+          className="mb-1.5 block text-[20px] font-semibold text-white"
         >
           Nome
         </label>
@@ -144,7 +144,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="phone"
-          className="mb-1.5 block text-[18px] font-semibold text-white"
+          className="mb-1.5 block text-[20px] font-semibold text-white"
         >
           WhatsApp
         </label>
@@ -161,7 +161,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="location"
-          className="mb-1.5 block text-[18px] font-semibold text-white"
+          className="mb-1.5 block text-[20px] font-semibold text-white"
         >
           Localização do imóvel
         </label>
@@ -178,7 +178,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="propertyType"
-          className="mb-1.5 block text-[18px] font-semibold text-white"
+          className="mb-1.5 block text-[20px] font-semibold text-white"
         >
           Tipo do imóvel
         </label>
@@ -199,7 +199,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="rentalStatus"
-          className="mb-1.5 block text-[18px] font-semibold text-white"
+          className="mb-1.5 block text-[20px] font-semibold text-white"
         >
           Já trabalha com temporada?
         </label>
@@ -218,7 +218,7 @@ export default function LeadForm() {
       <div>
         <label
           htmlFor="message"
-          className="mb-1.5 block text-[18px] font-semibold text-white"
+          className="mb-1.5 block text-[20px] font-semibold text-white"
         >
           Mensagem (opcional)
         </label>
@@ -233,11 +233,11 @@ export default function LeadForm() {
       <button
         type="submit"
         disabled={!ready}
-        className="mt-1 rounded-brand bg-orange px-6 py-3.5 text-[20px] font-semibold text-white hover:bg-orange/90 disabled:opacity-60"
+        className="mt-1 rounded-brand bg-orange px-6 py-3.5 text-[22px] font-semibold text-white hover:bg-orange/90 disabled:opacity-60"
       >
         Enviar pelo WhatsApp
       </button>
-      <p className="text-center text-[17px] text-white/60">
+      <p className="text-center text-[19px] text-white/60">
         Ao enviar, abrimos o WhatsApp com sua mensagem pronta. Seus dados são
         usados apenas para contato.
       </p>

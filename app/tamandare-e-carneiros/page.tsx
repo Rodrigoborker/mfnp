@@ -45,14 +45,14 @@ export default function TamandareCarneirosPage() {
         {/* Hero */}
         <section className="px-6 pb-14 pt-10 text-center">
           <Reveal className="mx-auto max-w-[860px]">
-            <p className="mb-4 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
+            <p className="mb-4 text-[20px] font-medium uppercase tracking-[0.14em] text-orange">
               Gestão em Tamandaré e Carneiros
             </p>
-            <h1 className="mb-5 font-heading text-[38px] leading-[1.15] text-navy sm:text-[47px] lg:text-[52px]">
+            <h1 className="mb-5 font-heading text-[41px] leading-[1.15] text-navy sm:text-[50px] lg:text-[55px]">
               Gestora de short stay para quem investiu em Tamandaré e Praia
               dos Carneiros
             </h1>
-            <p className="mx-auto max-w-[680px] text-[22px] leading-relaxed text-ink-soft">
+            <p className="mx-auto max-w-[680px] text-[24px] leading-relaxed text-ink-soft">
               Um destino de ticket médio mais alto e turismo de experiência
               exige posicionamento diferente de Porto de Galinhas: menos
               volume, mais valor por estadia, e uma operação pensada para
@@ -71,7 +71,7 @@ export default function TamandareCarneirosPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
             <Reveal className="relative mx-auto flex h-full max-w-brand items-center px-6">
               <div className="max-w-xl text-white">
-                <p className="mb-8 text-[23px] leading-relaxed text-white/90">
+                <p className="mb-8 text-[25px] leading-relaxed text-white/90">
                   Precificação orientada a valor, curadoria de hóspede e
                   comunicação alinhada ao perfil de quem busca Tamandaré e
                   Carneiros. O objetivo é transformar rendimento de aluguel
@@ -80,7 +80,7 @@ export default function TamandareCarneirosPage() {
                 </p>
                 <Link
                   href="/para-proprietarios#lead-form"
-                  className="inline-block bg-orange px-7 py-4 text-[21px] text-white hover:bg-orange/90"
+                  className="inline-block bg-orange px-7 py-4 text-[23px] text-white hover:bg-orange/90"
                 >
                   Quero rentabilizar meu flat em Tamandaré ou Carneiros
                 </Link>
@@ -92,10 +92,10 @@ export default function TamandareCarneirosPage() {
         {/* Por que a dinâmica local exige expertise */}
         <section className="mx-auto max-w-brand px-6 py-20">
           <Reveal className="mx-auto mb-14 max-w-[720px] text-center">
-            <p className="mb-3 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
+            <p className="mb-3 text-[20px] font-medium uppercase tracking-[0.14em] text-orange">
               Por que a gestão local importa
             </p>
-            <h2 className="font-heading text-[34px] text-navy sm:text-[45px]">
+            <h2 className="font-heading text-[37px] text-navy sm:text-[48px]">
               Valorização do ticket médio exige uma estratégia própria
             </h2>
           </Reveal>
@@ -103,10 +103,10 @@ export default function TamandareCarneirosPage() {
             {DYNAMICS.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.08} className="border-t border-orange pt-6">
                 <item.icon className="mb-3.5 h-6 w-6 text-orange" aria-hidden />
-                <h3 className="mb-2 font-heading text-[22px] text-navy">
+                <h3 className="mb-2 font-heading text-[24px] text-navy">
                   {item.title}
                 </h3>
-                <p className="text-[19px] leading-relaxed text-ink-soft">
+                <p className="text-[21px] leading-relaxed text-ink-soft">
                   {item.desc}
                 </p>
               </Reveal>
@@ -118,14 +118,14 @@ export default function TamandareCarneirosPage() {
         <section className="border-y border-border bg-surface-alt">
           <div className="mx-auto grid max-w-brand grid-cols-1 items-center gap-14 px-6 py-20 lg:grid-cols-2">
             <Reveal>
-              <p className="mb-3 text-[17px] font-medium uppercase tracking-[0.14em] text-white">
+              <p className="mb-3 text-[19px] font-medium uppercase tracking-[0.14em] text-white">
                 Operação local
               </p>
-              <h2 className="mb-4 font-heading text-[31px] text-white sm:text-[36px]">
+              <h2 className="mb-4 font-heading text-[34px] text-white sm:text-[39px]">
                 Curadoria de hóspede e padrão de experiência acima da
                 simples ocupação
               </h2>
-              <p className="mb-4 text-[21px] leading-relaxed text-white/70">
+              <p className="mb-4 text-[23px] leading-relaxed text-white/70">
                 Em Tamandaré e Praia dos Carneiros, o resultado financeiro
                 está mais ligado à diária média e à reputação do imóvel do
                 que ao volume de reservas. Selecionamos hóspede, cuidamos do
@@ -133,7 +133,7 @@ export default function TamandareCarneirosPage() {
                 anúncio alinhada ao posicionamento de tranquilidade que o
                 destino vende.
               </p>
-              <p className="text-[21px] leading-relaxed text-white/70">
+              <p className="text-[23px] leading-relaxed text-white/70">
                 A precificação dinâmica considera a sazonalidade específica
                 da região e a concorrência direta de pousadas e casas de
                 temporada, com uma lógica própria, diferente do modelo de
@@ -152,13 +152,13 @@ export default function TamandareCarneirosPage() {
         {/* CTA */}
         <section className="border-t border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[31px] text-white sm:text-[38px]">
+            <h2 className="mb-4 font-heading text-[34px] text-white sm:text-[41px]">
               Quer saber o potencial de rendimento do seu flat em Tamandaré
               ou Carneiros?
             </h2>
             <Link
               href="/para-proprietarios#lead-form"
-              className="inline-block bg-orange px-8 py-4 text-[21px] text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-[23px] text-white hover:bg-orange/90"
             >
               Quero uma avaliação do meu imóvel
             </Link>

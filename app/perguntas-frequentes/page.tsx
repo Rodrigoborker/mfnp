@@ -81,14 +81,14 @@ export default function PerguntasFrequentesPage() {
 
         <section className="px-6 pb-14 pt-10 text-center">
           <Reveal className="mx-auto max-w-[860px]">
-            <p className="mb-4 text-[18px] font-medium uppercase tracking-[0.14em] text-orange">
+            <p className="mb-4 text-[20px] font-medium uppercase tracking-[0.14em] text-orange">
               Perguntas frequentes
             </p>
-            <h1 className="mb-5 font-heading text-[38px] leading-[1.15] text-navy sm:text-[47px] lg:text-[52px]">
+            <h1 className="mb-5 font-heading text-[41px] leading-[1.15] text-navy sm:text-[50px] lg:text-[55px]">
               O que proprietários mais perguntam antes de contratar uma
               gestão de temporada
             </h1>
-            <p className="mx-auto max-w-[680px] text-[22px] leading-relaxed text-ink-soft">
+            <p className="mx-auto max-w-[680px] text-[24px] leading-relaxed text-ink-soft">
               Taxa de administração, repasse, proteção do imóvel, uso
               próprio, ocupação na baixa temporada e contrato, direto ao
               ponto.
@@ -102,12 +102,12 @@ export default function PerguntasFrequentesPage() {
 
         <section className="border-t border-border bg-surface-alt">
           <Reveal className="mx-auto max-w-brand px-6 py-18 text-center">
-            <h2 className="mb-4 font-heading text-[31px] text-white sm:text-[38px]">
+            <h2 className="mb-4 font-heading text-[34px] text-white sm:text-[41px]">
               Ainda tem dúvidas sobre a gestão do seu flat?
             </h2>
             <Link
               href="/para-proprietarios#lead-form"
-              className="inline-block bg-orange px-8 py-4 text-[21px] text-white hover:bg-orange/90"
+              className="inline-block bg-orange px-8 py-4 text-[23px] text-white hover:bg-orange/90"
             >
               Quero uma avaliação do meu imóvel
             </Link>
