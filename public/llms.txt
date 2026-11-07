@@ -45,6 +45,21 @@
 - [Gestão de flats em Porto de Galinhas](https://www.meuflatnapraia.com.br/porto-de-galinhas): administração de aluguel por temporada em Porto de Galinhas e Muro Alto.
 - [Gestão de flats em Tamandaré e Carneiros](https://www.meuflatnapraia.com.br/tamandare-e-carneiros): gestão de short stay em Tamandaré e na Praia dos Carneiros.
 - [Perguntas frequentes](https://www.meuflatnapraia.com.br/perguntas-frequentes): taxa de administração, repasses, proteção do imóvel, uso próprio, ocupação na baixa temporada e contrato.
+- [Condomínios que administramos](https://www.meuflatnapraia.com.br/condominios): lista dos empreendimentos onde a Meu Flat na Praia administra flats por temporada.
+
+## Condomínios administrados
+
+- [Porto Kai Residence](https://www.meuflatnapraia.com.br/condominios/porto-kai-residence): Porto de Galinhas.
+- [Nixxus II](https://www.meuflatnapraia.com.br/condominios/nixxus-ii): Porto de Galinhas.
+- [Paulo Brito Residence](https://www.meuflatnapraia.com.br/condominios/paulo-brito-residence): Porto de Galinhas.
+- [Ora Beach Residence](https://www.meuflatnapraia.com.br/condominios/ora-beach-residence): Porto de Galinhas.
+- [Ocean Blue](https://www.meuflatnapraia.com.br/condominios/ocean-blue): litoral sul de Pernambuco.
+- [Beach Porto](https://www.meuflatnapraia.com.br/condominios/beach-porto): litoral sul de Pernambuco.
+- [Bela Vista](https://www.meuflatnapraia.com.br/condominios/bela-vista): Porto de Galinhas.
+- [Harbor Living](https://www.meuflatnapraia.com.br/condominios/harbor-living): Porto de Galinhas.
+- [Terraza Tamandaré](https://www.meuflatnapraia.com.br/condominios/terraza-tamandare): Tamandaré.
+- [Prime Beach Carneiros](https://www.meuflatnapraia.com.br/condominios/prime-beach-carneiros): Praia dos Carneiros.
+- [Maré Alta Tamandaré](https://www.meuflatnapraia.com.br/condominios/mare-alta-tamandare): Tamandaré.
 
 ## Perguntas que este site responde
 

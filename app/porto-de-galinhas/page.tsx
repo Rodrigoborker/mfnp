@@ -9,9 +9,10 @@ import Reveal from "@/components/Reveal";
 import RevealImage from "@/components/RevealImage";
 
 export const metadata: Metadata = {
-  title: "Gestão de Flats em Porto de Galinhas",
+  title: "Administradora de flats em Porto de Galinhas",
   description:
-    "Gestão de flats e empresa de gestão Airbnb em Porto de Galinhas: giro de limpeza rápido, alta ocupação e precificação para o destino mais movimentado do litoral sul de PE.",
+    "Administradora de flats e Airbnb em Porto de Galinhas: giro de limpeza rápido, precificação dinâmica e repasse direto ao proprietário. Peça uma avaliação.",
+  alternates: { canonical: "/porto-de-galinhas" },
 };
 
 const DYNAMICS = [

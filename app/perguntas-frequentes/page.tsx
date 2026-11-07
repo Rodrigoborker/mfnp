@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Perguntas frequentes sobre gestão de flats",
   description:
     "Taxa de administração, repasses, proteção do imóvel, uso próprio, ocupação na baixa temporada e contrato: respostas diretas para proprietários do litoral sul de PE.",
+  alternates: { canonical: "/perguntas-frequentes" },
 };
 
 const FAQS = [

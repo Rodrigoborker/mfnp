@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const NAV_LINKS = [
   { href: "/gestao-de-imoveis", label: "Gestão" },
+  { href: "/condominios", label: "Condomínios" },
   { href: "/para-proprietarios", label: "Para proprietários" },
 ];
 

@@ -17,9 +17,10 @@ import RevealImage from "@/components/RevealImage";
 import LeadForm from "./LeadForm";
 
 export const metadata: Metadata = {
-  title: "Para proprietários",
+  title: "Administração de flat para proprietários",
   description:
-    "Transforme seu imóvel em renda por temporada, sem abrir mão do controle. Pagamento direto ao proprietário e área exclusiva de acompanhamento.",
+    "Transforme seu flat em renda por temporada sem abrir mão do controle. Avaliação gratuita, repasse direto ao proprietário e área exclusiva de acompanhamento.",
+  alternates: { canonical: "/para-proprietarios" },
 };
 
 const BENEFITS = [

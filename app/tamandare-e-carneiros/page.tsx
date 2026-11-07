@@ -9,9 +9,10 @@ import Reveal from "@/components/Reveal";
 import RevealImage from "@/components/RevealImage";
 
 export const metadata: Metadata = {
-  title: "Gestão de flats em Tamandaré e Carneiros",
+  title: "Administradora de flats em Tamandaré e Carneiros",
   description:
-    "Gestora de short stay em Tamandaré e Carneiros: posicionamento para diária média mais alta, turismo de experiência e rendimento de aluguel por temporada sustentável.",
+    "Administradora de flats e Airbnb em Tamandaré e na Praia dos Carneiros: diária média mais alta, turismo de experiência e repasse direto ao proprietário.",
+  alternates: { canonical: "/tamandare-e-carneiros" },
 };
 
 const DYNAMICS = [

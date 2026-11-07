@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   },
   description:
     "Administramos seu flat em Porto de Galinhas, Tamandaré e Carneiros com repasse direto e sem taxas ocultas. Peça uma avaliação gratuita.",
+  alternates: { canonical: "/" },
 };
 
 const FULL_SERVICE = [

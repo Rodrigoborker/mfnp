@@ -27,6 +27,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // URLs do WordPress antigo que o Google ainda tenta rastrear (404/403).
+      { source: "/index.php", destination: "/", permanent: true },
+      { source: "/pt", destination: "/", permanent: true },
+      { source: "/pt/:path*", destination: "/:path*", permanent: true },
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/:path*", destination: "/", permanent: true },
+      { source: "/es", destination: "/", permanent: true },
+      { source: "/es/:path*", destination: "/", permanent: true },
       {
         source: "/:path*",
         has: [{ type: "host", value: "meuflatnapraia.com.br" }],

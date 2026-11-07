@@ -4,22 +4,27 @@ import { SITE_URL } from "@/lib/site";
 export default function Breadcrumb({
   current,
   href,
+  parent,
 }: {
   current: string;
   href: string;
+  parent?: { name: string; href: string };
 }) {
+  const trail = [
+    { name: "Home", href: "/" },
+    ...(parent ? [parent] : []),
+    { name: current, href },
+  ];
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: current,
-        item: `${SITE_URL}${href}`,
-      },
-    ],
+    itemListElement: trail.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: i === 0 ? SITE_URL : `${SITE_URL}${item.href}`,
+    })),
   };
 
   return (
@@ -35,7 +40,16 @@ export default function Breadcrumb({
         <Link href="/" className="text-ink-soft hover:text-navy">
           Home
         </Link>{" "}
-        <span className="mx-1.5">›</span> {current}
+        <span className="mx-1.5">›</span>{" "}
+        {parent && (
+          <>
+            <Link href={parent.href} className="text-ink-soft hover:text-navy">
+              {parent.name}
+            </Link>{" "}
+            <span className="mx-1.5">›</span>{" "}
+          </>
+        )}
+        {current}
       </nav>
     </>
   );

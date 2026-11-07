@@ -22,12 +22,19 @@ const script = Alex_Brush({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Meu Flat na Praia | Gestão de imóveis por temporada",
+    default: "Meu Flat na Praia | Administradora de flats por temporada",
     template: "%s | Meu Flat na Praia",
   },
   description:
-    "Gestão profissional de imóveis por temporada no litoral de Pernambuco: preparação do imóvel, reservas, precificação e distribuição multicanal.",
+    "Administradora de flats e Airbnb em Porto de Galinhas, Tamandaré e Carneiros: preparação do imóvel, reservas, precificação dinâmica e repasse direto.",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Meu Flat na Praia",
+    images: ["/photos/hero-jangada.jpg"],
+  },
   verification: {
     google: "EmuX4Cgq_zkWIE8d11czpeAEEonm39QQOetKfCbHXC4",
   },
@@ -47,6 +54,31 @@ const organizationJsonLd = {
   logo: `${SITE_URL}/brand/logo-cor.png`,
   image: `${SITE_URL}/brand/logo-cor.png`,
   telephone: "+5581994869792",
+  description:
+    "Administradora de flats e imóveis para aluguel por temporada no litoral sul de Pernambuco.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Porto de Galinhas",
+    addressRegion: "PE",
+    addressCountry: "BR",
+  },
+  founder: [
+    {
+      "@type": "Person",
+      name: "Rodrigo Montenegro",
+      jobTitle: "Corretor de imóveis (CRECI-PE 16191)",
+    },
+    {
+      "@type": "Person",
+      name: "Rosana Costa",
+      jobTitle: "Administradora",
+    },
+  ],
+  knowsAbout: [
+    "Administração de flats por temporada",
+    "Gestão de Airbnb e Booking",
+    "Montagem e decoração de imóveis para temporada",
+  ],
   areaServed: [
     { "@type": "Place", name: "Porto de Galinhas" },
     { "@type": "Place", name: "Tamandaré" },

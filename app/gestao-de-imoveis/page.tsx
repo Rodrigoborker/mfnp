@@ -10,9 +10,10 @@ import Reveal from "@/components/Reveal";
 import RevealImage from "@/components/RevealImage";
 
 export const metadata: Metadata = {
-  title: "Gestão de imóveis por temporada",
+  title: "Administradora de Airbnb e flats por temporada",
   description:
-    "Gestão profissional de Airbnb: preparação do imóvel, anúncios multicanal, precificação dinâmica e repasses diretos ao proprietário.",
+    "Administradora de Airbnb e flats por temporada: preparação do imóvel, anúncios multicanal, precificação dinâmica e repasse direto ao proprietário.",
+  alternates: { canonical: "/gestao-de-imoveis" },
 };
 
 type Pillar = {

@@ -1,16 +1,22 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
+import { CONDOMINIOS } from "@/lib/condominios";
 
 // lastModified reflects the date each page's content last actually changed.
 // Update the entry when you edit a route's page.tsx.
 const ROUTES: { path: string; lastModified: string }[] = [
-  { path: "", lastModified: "2026-09-24" },
-  { path: "/gestao-de-imoveis", lastModified: "2026-09-23" },
-  { path: "/montagem-de-flats", lastModified: "2026-09-23" },
-  { path: "/para-proprietarios", lastModified: "2026-09-23" },
-  { path: "/porto-de-galinhas", lastModified: "2026-09-24" },
-  { path: "/tamandare-e-carneiros", lastModified: "2026-09-24" },
-  { path: "/perguntas-frequentes", lastModified: "2026-09-24" },
+  { path: "", lastModified: "2026-11-07" },
+  { path: "/gestao-de-imoveis", lastModified: "2026-11-07" },
+  { path: "/montagem-de-flats", lastModified: "2026-11-07" },
+  { path: "/para-proprietarios", lastModified: "2026-11-07" },
+  { path: "/porto-de-galinhas", lastModified: "2026-11-07" },
+  { path: "/tamandare-e-carneiros", lastModified: "2026-11-07" },
+  { path: "/perguntas-frequentes", lastModified: "2026-11-07" },
+  { path: "/condominios", lastModified: "2026-11-07" },
+  ...CONDOMINIOS.map((c) => ({
+    path: `/condominios/${c.slug}`,
+    lastModified: "2026-11-07",
+  })),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

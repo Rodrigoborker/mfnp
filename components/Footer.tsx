@@ -75,6 +75,12 @@ export default function Footer() {
             >
               Tamandaré e Carneiros
             </Link>
+            <Link
+              href="/condominios"
+              className="text-footer-text hover:text-white"
+            >
+              Condomínios que administramos
+            </Link>
           </div>
         </div>
 

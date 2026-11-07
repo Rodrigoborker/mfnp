@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Montagem e decoração de flats",
   description:
     "Projeto de arquitetura, marcenaria, elétrica e pintura com equipe própria: do imóvel vazio ao flat decorado e pronto para hospedar.",
+  alternates: { canonical: "/montagem-de-flats" },
 };
 
 const FRONTS = [
