@@ -215,6 +215,14 @@ export default async function CondominioPage({
                 ))}
               </ul>
             )}
+            <p className="mb-4 text-[22px] leading-relaxed text-ink-soft">
+              O público que se hospeda aqui é formado principalmente por
+              casais e famílias.
+            </p>
+            <p className="mb-4 text-[22px] leading-relaxed text-ink-soft">
+              Como em todos os condomínios da nossa carteira, o prédio conta
+              com rooftop, piscina, garagem e elevadores.
+            </p>
             <p className="text-[22px] leading-relaxed text-ink-soft">
               Os anúncios são publicados em vários canais ao mesmo tempo e a
               tarifa é revisada continuamente contra a concorrência direta
