@@ -138,9 +138,8 @@ export const CONDOMINIOS: Condominio[] = [
   { slug: "nixxus-ii", nome: "Nixxus II", destino: "porto-de-galinhas" },
   { slug: "paulo-brito-residence", nome: "Paulo Brito Residence", destino: "porto-de-galinhas" },
   { slug: "ora-beach-residence", nome: "Ora Beach Residence", destino: "porto-de-galinhas" },
-  // TODO: confirmar a localização de Ocean Blue e Beach Porto e trocar "litoral-sul".
-  { slug: "ocean-blue", nome: "Ocean Blue", destino: "litoral-sul" },
-  { slug: "beach-porto", nome: "Beach Porto", destino: "litoral-sul" },
+  { slug: "ocean-blue", nome: "Ocean Blue", destino: "porto-de-galinhas" },
+  { slug: "beach-porto", nome: "Beach Porto", destino: "porto-de-galinhas" },
   { slug: "bela-vista", nome: "Bela Vista", destino: "porto-de-galinhas" },
   { slug: "harbor-living", nome: "Harbor Living", destino: "porto-de-galinhas" },
   { slug: "terraza-tamandare", nome: "Terraza Tamandaré", destino: "tamandare" },

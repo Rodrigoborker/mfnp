@@ -10,6 +10,16 @@ const NAV_LINKS = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
+      <div className="bg-navy text-white">
+        <div className="mx-auto flex max-w-brand justify-end px-6 py-1">
+          <a
+            href="https://reservas.meuflatnapraia.com.br"
+            className="text-[14px] tracking-[0.03em] text-white/85 hover:text-white hover:underline"
+          >
+            Sou hóspede e quero reservar →
+          </a>
+        </div>
+      </div>
       <div className="mx-auto flex max-w-brand flex-wrap items-center justify-between gap-2 px-6 py-2 sm:gap-6 sm:py-3">
         <Link href="/" className="shrink-0">
           <Image
