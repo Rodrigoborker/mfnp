@@ -19,7 +19,7 @@ const FAQS = [
     question:
       "Qual a taxa de administração cobrada para gerenciar meu flat e o que está incluso?",
     answer:
-      "A taxa varia conforme o tipo de imóvel, o destino (Porto de Galinhas, Tamandaré ou Carneiros) e o escopo contratado, por isso fazemos uma avaliação personalizada antes de qualquer proposta. A transparência, essa não varia: o percentual é fixo em contrato, incide só sobre o que é efetivamente reservado e cobre toda a operação comercial, então o proprietário sabe exatamente o que está pagando e por quê. Isso inclui anúncios profissionais multicanal, precificação dinâmica, atendimento ao hóspede do check-in ao check-out, vistoria de entrada e saída e a área exclusiva de acompanhamento financeiro. Montagem, decoração ou reformas pontuais entram à parte, sempre com orçamento aprovado antes da execução.",
+      "A taxa de administração é de 20% sobre o valor líquido da reserva, calculado depois que o canal (Airbnb, Booking e similares) desconta a taxa dele. Ela cobre toda a gestão comercial e operacional, e a taxa de limpeza é paga pelo hóspede. O percentual é fixo em contrato e incide só sobre o que é efetivamente reservado, então o proprietário sabe exatamente o que está pagando e por quê. A gestão inclui anúncios profissionais multicanal, precificação dinâmica, atendimento ao hóspede do check-in ao check-out, vistoria de entrada e saída e a área exclusiva de acompanhamento financeiro. Montagem, decoração ou reformas pontuais entram à parte, sempre com orçamento aprovado antes da execução.",
   },
   {
     id: "repasse-prestacao-contas",
@@ -52,7 +52,7 @@ const FAQS = [
     question:
       "Qual o formato do contrato de gestão? Existe fidelidade engessada?",
     answer:
-      "O contrato de gestão é formalizado por escrito, com o percentual da taxa, os serviços incluídos e as regras de repasse definidos com clareza desde o início. Não existe fidelidade que prenda o proprietário a um vínculo indefinido: o contrato prevê prazo de aviso prévio para encerramento da gestão, para que a transição, se um dia acontecer, seja organizada e não prejudique a operação do imóvel. A lógica é simples: a confiança do proprietário tem que se renovar pelo resultado entregue mês a mês, não por uma cláusula que o impeça de sair.",
+      "O contrato de gestão é formalizado por escrito, com o percentual da taxa, os serviços incluídos e as regras de repasse definidos com clareza desde o início. Não existe contrato de fidelidade: o proprietário não fica preso a um prazo mínimo. A gestão é em regime de exclusividade enquanto o contrato estiver vigente, para que calendário e preço fiquem sob um único comando, sem reserva em duplicidade. O contrato prevê prazo de aviso prévio para encerramento da gestão, para que a transição, se um dia acontecer, seja organizada e não prejudique a operação do imóvel. A lógica é simples: a confiança do proprietário tem que se renovar pelo resultado entregue mês a mês, não por uma cláusula que o impeça de sair.",
   },
 ];
 

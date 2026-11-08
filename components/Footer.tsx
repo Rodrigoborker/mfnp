@@ -57,6 +57,15 @@ export default function Footer() {
             >
               Perguntas frequentes
             </Link>
+            <Link href="/guias" className="text-footer-text hover:text-white">
+              Guias para proprietários
+            </Link>
+            <Link
+              href="/administradora-de-airbnb-em-porto-de-galinhas"
+              className="text-footer-text hover:text-white"
+            >
+              Administradora de Airbnb
+            </Link>
           </div>
         </div>
 
