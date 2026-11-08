@@ -98,7 +98,7 @@ export default async function CondominioPage({
       id: "taxa",
       question: `Quanto custa administrar um flat no ${condo.nome}?`,
       answer:
-        "A taxa varia conforme o tipo de imóvel e o escopo contratado, por isso fazemos uma avaliação personalizada antes da proposta. O percentual é fixo em contrato, incide só sobre o que é efetivamente reservado e o proprietário sabe exatamente o que está pagando. Montagem, decoração e reformas pontuais entram à parte, sempre com orçamento aprovado antes.",
+        "A taxa de administração é de 20% sobre o valor líquido da reserva, depois de descontada a taxa do canal (Airbnb, Booking e similares), e cobre toda a gestão comercial e operacional. A limpeza é paga pelo hóspede. Montagem, decoração e reformas pontuais entram à parte, sempre com orçamento aprovado antes.",
     },
     {
       id: "repasse",
