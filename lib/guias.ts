@@ -154,7 +154,7 @@ export const GUIAS: Guia[] = [
     path: "/guias/flat-ou-pousada-em-porto-de-galinhas",
     kind: "article",
     eyebrow: "Guia para investidores",
-    metaTitle: "Flat ou pousada em Porto de Galinhas: qual escolher?",
+    metaTitle: "Flat ou pousada em Porto de Galinhas",
     metaDescription:
       "Comparativo prático entre investir em flat ou em pousada em Porto de Galinhas: operação, risco, controle, uso próprio e o papel da administradora.",
     h1: "Flat ou pousada em Porto de Galinhas: qual faz mais sentido para você?",
@@ -262,7 +262,7 @@ export const GUIAS: Guia[] = [
     path: "/guias/como-comprar-um-flat-em-porto-de-galinhas",
     kind: "article",
     eyebrow: "Guia para investidores",
-    metaTitle: "Como comprar um flat em Porto de Galinhas: guia passo a passo",
+    metaTitle: "Como comprar um flat em Porto de Galinhas",
     metaDescription:
       "O que verificar antes de comprar um flat em Porto de Galinhas: localização, documentação, convenção do condomínio, custos além do preço e compra na planta.",
     h1: "Como comprar um flat em Porto de Galinhas: o que verificar antes de fechar",
@@ -377,7 +377,7 @@ export const GUIAS: Guia[] = [
     path: "/guias/turnkey-como-funciona",
     kind: "article",
     eyebrow: "Guia para proprietários",
-    metaTitle: "Turnkey para flats: como funciona, etapa por etapa",
+    metaTitle: "Turnkey para flats: como funciona",
     metaDescription:
       "Como funciona o turnkey da Meu Flat na Praia: avaliação, projeto, montagem, decoração, fotos e anúncio, para você entregar as chaves e receber o flat pronto.",
     h1: "Turnkey para flats: como funciona do imóvel vazio à primeira reserva",

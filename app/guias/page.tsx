@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 import { GUIAS } from "@/lib/guias";
 
 export const metadata: Metadata = {
-  title: "Guias para proprietários e investidores de flat",
+  title: "Guias para donos e investidores de flat",
   description:
     "Administração de Airbnb, flat ou pousada, como comprar um flat e como funciona o turnkey em Porto de Galinhas, Tamandaré e Carneiros.",
   alternates: { canonical: "/guias" },
