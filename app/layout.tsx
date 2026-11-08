@@ -67,6 +67,8 @@ const organizationJsonLd = {
       "@type": "Person",
       name: "Rodrigo Montenegro",
       jobTitle: "Corretor de imóveis (CRECI-PE 16191)",
+      url: "https://rodrigomontenegro.com.br",
+      sameAs: ["https://rodrigomontenegro.com.br"],
     },
     {
       "@type": "Person",
