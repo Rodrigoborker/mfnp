@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 
+// "/admin$" + "/admin/": bloqueia só o painel. "/admin" puro bloquearia também
+// /administradora-de-airbnb-em-porto-de-galinhas (prefixo).
+const ADMIN_BLOCK = ["/admin$", "/admin/"];
+
 const AI_CRAWLERS = [
   "GPTBot",
   "OAI-SearchBot",
@@ -21,12 +25,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: "/admin",
+        disallow: ADMIN_BLOCK,
       },
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
         allow: "/",
-        disallow: "/admin",
+        disallow: ADMIN_BLOCK,
       })),
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
